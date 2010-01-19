@@ -13,6 +13,13 @@ bundles/cucumber:
   revision: 5d79ec79b71b982305a6368bc74a935a8bfad196
   branch: master
   remote: braid/bundles/cucumber
+bundles/endwise: 
+  squashed: true
+  url: git://github.com/tpope/vim-endwise.git
+  type: git
+  revision: 780fa5603c0917d9b22e3b64dd8ab0423e006eb5
+  branch: master
+  remote: braid/bundles/endwise
 bundles/nerdcommenter: 
   squashed: true
   url: git://github.com/scrooloose/nerdcommenter.git
