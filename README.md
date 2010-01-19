@@ -7,7 +7,7 @@ Plugins that are available form a git repository were added with
 
 #### General configuration
 
-"," is used as mapleader
+`,` is used as mapleader
 
 Check out the 'vimrc' file for more...
 
