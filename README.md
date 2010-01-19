@@ -44,22 +44,22 @@ Check out the 'vimrc' file for more...
 
     A Git wrapper so awesome, it should be illegal
 
-    *    :Gstatus
+    *    `:Gstatus`
 
          Bring up the output of git-status in the preview
          window.  Press - to stage or unstage the file on the
          cursor line.  Press p to do so on a per hunk basis
          (--patch).  Press C to invoke |:Gcommit|.
 
-    *    :Gcommit [args]
+    *    `:Gcommit [args]`
 
          A wrapper around git-commit.
 
-    *    :Ggrep [args]
+    *    `:Ggrep [args]`
 
          |:grep| with git-grep as 'grepprg'.
 
-    *   :Gblame
+    *   `:Gblame`
 
         Run git-blame on the file and open the results in a
         scroll bound vertical split.  Press enter on a line to
@@ -84,6 +84,9 @@ Check out the 'vimrc' file for more...
 
     Elegant buffer explorer - takes very little screen space
 
+    * `,b` to open buffer list window.
+    * `Enter` in the list window to open the buffer
+
 *   misc-lang-settings 
 
     ts/sw/et settings for various filetypes
@@ -92,16 +95,16 @@ Check out the 'vimrc' file for more...
 
     Vim plugin for intensely orgasmic commenting
 
-    * ,/ - toggle comment
-    * ,cc - add commenting
-    * ,cu - Uncomment
+    * `,/` - toggle comment
+    * `,cc` - add commenting
+    * `,cu` - Uncomment
     * check docs for more
 
 *   nerdtree ([github](http://github.com/scrooloose/nerdtree))
 
     hax0r vim script to give you a tree explorer
 
-    * Ctrl-P - open directory browser
+    * `Ctrl-P` - open directory browser
 
 *   pastie ([vim.org](http://www.vim.org/scripts/script.php?script_id=1624)) ([github](http://github.com/tpope/vim-pastie))
 
@@ -131,9 +134,10 @@ Check out the 'vimrc' file for more...
 
     Delete/change/add parentheses/quotes/XML-tags/much more with ease
 
-    * dsX - delete surround X
-    * csXY - change surround X with Y
-    * s/S in visual mode - wrap selection 
+    * `dsX` - delete surround X
+    * `csXY` - change surround X with Y
+    * `s/S` in visual mode - wrap selection 
+    * `ysMovementX - surround movement with X
 
     You should REALLY read the docs if you want to use this one
 
@@ -141,7 +145,7 @@ Check out the 'vimrc' file for more...
 
     Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 
-    * ,t - toggle tags window
+    * `,t` - toggle tags window
 
 *   tmux 
 
