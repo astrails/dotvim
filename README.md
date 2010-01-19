@@ -11,7 +11,7 @@ Plugins that are available form a git repository were added with
 
 Check out the 'vimrc' file for more...
 
-Included Plugins:
+#### Included Plugins:
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
 
