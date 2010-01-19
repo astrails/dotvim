@@ -5,6 +5,13 @@ Plugins that are available form a git repository were added with
 
 *Some* help tips are provided for *some* of the plugins. please check out the plugin's docs for more info.
 
+##### Installation
+
+From your homedirectory (on Linux/Mac OSX):
+
+`git clone git://github.com/astrails/dotvim.git`
+`ln -sfn dotvim/vimrc .vimrc`
+
 #### General configuration
 
 `,` is used as mapleader
