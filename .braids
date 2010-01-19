@@ -1,0 +1,8 @@
+--- 
+vim-pathogen: 
+  squashed: true
+  url: git://github.com/tpope/vim-pathogen.git
+  type: git
+  revision: 9dc6d067fb089e37ae28e41b2a1bc5b5cf140554
+  branch: master
+  remote: braid/vim-pathogen
