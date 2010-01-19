@@ -6,6 +6,13 @@ bundles/haml:
   revision: 8f9e77eb238bb53946dcd1bfd35761f138766d15
   branch: master
   remote: braid/bundles/haml
+bundles/rails: 
+  squashed: true
+  url: git://github.com/tpope/vim-rails.git
+  type: git
+  revision: cc6d300121ec61c6ac919d7053078482d1d3973e
+  branch: master
+  remote: braid/bundles/rails
 vim-pathogen: 
   squashed: true
   url: git://github.com/tpope/vim-pathogen.git
