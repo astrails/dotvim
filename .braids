@@ -41,6 +41,13 @@ bundles/nerdcommenter:
   revision: bca88e735b063cec69127f2ab7efc28b868789a7
   branch: master
   remote: braid/bundles/nerdcommenter
+bundles/repeat: 
+  squashed: true
+  url: git://github.com/tpope/vim-repeat.git
+  type: git
+  revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
+  branch: master
+  remote: braid/bundles/repeat
 bundles/nerdtree: 
   squashed: true
   url: git://github.com/scrooloose/nerdtree.git
