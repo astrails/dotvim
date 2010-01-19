@@ -62,6 +62,13 @@ bundles/repeat:
   revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
   branch: master
   remote: braid/bundles/repeat
+bundles/vividchalk: 
+  squashed: true
+  url: git://github.com/vitaly/vim-vividchalk.git
+  type: git
+  revision: 3e6ee09ba8cb4f18f104b2e80e3d1b16bd5b40d1
+  branch: master
+  remote: braid/bundles/vividchalk
 bundles/nerdtree: 
   squashed: true
   url: git://github.com/scrooloose/nerdtree.git
