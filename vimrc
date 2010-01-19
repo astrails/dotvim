@@ -17,14 +17,11 @@ let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 "let g:rubycomplete_rails = 1
 
-
-"colorscheme default
 colorscheme vividchalk
 set background=dark
 
 let bash_is_sh=1
 set cinoptions=:0,(s,u0,U1,g0,t0
-
 
 set modelines=5
 set tags=tags;/
@@ -36,12 +33,12 @@ set cul
 
 set number
 
-set textwidth=0				  " Do not wrap words (insert)
-set nowrap							" Do not wrap words (view)
+set textwidth=0         " Do not wrap words (insert)
+set nowrap              " Do not wrap words (view)
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set ignorecase          " Do case insensitive matching
-set smartcase			      " do not ignore if search pattern has CAPS
+set smartcase           " do not ignore if search pattern has CAPS
 set incsearch           " Incremental search
 set autowriteall        " Automatically save before commands like :next and :make
 set hlsearch            " Highlight search match
@@ -75,17 +72,13 @@ set directory=~/.backup,~/tmp,.
 " enable showmmarks
 let g:showmarks_enable = 1
 
-
 " Make
 :command -nargs=* Make make <args> | cwindow 3
-
-
 
 let mapleader = ","
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-
 
 " highlight trailing whitespace  
 set listchars=tab:>-,trail:·,eol:$
@@ -118,6 +111,3 @@ let g:miniBufExplVSplit = 25
 let g:miniBufExplorerMoreThanOne = 100
 let g:miniBufExplUseSingleClick = 1
 nmap <Leader>b :MiniBufExplorer<cr>
-"nmap <Leader>b :MiniBufExplorer<cr>
-
-
