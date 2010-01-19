@@ -6,6 +6,13 @@ vim-pathogen:
   revision: 9dc6d067fb089e37ae28e41b2a1bc5b5cf140554
   branch: master
   remote: braid/vim-pathogen
+bundles/cucumber: 
+  squashed: true
+  url: git://github.com/tpope/vim-cucumber.git
+  type: git
+  revision: 5d79ec79b71b982305a6368bc74a935a8bfad196
+  branch: master
+  remote: braid/bundles/cucumber
 bundles/nerdcommenter: 
   squashed: true
   url: git://github.com/scrooloose/nerdcommenter.git
