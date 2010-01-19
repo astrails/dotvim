@@ -6,6 +6,13 @@ bundles/haml:
   revision: 8f9e77eb238bb53946dcd1bfd35761f138766d15
   branch: master
   remote: braid/bundles/haml
+bundles/pastie: 
+  squashed: true
+  url: git://github.com/tpope/vim-pastie.git
+  type: git
+  revision: 09a2776a1cb28baae902cdfa99e2bda0a92f8687
+  branch: master
+  remote: braid/bundles/pastie
 bundles/unimpaired: 
   squashed: true
   url: git://github.com/tpope/vim-unimpaired.git
