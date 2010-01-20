@@ -1,0 +1,181 @@
+= Quick test
+  = normal (+folded/-folded)
+    + f<Space><S-Space>
+    + /foo<CR><Space><S-Space>
+    + n<Space><S-Space>
+    + ]}<Space><S-Space>
+    + ]m<Space><S-Space>
+    + ]]<Space><S-Space>
+    + zj<Space><S-Space>
+    + [z<Space><S-Space>
+    + :cc<CR><Space><S-Space>
+    + :ll<CR><Space><S-Space>
+  = visual (-folded)
+    + f<Space><S-Space>
+    + /foo<CR><Space><S-Space>
+    + n<Space><S-Space>
+    + ]}<Space><S-Space>
+    + ]m<Space><S-Space>
+    + ]]<Space><S-Space>
+    + zj<Space><S-Space>
+    + [z<Space><S-Space>
+  = visual (+folded)
+    / /foo<CR><Space><S-Space>
+    + n<Space><S-Space>
+    + ]m<Space><S-Space>
+    + ]]<Space><S-Space>
+    + zj<Space><S-Space>
+  = normal (no foldopen)
+    + f<Space><S-Space>
+    + /foo<CR><Space><S-Space>
+    + n<Space><S-Space>
+    + ]}<Space><S-Space>
+    + ]m<Space><S-Space>
+    + ]]<Space><S-Space>
+    + zj<Space><S-Space>
+    + [z<Space><S-Space>
+    + :cc<CR><Space><S-Space>
+    + :ll<CR><Space><S-Space>
+  = visual (no foldopen)
+    + /foo<CR><Space><S-Space>
+    + n<Space><S-Space>
+    + ]m<Space><S-Space>
+    + ]]<Space><S-Space>
+    + zj<Space><S-Space>
+    + [z<Space><S-Space>
+
+= Test normal mode mappings
+  + f
+  + F
+  + t
+  + T
+  + ;
+  + ,
+  + *
+  + g*
+  + #
+  + g#
+  + /
+  + ?
+  + n
+  + N
+  + ]c
+  + [c
+  + ])
+  + [(
+  + ]}
+  + [{
+  + ]m
+  + [m
+  + ]M
+  + [M
+  + ]]
+  + [[
+  + ][
+  + []
+
+= Test visual mode mappings
+  + f
+  + F
+  + t
+  + T
+  + ;
+  + ,
+  + *
+  + g*
+  + #
+  + g#
+  + /
+  + ?
+  + n
+  + N
+  + ]c
+  + [c
+  + ])
+  + [(
+  + ]}
+  + [{
+  + ]m
+  + [m
+  + ]M
+  + [M
+  + ]]
+  + [[
+  + ][
+  + []
+
+= Test quickfix and location list commands
+  + :cc
+  + :cp
+  + :cN
+  + :cn
+  + :cfir
+  + :cla
+  + :cr
+  - :cf
+  + :cnf
+  + :cNf
+  + :cpf
+  + :ll
+  + :lp
+  + :lN
+  + :lne
+  + :lfir
+  + :lla
+  + :lr
+  - :lf
+  + :lnf
+  + :lNf
+  + :lpf
+
+= Test folding
+" set foldopen=hor,search,block,quickfix
+  + f       hor
+  + F       hor
+  + t       hor
+  + T       hor
+  + ;       hor
+  + ,       hor
+  + *       search
+  + g*      search
+  + #       search
+  + g#      search
+  / /       search
+  / ?       search
+  + n       search
+  + N       search
+  + ])      block
+  + [(      block
+  + ]}      block
+  + [{      block
+  + ]m      block
+  + [m      block
+  + ]M      block
+  + [M      block
+  + ]]      block
+  + [[      block
+  + ][      block
+  + []      block
+  + :cc     qf
+  + :cp     qf
+  + :cN     qf
+  + :cn     qf
+  + :cfir   qf
+  + :cla    qf
+  + :cr     qf
+  + :ll     qf
+  + :lp     qf
+  + :lN     qf
+  + :lne    qf
+  + :lfir   qf
+  + :lla    qf
+  + :cr     qf
+
+= Test count
+  - 4fx
+  - 4n
+  - 4/foo
+  - :4cn
+  - etc
+  - 4<Space>
+  - :4lvim //

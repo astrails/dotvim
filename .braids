@@ -83,6 +83,13 @@ bundles/repeat:
   revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
   branch: master
   remote: braid/bundles/repeat
+bundles/space: 
+  squashed: true
+  url: git://github.com/scrooloose/vim-space.git
+  type: git
+  revision: 387ff06c69fa225369427934efc7d8907fe4fc5a
+  branch: master
+  remote: braid/bundles/space
 bundles/snipmate: 
   squashed: true
   url: git://github.com/msanders/snipmate.vim.git
