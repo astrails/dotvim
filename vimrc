@@ -102,6 +102,7 @@ nmap <silent> <C-N> :silent noh<CR>
 nmap <C-E> :b#<CR>
 
 nmap <C-P> :NERDTreeToggle<CR>
+nmap <leader>p :NERDTreeFind<CR>
 
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
