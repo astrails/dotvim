@@ -69,6 +69,13 @@ bundles/surround:
   revision: 545ca856ff99ef13dee161b465277d4dc9a1e2ad
   branch: master
   remote: braid/bundles/surround
+bundles/syntastic: 
+  squashed: true
+  url: git://github.com/scrooloose/syntastic.git
+  type: git
+  revision: 0b157baa96498dad6abd77885461a99ee98a0a86
+  branch: master
+  remote: braid/bundles/syntastic
 bundles/repeat: 
   squashed: true
   url: git://github.com/tpope/vim-repeat.git
