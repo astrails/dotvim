@@ -85,7 +85,7 @@ let mapleader = ","
 map Q gq
 
 " highlight trailing whitespace  
-set listchars=tab:>-,trail:·,eol:$
+set listchars=tab:▷⋅,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
 
 " extended '%' mapping for if/then/else/end etc
