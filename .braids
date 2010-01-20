@@ -97,3 +97,10 @@ bundles/nerdtree:
   revision: 153041ac939502746e5a24468910eb7214a3f593
   branch: master
   remote: braid/bundles/nerdtree
+bundles/scrooloose-snipmate-snippets/snippets: 
+  squashed: true
+  url: git://github.com/scrooloose/snipmate-snippets.git
+  type: git
+  revision: f9f420418df3578c10833fe1a7f33adaedacf8c0
+  branch: master
+  remote: braid/bundles/scrooloose-snipmate-snippets/snippets
