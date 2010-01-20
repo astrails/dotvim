@@ -76,6 +76,13 @@ bundles/repeat:
   revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
   branch: master
   remote: braid/bundles/repeat
+bundles/snipmate: 
+  squashed: true
+  url: git://github.com/msanders/snipmate.vim.git
+  type: git
+  revision: 199e86cac0053bb7120178bfa28054cade1b5b10
+  branch: master
+  remote: braid/bundles/snipmate
 bundles/vividchalk: 
   squashed: true
   url: git://github.com/vitaly/vim-vividchalk.git
