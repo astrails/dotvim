@@ -28,6 +28,10 @@ set tags=tags;/
 
 set laststatus=2
 
+" default:
+" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-14.(%l,%c%V%)\ %P
+
 "set cuc
 set cul
 
