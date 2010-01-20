@@ -140,6 +140,10 @@ Check out the 'vimrc' file for more...
 
     Visually shows the location of marks.
 
+*   syntastic ([github](http://github.com/scrooloose/syntastic))
+	
+	syntax checking plugin
+
 *   snipmate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2540)) ([github](http://github.com/msanders/snipmate.vim))
 
     TextMate-style snippets for Vim
