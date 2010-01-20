@@ -150,6 +150,12 @@ Check out the 'vimrc' file for more...
 
     To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
 
+*   space ([github](http://github.com/scrooloose/vim-space))
+
+	Smart Space key for Vim
+
+	press SPACE to repeat last motion command
+
 *   surround ([vim.org](http://www.vim.org/scripts/script.php?script_id=1697)) ([github](http://github.com/tpope/vim-surround))
 
     Delete/change/add parentheses/quotes/XML-tags/much more with ease
