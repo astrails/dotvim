@@ -10,7 +10,10 @@ Plugins that are available form a git repository were added with
 From your homedirectory (on Linux/Mac OSX):
 
 * `git clone git://github.com/astrails/dotvim.git`
+* `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
+
+Note: if you alrady have `~/.vim` `~/.vimrc`, you might want to backup them :)
 
 #### General configuration
 
