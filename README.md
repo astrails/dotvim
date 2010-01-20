@@ -140,6 +140,12 @@ Check out the 'vimrc' file for more...
 
     Visually shows the location of marks.
 
+*   snipmate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2540)) ([github](http://github.com/msanders/snipmate.vim))
+
+    TextMate-style snippets for Vim
+
+    To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
+
 *   surround ([vim.org](http://www.vim.org/scripts/script.php?script_id=1697)) ([github](http://github.com/tpope/vim-surround))
 
     Delete/change/add parentheses/quotes/XML-tags/much more with ease
