@@ -185,7 +185,7 @@ Check out the 'vimrc' file for more...
 
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
 
-*   vimsh ([vim.org](http://vim.sourceforge.net/scripts/script.php?script_id=165))
+*   vimsh ([vim.org](http://www.vim.org/scripts/script.php?script_id=165))
 
     A kind of shell-in-a-vim-window Plugin.
 
