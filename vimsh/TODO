@@ -1,0 +1,29 @@
+* I can't use multiple threads ( vim just hangs ) so I need to find
+  a way to continue to get output in the background for commands that
+  take a while to post stuff to stdout.  This would also fix the clean
+  up after ctrl-c.  This issue is the the single biggest limitation
+  of this script.  Without multiple threads or some notification scheme
+  constant output can't be read and also allow for keyboard input.
+  See vimsh.vim for an explanation of what I've tried so far and hasn't
+  worked.
+
+* Get ctrl-c working on Windows, commands like 'findstr foo' hang.
+
+* verify ctrl-d on solaris works
+
+* Ctrl-D/EOF not working on BSD for /bin/sh.
+
+
+* How to handle stderr inline with stdout? popen4?
+
+* Handle ( syntax hi ) ansi escape sequences ( colored prompts, LS_COLORS ).
+
+* Add hooks for write/read so scripts can ride on top of this one.
+  i.e. GDB run in terminal buffer, script hooks write read etc parses
+  output, and uses glyph to highlight current line, for example.
+
+* Support vim/python native to 'cygwin', cygwin seems to support select.
+
+* tab completion
+
+* command history

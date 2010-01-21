@@ -1,0 +1,257 @@
+    ChangeLog
+    =========
+
+    This file contains a listing of modifications to vimsh.
+    Dates are included.  All changes by <bsturk@adelphia.net> unless
+    noted.
+
+    12/05/01 - 0.2a
+                      * Fixed tabwidth
+                      * Fixed not on prompt message
+                      * Fixed handling of user input execution rm -i works
+                      * Shells now die via autocommand
+
+    12/06/01 - 0.3a 
+                      * Fixed the first line issue
+                      * Fixed the printed ^Ms
+
+    12/07/01 - 0.4a
+                      * Implemented clear, exit, and can now alternate between
+                        using popen3( pipes ) or pty.  This allows platforms
+                        that do not support pty to work.  Should work on Windows
+                        flavors.
+
+    12/07/01 - 0.5
+                      * Implemented secure input of passwords,
+                      * Exit cmd works as expected, for subprocesses it
+                        exits to parent, initial shell exit will delete buffer,
+                      * Keep <Delete> from overwriting prompt
+
+    12/08/01 - 0.6
+                      * Removed the <Delete><BS> hooks.  They just weren't
+                        working as I thought they would.  Now just check
+                        for cursor to not be in prompt.
+                      * Figured out the ftp issue see "notes".
+                      * Added a mapping & func to set timeouts. 
+                      * Changed pty prompt to something useful,
+                      * Fixed clear
+
+    12/10/01 - 0.7    
+                      * Made usage of tty, pty condtional on not being windows
+                      * Removed popen buffer size
+                      * Increased timeout if using popen3
+                      * Fixed output for lines crossing consecutive reads for pty
+                      * Added map for starting a new prompt at bottom of buffer
+
+    12/11/01 - 0.8   
+                      * Windows support, tested on NT4 w/ ActiveState Python 2.2
+                        Should also work on 2K/XP. Caveat hacktor ;)
+                        Non interactive programs only, dir, findstr, attrib etc
+                        work fine, no ftp, telnet, etc yet. 
+                      * Made clear check more explicit, cleartool triggered it
+                      * Fixed the mysterious missing single char issue.
+
+    12/13/01 - 0.9
+                      * Set buftype=nofile <b.cerrina@wanadoo.fr>
+                      * Option to use current buffer if non-modified
+                      * Use vim variables for options so this file doesn't need
+                        to be modified to allow customization.
+                      * Handle cancelling of input dialogs
+                      * Flag unsupported windows console commands
+                        ( partial list see:unsupp_regex )
+
+                      * NOTE-- All attempts I've made to get interactive programs to
+                               work under Windows have failed.  Without pty/expect like
+                               functionality under Windows, interactive programs cannot
+                               work using this script.  More specifically, programs
+                               that do buffered I/O or read/write directly to the
+                               console.  I'll try any ideas submitted, but for now
+                               I'm punting.
+
+    12/20/01 - 0.10
+                      * !! NOTE !! -- New way to run is to "source" vimsh.vim
+                      * /bin/sh is symlinked to csh on *bsd, added csh prompt.
+                      * Fixed mappings, needed to be set after buffer created.
+                      * Added check for buffer's existence before writing prompt
+                        and jump to prompt if it already exists.
+                      * Ctrl-c ( SIGINT ) for interrupting continuous cmds, prompts
+                        if multiple processes besides shell running.
+                      * Cleaned up exit handling
+                      * Added function and mapping for refreshing/paging
+                        output when timeout is too short.
+                      * Added vim function to redraw periodically during long
+                        operations or continuous operations ( ie ping <host> or 
+                        find /  Added redraw func to vimsh.vim
+                      * Created ChangeLog, TODO, and vimsh.vim.  vimsh.vim is
+                        now the way that vimsh is started.  The vimsh.vim is
+                        a place for me to put code that is unsupported when
+                        running python scripts within vim.  Only limitation so
+                        far has been to not be able to define a vim function
+                        from within a python script.  This file will also allow
+                        users to add it to their plugin directory ( although
+                        it is highly unrecommended )
+
+    03/08/02 - 0.11
+                      * Added support for sending EOF. Default
+                        mapping is Ctrl-D <C-d>.  Now you can run python
+                        (pty only) for example in a buffer and quit it by typing
+                        Ctrl-D.
+                      * Fixed snafu of line split in the middle of python
+                        statement which kept script from loading.  WHOOPS.
+                        NOTE TO SELF, don't edit and test vimsh in the same
+                        vim session!
+                      * Made the signalling mechanism more generic so I can
+                        add more handlers in the future.
+
+    04/04/02 - 0.12
+                      * Fix for Solaris pty detection.
+                      * EOF and SIGINT now query termios settings so
+                        the 'right thing' happens.  Users can still map
+                        whatever vim key sequence they want for these
+                        operations.  Support for more of these coming
+                        in future versions.
+                      * Removed now unused vimsh.signal function.
+                      * Output of slower commands after refresh give
+                        better but still not perfect output.
+                      * For pty, SIGINT now flushes remaining data which will
+                        work for some commands, i.e. ping.  Some apps still
+                        will not flush correctly, find(1) for example.
+                      * Added a help message for SIGINT handler which can be
+                        disabled by setting vimsh_show_workaround_msgs
+                        to 0 in your .vimrc.  It just explains how to get
+                        around not seeing the prompt for commands that don't
+                        flush correctly after SIGINT.
+                      * Go back to insert mode after paging output.
+                      * Fixes and speed ups for Windows
+                            - BufWipeout wasn't being hit so lots of cmd.exe
+                              instances being left around, changed to
+                              BufDelete.
+                            - ^M wasn't being removed from end of lines that
+                              had it, i.e. ping.exe.
+                            - Buffer size for reading from pipe has been
+                              optimized somewhat.
+                            - Return to insert mode after trying to execute
+                              unsupported command.
+                            - Changed redraw frequency for better interactive
+                              response.
+
+    04/10/02 - 0.13
+                      * Figured out the line break always creeping in to
+                        files for some users.  Winzip has feature under
+                            Options->Configuration->Miscellaneous
+                        called "Tar file smart CF/LF conversion".  
+                        It's not so smart... Turn it off if you want
+                        to unpack the tarball using Winzip.  Better yet
+                        use the vimsh.zip file available at my website.
+                      * Fixed 'exit' of shell killing entire vim session rather
+                        than just the vimsh buffer.
+                      * Fixed empty line being added after paging output (F5)
+                      * Now check for password prompt when paging slow output(F5).
+                      * Cleanup of filename handling
+                      * Removed some un-needed ';' characters at the end of
+                        lines ( this is what happens when you do C all day )
+                      * Removed duplicate sending of EOF in send_eof.
+                      * Fixed pty/# of proc detection
+
+    04/28/02 - 0.14
+
+                      * Changed name of buffer name from vimsh to _vimsh_ since this 
+                        script is usually placed in a directory called vimsh. 
+                        If vimsh was a directory in vim's cwd it would edit 
+                        the directory using the explorer plugin. 
+                      * Fixed procs_in_pty to return full name of command last executed. 
+                      * Fixed not going back to insert mode after changing timeout. 
+                      * Added current timeout to timeout prompt. 
+                      * Correctly handle bogus entered timeout values, like 'ls'. 
+                      * Added support routine to return the current mode. 
+                      * Added a support routine to determine if last command 
+                        executed is still running.
+
+    09/30/02 - 0.15 
+                      * Changed handling of default prompt (when vimsh_prompt_pty
+                        is not defined and vimsh_prompt_override is 1).  Made it 
+                        simpler and removed assumptions about which shell is being 
+                        used on certain platforms.
+                      * Fixed the bdelete on exit line to use the new _vimsh_.
+                      * Removed checks for running interactive programs on windows.  
+                        It made the code messier and there are plenty of interactive 
+                        programs that weren't in the regex list.
+                      * Removed all the code related to a user supplied pipe prompt.
+                        I have yet to find a platform that needs it.
+                      * Added a password regex for ssh.  NOTE when ssh'ing the
+                        prompt on the remote machine may not be printed
+                        correctly if it has ANSI escape sequences etc.
+                      * Changed 'exit' handling to use SIGCHLD, much cleaner
+                        and correct, also removes the need for detecting pty
+                        name which was different on every platform.
+                      * Fixed logic for vimsh_split_open, it was backwards.
+                      * Fix handling of numerical config options.  Checks on
+                        it must be against strings.  i.e. '0' or '1'.
+                      * Made note in config section about overriding prompt
+                        using [t]csh.
+                      * Fixed handling of shell spawn when there are no args
+                        to shell. i.e. '' instead of '-i'.
+                      * Fixed deleting of line when refreshing output on non-pty
+                        platform.
+                      * typing 'exit' within vimsh or doing a bdelete on a
+                        vimsh buffer now cleans up properly.
+                      * Added wait() to SIGCHLD handler to properly clean up
+                        (no zombies).
+                      * Added cls for Windows clearing of buffer.
+                      * Fixed clear/cls handling.  'clear' or 'cls' is no longer also sent
+                        to the shell which caused some control codes to be
+                        read from terminal.
+                      * Fixed a vim hang when using pipes and binary data 'corrupts'
+                        pipe.  Changed pipe type to 'b' (binary) from 't' (text).
+                      * Added a dump routine for all terminal settings.
+                      * Changed the textwidth to a large number to support
+                        long lines.  This is temporary until I support real
+                        multiple line commands.
+
+    09/19/03 - 0.16 
+                      * Changed '^M' to '\n' for python 2.3.  Vimsh would not
+                        run w/ python 2.3. Backwards compatible change.
+
+    11/29/03 - 0.17 
+                      * Multiple buffer support <ddarius@hotpop.com>.
+                        i.e. :VimShNewBuf foo
+                      * Default behavior of creating a single vimsh buffer
+                        when sourced added to multiple buffer patch.
+                      * Multi-line command support. <ddarius@hotpop.com>
+		              * made a clear screen routine honoring g:vimsh_clear_all.
+		              * clear screen key mapping g:vimsh_clear_key (default F9). <ddarius@hotpop.com>
+                      * use startinsert!. <ddarius@hotpop.com>
+
+     1/31/04 - 0.18 
+                      * Use waitpid rather than wait, now correctly handles :!cmd. <mbays@sdf.lonestar.org>
+                      * Run pyfile command once when sourcing vimsh.vim. <mbays@sdf.lonestar.org>
+                      * Handle programs that do not have a prompt. <mbays@sdf.lonestar.org>
+                      * Moved invocation of startup shell in vimsh.vim to outside of pyfile 
+                        sourcing conditional.
+                      * Fixed case where buffer deleted through autocommand and same 
+                        buffer name used again would cause an error (multiple buf fix).
+                      * Fixed multiple au BufDelete commands being invoked for same vimsh buffer name
+                        (multiple buf fix).
+                      * Fixed password regex for ssh, now handles leading spaces if present within vimsh.
+
+     3/20/04 - 0.19   
+                      * Fixed clear_screen call.
+                      * Changed default mapping for clearing screen to ^L.
+                      * Preserve mode (insert/normal) when clearing screen.
+                      * Fix leading space in output when paging commands like
+                        ping(8).
+                      * Added some tips for [t]csh users to the readme.
+
+     3/26/04 - 0.20   
+                      * Leading space in output issue now works 100%, even when doing
+                        wacky stuff like 'sleep 10', then 'ls', without waiting for the
+                        prompt to return.
+                      * Typing 'exit' now works as expected when running ssh, telnet,
+                        etc.  This fix also doesn't need the procs_in_pty hack I had previously used.
+                      * exit'ing the initially spawned shell correctly deletes the buffer.
+                      * Fixed race conditions w/ SIGCHLD (async) setting flag and bdelete
+                        path not always seeing flag toggle.
+                      * Fixed bug where exiting vimsh buffer kept vim in insert mode.
+                      * Ctrl-D (EOF) now closes buffer only when sent to initial spawned shell.
+                      * Fixed bug on Windows (pipes) for multiple line command
+                        or leading space in command.
