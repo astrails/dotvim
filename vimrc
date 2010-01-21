@@ -12,10 +12,15 @@ filetype plugin indent on
 set completeopt=menuone,preview
 "inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
+" Omni completion settings
 set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
+" completing Rails hangs a lot
 "let g:rubycomplete_rails = 1
+
+" syntastic
+let g:syntastic_enable_signs=1
 
 colorscheme vividchalk
 set background=dark
@@ -61,7 +66,8 @@ set ts=4
 set sw=4
 
 "fixdel
-"
+
+" prevent vim from adding that stupid empty line at the end of every file
 set noeol
 set binary
 
@@ -91,7 +97,6 @@ nmap <silent> <leader>s :set nolist!<CR>
 " extended '%' mapping for if/then/else/end etc
 runtime macros/matchit.vim
 
-
 " Make shift-insert work like in Xterm
 map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
@@ -99,20 +104,30 @@ map! <S-Insert> <MiddleMouse>
 " Ctrl-N to disable search match highlight
 nmap <silent> <C-N> :silent noh<CR>
 
+" Ctrol-E to switch between 2 last buffers
 nmap <C-E> :b#<CR>
 
+" Ctrl-P to Display the file browser tree
 nmap <C-P> :NERDTreeToggle<CR>
+" ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
+" ,/ to invert comment on the current line/selection
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
+" ,t to show tags window
 let Tlist_Show_Menu=1
 nmap <leader>t :TlistToggle<CR>
 
+" ,e to fast finding files. just type beginning of a name and hit TAB
 nmap <leader>e :e **/
 
+" ,b to display current buffers list
 let g:miniBufExplVSplit = 25
 let g:miniBufExplorerMoreThanOne = 100
 let g:miniBufExplUseSingleClick = 1
 nmap <Leader>b :MiniBufExplorer<cr>
+
+" ,sh to open vimshell window
+nmap <Leader>sh :runtime vimsh/vimsh.vim<cr>

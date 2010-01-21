@@ -184,3 +184,11 @@ Check out the 'vimrc' file for more...
 *   vividchalk ([vim.org](http://www.vim.org/scripts/script.php?script_id=1891)) ([github](http://github.com/vitaly/vim-vividchalk))
 
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
+
+*   vimsh ([vim.org](http://vim.sourceforge.net/scripts/script.php?script_id=165))
+
+    A kind of shell-in-a-vim-window Plugin.
+
+	It has it problems but it solves the basics.
+
+	`,sh` - start a vimsh window
