@@ -119,11 +119,13 @@ highlight Directory     none
 high link Directory     Identifier
 highlight ErrorMsg      guibg=Red ctermbg=DarkRed guifg=NONE ctermfg=NONE
 highlight Search        guifg=NONE ctermfg=NONE gui=none cterm=none
-call s:hibg("Search"    ,"#555555","DarkBlue",81)
-highlight IncSearch     guifg=White guibg=Black ctermfg=White ctermbg=Black
+"call s:hibg("Search"    ,"Yellow","Yellow","Yellow")
+highlight Search        guifg=Blue guibg=Yellow ctermfg=Blue ctermbg=Yellow
+highlight IncSearch     guifg=Blue guibg=White ctermfg=Blue ctermbg=White
 highlight MoreMsg       guifg=#00AA00 ctermfg=Green
 highlight LineNr        guifg=#DDEEFF ctermfg=White
-call s:hibg("LineNr"    ,"#222222","DarkBlue",80)
+call s:hibg("LineNr"    ,"#222222","DarkGray",80)
+
 highlight Question      none
 high link Question      MoreMsg
 highlight Title         guifg=Magenta ctermfg=Magenta

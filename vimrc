@@ -60,7 +60,6 @@ set history=1000
 set wildmenu
 set ruler
 set visualbell
-set wrap
 
 set ts=4
 set sw=4
@@ -81,6 +80,11 @@ set directory=~/.backup,~/tmp,.
 
 " enable showmmarks
 let g:showmarks_enable = 1
+hi! link ShowMarksHLl LineNr
+hi! link ShowMarksHLu LineNr
+hi! link ShowMarksHLo LineNr
+hi! link ShowMarksHLm LineNr
+
 
 " Make
 :command -nargs=* Make make <args> | cwindow 3
