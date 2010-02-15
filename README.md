@@ -13,7 +13,7 @@ From your homedirectory (on Linux/Mac OSX):
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
 
-Note: if you alrady have `~/.vim` `~/.vimrc`, you might want to backup them :)
+Note: if you alrady have `~/.vim` `~/.vimrc` RENMIVE THEM (you might want to backup them ifirst :)
 
 #### General configuration
 
