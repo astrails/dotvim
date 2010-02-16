@@ -62,7 +62,8 @@ Check out the 'vimrc' file for more...
 
      Maintains a history of previous yanks, changes and deletes 
 
-	 * `,y` to shoud the yankring
+	 * `,y` to show the yankring
+	 * `,[`/`,]` - to cycle the just-pasted text though the yankring.
 	 * `:h yankring.txt` and `:h yankring-tutorial` for more
 
 *   fugitive ([github](http://github.com/tpope/vim-fugitive))

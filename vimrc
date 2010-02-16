@@ -143,3 +143,5 @@ if has("mouse")
   set mouse=a
 endif
 
+let g:yankring_replace_n_pkey = '<leader>['
+let g:yankring_replace_n_nkey = '<leader>]'
