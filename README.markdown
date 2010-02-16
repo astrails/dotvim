@@ -19,6 +19,11 @@ Note: if you alrady have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to back
 
 `,` is used as mapleader
 
+* `,e` mapped to `:e **/`. essentially you do `,efoo<tab>` to get a list of all files starting with foo
+* `,s` - toggle invisible characters display
+* `Ctrl-E` - switch between 2 last buffers  (its just a `:b#<cr>` :)
+* `Ctrl-N` to cancel current search highlighing
+
 Check out the 'vimrc' file for more...
 
 #### "Interesting" Plugins:
