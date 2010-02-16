@@ -203,3 +203,6 @@ Check out the 'vimrc' file for more...
 
     [HAML](http://haml-lang.com/) syntax etc.
 
+*   markdown ([github](http://github.com/plasticboy/vim-markdown))
+
+    syntax for [Markdown](http://daringfireball.net/projects/markdown/)
