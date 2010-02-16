@@ -58,6 +58,13 @@ Check out the 'vimrc' file for more...
     * `,b` to open buffer list window.
     * `Enter` in the list window to open the buffer
 
+*    yankring 100 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1234))
+
+     Maintains a history of previous yanks, changes and deletes 
+
+	 * `,y` to shoud the yankring
+	 * `:h yankring.txt` and `:h yankring-tutorial` for more
+
 *   fugitive ([github](http://github.com/tpope/vim-fugitive))
 
     A Git wrapper so awesome, it should be illegal

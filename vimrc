@@ -136,6 +136,9 @@ nmap <Leader>b :MiniBufExplorer<cr>
 " ,sh to open vimshell window
 nmap <Leader>sh :runtime vimsh/vimsh.vim<cr>
 
+" map ,y to show the yankring
+nmap <leader>y :YRShow<cr>
+
 if has("mouse")
   set mouse=a
 endif
