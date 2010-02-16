@@ -135,3 +135,8 @@ nmap <Leader>b :MiniBufExplorer<cr>
 
 " ,sh to open vimshell window
 nmap <Leader>sh :runtime vimsh/vimsh.vim<cr>
+
+if has("mouse")
+  set mouse=a
+endif
+
