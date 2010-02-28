@@ -38,7 +38,7 @@ set laststatus=2
 set statusline=%<%f\ %h%m%r%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-14.(%l,%c%V%)\ %P
 
 "set cuc
-set cul
+"set cul
 
 set number
 
