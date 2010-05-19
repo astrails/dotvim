@@ -136,8 +136,16 @@ let g:miniBufExplorerMoreThanOne = 100
 let g:miniBufExplUseSingleClick = 1
 nmap <Leader>b :MiniBufExplorer<cr>
 
+let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
+let g:Conque_TERM = 'xterm'
+
 " ,sh to open vimshell window
-nmap <Leader>sh :runtime vimsh/vimsh.vim<cr>
+nmap <Leader>sh :ConqueSplit bash<cr>
+
+" ,r to open vimshell window
+nmap <Leader>r :ConqueSplit 
+
+
 
 " map ,y to show the yankring
 nmap <leader>y :YRShow<cr>

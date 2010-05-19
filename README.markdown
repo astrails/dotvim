@@ -131,13 +131,14 @@ Check out the 'vimrc' file for more...
 
     You should REALLY read the docs if you want to use this one
 
-*   vimsh ([vim.org](http://www.vim.org/scripts/script.php?script_id=165))
+*   conque ([vim.org](http://www.vim.org/scripts/script.php?script_id=2771))
 
-    A kind of shell-in-a-vim-window Plugin.
+	Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
 
-	It has it problems but it solves the basics.
+	This one is much better then vimsh that I was using before
 
 	`,sh` - start a vimsh window
+	`,r`  - opens vim prompt for command to run
 
 *   drillctg 1.1.3 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2013))
 
