@@ -219,3 +219,18 @@ Check out the 'vimrc' file for more...
 *   markdown ([github](http://github.com/plasticboy/vim-markdown))
 
     syntax for [Markdown](http://daringfireball.net/projects/markdown/)
+
+### Misc
+
+The following is a list of commands and key bindings that I personally find interesting
+stored for easy refreshing my memory of them. there is no much 'system' to it, just
+randomly chosen bits of vim goodness.
+
+
+* `ga` print ascii value of character under the
+* `g#` like "#", but without using "\<" and "\>"
+* `g<` display previous command output
+* `z<CR>` redraw, cursor line to top of window
+* `z-` redraw, cursor line at bottom of window
+* `CTRL-W x` exchange current window with n-th window (or next if no count given)
+
