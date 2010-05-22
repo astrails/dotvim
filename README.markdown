@@ -234,4 +234,5 @@ randomly chosen bits of vim goodness.
 * `z<CR>` redraw, cursor line to top of window
 * `z-` redraw, cursor line at bottom of window
 * `CTRL-W x` exchange current window with n-th window (or next if no count given)
+* `gv` reselect last selection
 
