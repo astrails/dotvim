@@ -98,6 +98,20 @@ Check out the 'vimrc' file for more...
 
     Much more in the plugin's doc
 
+*   rails ([vim.org](http://www.vim.org/scripts/script.php?script_id=1567)) ([github](http://github.com/tpope/vim-rails))
+
+    Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
+
+	* `:AV` - open "alternate" file in a new vertical split
+	* `:AS` - open "alternate" file in a new horizontal split
+	* `:RV` - open "related" file in a new vertical split
+	* `:RS` - open "related" file in a new horizontal split
+	* `:Rextract` - extract partial (select text for extraction first)
+	* `:Rinvert` - takes a self.up migration and writes a self.down.
+	* `gf` - remapped to take context into account. recognizes models
+	  associations, partials etc.
+	* `:h rails` for more info ;)
+
 *   syntastic ([github](http://github.com/scrooloose/syntastic))
 	
 	syntax checking plugin
@@ -175,10 +189,6 @@ Check out the 'vimrc' file for more...
 
     integration with http://pastie.org
 
-*   rails ([vim.org](http://www.vim.org/scripts/script.php?script_id=1567)) ([github](http://github.com/tpope/vim-rails))
-
-    Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
-
 *   repeat ([vim.org](http://www.vim.org/scripts/script.php?script_id=2136)) ([github](http://github.com/tpope/vim-repeat))
 
     Use the repeat command "." with supported plugins
@@ -228,7 +238,7 @@ stored for easy refreshing my memory of them. there is no much 'system' to it, j
 randomly chosen bits of vim goodness.
 
 
-* `ga` print ascii value of character under the
+* `ga` print ascii value of character under the cursor
 * `g#` like "#", but without using "\<" and "\>"
 * `g<` display previous command output
 * `z<CR>` redraw, cursor line to top of window
