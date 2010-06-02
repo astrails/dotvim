@@ -1,11 +1,10 @@
-*fugitive.txt*  a Git wrapper so awesome, it should be illegal
+*fugitive.txt*  A Git wrapper so awesome, it should be illegal
 
 Author:  Tim Pope <vimNOSPAM@tpope.info>        *fugitive-author*
 License: Same terms as Vim itself (see |license|)
 
 This plugin is only available if 'compatible' is not set.
 
-==============================================================================
 INTRODUCTION                                    *fugitive*
 
 Install in ~/.vim, or in ~\vimfiles if you're on Windows and feeling lucky.
@@ -24,6 +23,10 @@ the indexed version.  Use |do| and |dp| on various hunks to bring the files in
 sync, or use |:Gread| to pull in all changes.  Write the indexed version to
 stage the file.
 
+Run |:Gstatus| to check your repository's status.  Use "-" to stage and reset
+files and "p" to add/reset --patch them.  Invoke |:Gcommit| to commit your
+changes.
+
 Run |:Gblame| in a work tree file to see a blame in a vertical split.  Press
 <CR> on any line to reopen and reblame that file as it stood in that commit.
 Press o or O on any line to inspect that commit in a split or a tab.
@@ -31,7 +34,6 @@ Press o or O on any line to inspect that commit in a split or a tab.
 Run |:Ggrep| to search the work tree or history.  Run |:Gmove| to rename a
 file.  Run |:Gremove| to delete a file.
 
-==============================================================================
 COMMANDS                                        *fugitive-commands*
 
 These commands are local to the buffers in which they work (generally, buffers
@@ -49,7 +51,8 @@ that are part of Git repositories).
 
                                                 *fugitive-:Gstatus*
 :Gstatus                Bring up the output of git-status in the preview
-                        window.  Press - to stage or unstage the file on the
+                        window.  Press D to |:Gdiff| the file on the cursor
+                        line.  Press - to stage or unstage the file on the
                         cursor line.  Press p to do so on a per hunk basis
                         (--patch).  Press C to invoke |:Gcommit|.
 
@@ -120,7 +123,8 @@ that are part of Git repositories).
                         given revision.  With no argument, the version in the
                         index is used (which means a three-way diff during a
                         merge conflict, making it a git-mergetool
-                        alternative).  Use |do| and |dp| and write to the
+                        alternative).  The newer of the two files is placed
+                        to the right.  Use |do| and |dp| and write to the
                         index file to simulate "git add --patch".
 
                                                 *fugitive-:Gmove*
@@ -136,13 +140,14 @@ that are part of Git repositories).
                         buffer.
 
                                                 *fugitive-:Gblame*
-:Gblame                 Run git-blame on the file and open the results in a
+:Gblame [flags]         Run git-blame on the file and open the results in a
                         scroll bound vertical split.  Press enter on a line to
-                        reblame the file as it was in that commit.
+                        reblame the file as it was in that commit.  You can
+                        give any of ltwfsMC as flags and they will be passed
+                        along to git-blame.
 
-:[range]Gblame          Run git-blame on the given range.
+:[range]Gblame [flags]  Run git-blame on the given range.
 
-==============================================================================
 MAPPINGS                                        *fugitive-mappings*
 
 These maps are available in Git objects.
@@ -170,7 +175,6 @@ C                       Go to the commit containing the current file.
 a                       Show the current tag, commit, or tree in an alternate
                         format.
 
-==============================================================================
 SPECIFYING REVISIONS                            *fugitive-revision*
 
 Fugitive revisions are similar to Git revisions as defined in the "SPECIFYING
@@ -198,12 +202,19 @@ HEAD^:Makefile  The file named Makefile in the parent of HEAD
 :3              The current file in the merged branch during a conflict
 :/foo           The most recent commit with "foo" in the message
 
-==============================================================================
+STATUSLINE                                      *fugitive-statusline*
+
+                                                *fugitive#statusline()*
+Add %{fugitive#statusline()} to your statusline to get an indicator including
+the current branch and the currently edited file's commit.  If you don't have
+a statusline, this one matches the default when 'ruler' is set:
+>
+    set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+<
 ABOUT                                           *fugitive-about*
 
-Grab the latest version or report a bug on Github:
+Grab the latest version or report a bug on GitHub:
 
 http://github.com/tpope/vim-fugitive
 
-==============================================================================
  vim:tw=78:et:ft=help:norl:
