@@ -130,6 +130,9 @@ nmap <leader>t :TlistToggle<CR>
 " ,e to fast finding files. just type beginning of a name and hit TAB
 nmap <leader>e :e **/
 
+" ,f to fast finding files using fuzzy finder.
+nmap <leader>f :FufFile **/<CR>
+
 " ,b to display current buffers list
 let g:miniBufExplVSplit = 25
 let g:miniBufExplorerMoreThanOne = 100
