@@ -2,7 +2,7 @@
 bundles/cucumber: 
   branch: master
   remote: braid/bundles/cucumber
-  revision: bbc287f99983e6cdb758ab4a4c901c704ffa312a
+  revision: c82f45f67bedfeb8fb90e66e17efacac9e2e4124
   squashed: true
   type: git
   url: git://github.com/tpope/vim-cucumber.git
