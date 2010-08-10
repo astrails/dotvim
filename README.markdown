@@ -187,6 +187,10 @@ Check out the 'vimrc' file for more...
 
     Wisely add "end" in ruby, endfunction/endif/more in vim script, etc 
 
+*   delimitMate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2754)) ([github](http://github.com/Raimondi/delimitMate))
+
+    auto-completion for quotes, parens, brackets, etc. in insert mode.
+
 *   kwdbi 1.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2103))
 
     Keep Window on Buffer Delete - Improved
