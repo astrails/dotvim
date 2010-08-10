@@ -21,12 +21,12 @@ NERDComComment	NERD_commenter.txt	/*NERDComComment*
 NERDComCredits	NERD_commenter.txt	/*NERDComCredits*
 NERDComDefaultDelims	NERD_commenter.txt	/*NERDComDefaultDelims*
 NERDComEOLComment	NERD_commenter.txt	/*NERDComEOLComment*
-NERDComFiletypes	NERD_commenter.txt	/*NERDComFiletypes*
 NERDComFunctionality	NERD_commenter.txt	/*NERDComFunctionality*
 NERDComFunctionalityDetails	NERD_commenter.txt	/*NERDComFunctionalityDetails*
 NERDComFunctionalitySummary	NERD_commenter.txt	/*NERDComFunctionalitySummary*
 NERDComHeuristics	NERD_commenter.txt	/*NERDComHeuristics*
 NERDComInsertComment	NERD_commenter.txt	/*NERDComInsertComment*
+NERDComInstallation	NERD_commenter.txt	/*NERDComInstallation*
 NERDComInvertComment	NERD_commenter.txt	/*NERDComInvertComment*
 NERDComIssues	NERD_commenter.txt	/*NERDComIssues*
 NERDComLicense	NERD_commenter.txt	/*NERDComLicense*
