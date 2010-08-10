@@ -69,13 +69,6 @@ bundles/repeat:
   squashed: true
   type: git
   url: git://github.com/tpope/vim-repeat.git
-bundles/scrooloose-snipmate-snippets/snippets: 
-  branch: master
-  remote: braid/bundles/scrooloose-snipmate-snippets/snippets
-  revision: f9f420418df3578c10833fe1a7f33adaedacf8c0
-  squashed: true
-  type: git
-  url: git://github.com/scrooloose/snipmate-snippets.git
 bundles/snipmate: 
   branch: master
   remote: braid/bundles/snipmate
