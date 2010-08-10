@@ -1,120 +1,127 @@
 --- 
-bundles/haml: 
-  squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-haml.git
-  type: git
-  revision: dfb1f770d5cf959be057b3d2c34d2ef20ecf8119
-  remote: braid/bundles/haml
-bundles/unimpaired: 
-  squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-unimpaired.git
-  type: git
-  revision: 360338d9a628677adc07171b4487a2ab50065a74
-  remote: braid/bundles/unimpaired
-bundles/pastie: 
-  squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-pastie.git
-  type: git
-  revision: 549355332197d8309bfe81a4cb768c30871a8440
-  remote: braid/bundles/pastie
-bundles/endwise: 
-  squashed: true
-  url: git://github.com/tpope/vim-endwise.git
-  branch: master
-  type: git
-  revision: 780fa5603c0917d9b22e3b64dd8ab0423e006eb5
-  remote: braid/bundles/endwise
 bundles/cucumber: 
-  squashed: true
   branch: master
-  url: git://github.com/tpope/vim-cucumber.git
-  type: git
-  revision: bbc287f99983e6cdb758ab4a4c901c704ffa312a
   remote: braid/bundles/cucumber
-vim-pathogen: 
+  revision: bbc287f99983e6cdb758ab4a4c901c704ffa312a
   squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-pathogen.git
   type: git
-  revision: f4f79bc7205b6c101955f32985a4d1b1da0be556
-  remote: braid/vim-pathogen
-bundles/rails: 
+  url: git://github.com/tpope/vim-cucumber.git
+bundles/delimitMate: 
+  branch: master
+  remote: braid/bundles/delimitMate
+  revision: 8f5a45f9e7b38bd1bcc5b901c0981ec90053a677
   squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-rails.git
   type: git
-  revision: ec59f4494541655cc7a5f85f80dded08558c78c8
-  remote: braid/bundles/rails
-bundles/nerdcommenter: 
+  url: http://github.com/Raimondi/delimitMate.git
+bundles/endwise: 
+  branch: master
+  remote: braid/bundles/endwise
+  revision: 780fa5603c0917d9b22e3b64dd8ab0423e006eb5
   squashed: true
-  url: git://github.com/scrooloose/nerdcommenter.git
-  branch: master
   type: git
-  revision: bca88e735b063cec69127f2ab7efc28b868789a7
-  remote: braid/bundles/nerdcommenter
-bundles/repeat: 
-  squashed: true
-  url: git://github.com/tpope/vim-repeat.git
-  branch: master
-  type: git
-  revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
-  remote: braid/bundles/repeat
-bundles/vividchalk: 
-  squashed: true
-  url: git://github.com/vitaly/vim-vividchalk.git
-  branch: master
-  type: git
-  revision: 3e6ee09ba8cb4f18f104b2e80e3d1b16bd5b40d1
-  remote: braid/bundles/vividchalk
-bundles/snipmate: 
-  squashed: true
-  branch: master
-  url: git://github.com/msanders/snipmate.vim.git
-  type: git
-  revision: f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b
-  remote: braid/bundles/snipmate
-bundles/surround: 
-  squashed: true
-  branch: master
-  url: git://github.com/tpope/vim-surround.git
-  type: git
-  revision: ad5690f10eb08688b0772045a4795cf7df461c93
-  remote: braid/bundles/surround
-bundles/scrooloose-snipmate-snippets/snippets: 
-  squashed: true
-  url: git://github.com/scrooloose/snipmate-snippets.git
-  branch: master
-  type: git
-  revision: f9f420418df3578c10833fe1a7f33adaedacf8c0
-  remote: braid/bundles/scrooloose-snipmate-snippets/snippets
-bundles/nerdtree: 
-  squashed: true
-  url: git://github.com/scrooloose/nerdtree.git
-  branch: master
-  type: git
-  revision: 153041ac939502746e5a24468910eb7214a3f593
-  remote: braid/bundles/nerdtree
-bundles/syntastic: 
-  squashed: true
-  branch: master
-  url: git://github.com/scrooloose/syntastic.git
-  type: git
-  revision: 2926533fd71e8dd22ddc08667ab602d9f8406f63
-  remote: braid/bundles/syntastic
+  url: git://github.com/tpope/vim-endwise.git
 bundles/fugitive: 
-  squashed: true
   branch: master
-  url: git://github.com/tpope/vim-fugitive.git
-  type: git
-  revision: 6c44c4795e0cfcd8439a7d558d013f246b60d077
   remote: braid/bundles/fugitive
-bundles/space: 
+  revision: 6c44c4795e0cfcd8439a7d558d013f246b60d077
   squashed: true
-  url: git://github.com/scrooloose/vim-space.git
-  branch: master
   type: git
-  revision: 387ff06c69fa225369427934efc7d8907fe4fc5a
+  url: git://github.com/tpope/vim-fugitive.git
+bundles/haml: 
+  branch: master
+  remote: braid/bundles/haml
+  revision: dfb1f770d5cf959be057b3d2c34d2ef20ecf8119
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-haml.git
+bundles/nerdcommenter: 
+  branch: master
+  remote: braid/bundles/nerdcommenter
+  revision: bca88e735b063cec69127f2ab7efc28b868789a7
+  squashed: true
+  type: git
+  url: git://github.com/scrooloose/nerdcommenter.git
+bundles/nerdtree: 
+  branch: master
+  remote: braid/bundles/nerdtree
+  revision: 153041ac939502746e5a24468910eb7214a3f593
+  squashed: true
+  type: git
+  url: git://github.com/scrooloose/nerdtree.git
+bundles/pastie: 
+  branch: master
+  remote: braid/bundles/pastie
+  revision: 549355332197d8309bfe81a4cb768c30871a8440
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-pastie.git
+bundles/rails: 
+  branch: master
+  remote: braid/bundles/rails
+  revision: ec59f4494541655cc7a5f85f80dded08558c78c8
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-rails.git
+bundles/repeat: 
+  branch: master
+  remote: braid/bundles/repeat
+  revision: c4101c205ef9e06bdfeff571a7dbba2576f08974
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-repeat.git
+bundles/scrooloose-snipmate-snippets/snippets: 
+  branch: master
+  remote: braid/bundles/scrooloose-snipmate-snippets/snippets
+  revision: f9f420418df3578c10833fe1a7f33adaedacf8c0
+  squashed: true
+  type: git
+  url: git://github.com/scrooloose/snipmate-snippets.git
+bundles/snipmate: 
+  branch: master
+  remote: braid/bundles/snipmate
+  revision: f5a75d075d3c005ebe69e3f5e56cf99516e8aa3b
+  squashed: true
+  type: git
+  url: git://github.com/msanders/snipmate.vim.git
+bundles/space: 
+  branch: master
   remote: braid/bundles/space
+  revision: 387ff06c69fa225369427934efc7d8907fe4fc5a
+  squashed: true
+  type: git
+  url: git://github.com/scrooloose/vim-space.git
+bundles/surround: 
+  branch: master
+  remote: braid/bundles/surround
+  revision: ad5690f10eb08688b0772045a4795cf7df461c93
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-surround.git
+bundles/syntastic: 
+  branch: master
+  remote: braid/bundles/syntastic
+  revision: 2926533fd71e8dd22ddc08667ab602d9f8406f63
+  squashed: true
+  type: git
+  url: git://github.com/scrooloose/syntastic.git
+bundles/unimpaired: 
+  branch: master
+  remote: braid/bundles/unimpaired
+  revision: 360338d9a628677adc07171b4487a2ab50065a74
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-unimpaired.git
+bundles/vividchalk: 
+  branch: master
+  remote: braid/bundles/vividchalk
+  revision: 3e6ee09ba8cb4f18f104b2e80e3d1b16bd5b40d1
+  squashed: true
+  type: git
+  url: git://github.com/vitaly/vim-vividchalk.git
+vim-pathogen: 
+  branch: master
+  remote: braid/vim-pathogen
+  revision: f4f79bc7205b6c101955f32985a4d1b1da0be556
+  squashed: true
+  type: git
+  url: git://github.com/tpope/vim-pathogen.git
