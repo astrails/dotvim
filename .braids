@@ -30,7 +30,7 @@ bundles/fugitive:
 bundles/haml: 
   branch: master
   remote: braid/bundles/haml
-  revision: dfb1f770d5cf959be057b3d2c34d2ef20ecf8119
+  revision: 47c4dff622245e50908665b2729e53090976b92b
   squashed: true
   type: git
   url: git://github.com/tpope/vim-haml.git
