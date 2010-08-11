@@ -1,6 +1,6 @@
 *fugitive.txt*  A Git wrapper so awesome, it should be illegal
 
-Author:  Tim Pope <vimNOSPAM@tpope.info>        *fugitive-author*
+Author:  Tim Pope <vimNOSPAM@tpope.org>         *fugitive-author*
 License: Same terms as Vim itself (see |license|)
 
 This plugin is only available if 'compatible' is not set.
@@ -52,9 +52,10 @@ that are part of Git repositories).
                                                 *fugitive-:Gstatus*
 :Gstatus                Bring up the output of git-status in the preview
                         window.  Press D to |:Gdiff| the file on the cursor
-                        line.  Press - to stage or unstage the file on the
-                        cursor line.  Press p to do so on a per hunk basis
-                        (--patch).  Press C to invoke |:Gcommit|.
+                        line, or dh to |:Gdiff!|.  Press - to stage or unstage
+                        the file on the cursor line.  Press p to do so on a
+                        per hunk basis (--patch).  Press C to invoke
+                        |:Gcommit|.
 
                                                 *fugitive-:Gcommit*
 :Gcommit [args]         A wrapper around git-commit.  If there is nothing
@@ -126,6 +127,9 @@ that are part of Git repositories).
                         alternative).  The newer of the two files is placed
                         to the right.  Use |do| and |dp| and write to the
                         index file to simulate "git add --patch".
+
+                                                *fugitive-:Gdiff!*
+:Gdiff! [revision]      Like |:Gdiff|, but split horizontally.
 
                                                 *fugitive-:Gmove*
 :Gmove {destination}    Wrapper around git-mv that renames the buffer
