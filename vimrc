@@ -21,6 +21,7 @@ let g:rubycomplete_classes_in_global = 1
 
 " syntastic
 let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
 
 colorscheme vividchalk
 set background=dark
