@@ -68,6 +68,7 @@ set history=1000
 set wildmenu
 set ruler
 set visualbell
+set autoread            " automatically read feil that has been changed on disk and doesn't have changes in vim
 
 set ts=4
 set sw=4
