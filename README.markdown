@@ -33,7 +33,7 @@ Check out the 'vimrc' file for more...
     hax0r vim script to give you a tree explorer
 
     * `Ctrl-P` - open directory browser
-	* `,p` - to find and highlight the currently open file in the tree
+    * `,p` - to find and highlight the currently open file in the tree
 
 *   nerdcommenter ([github](http://github.com/scrooloose/nerdcommenter))
 
@@ -46,9 +46,9 @@ Check out the 'vimrc' file for more...
 
 *   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
 
-	buffer/file/command/tag/etc explorer with fuzzy matching
+    buffer/file/command/tag/etc explorer with fuzzy matching
 
-	* `,f` - FufFile - fuzzy find file
+    * `,f` - FufFile - fuzzy find file
 
 *   autocomplpop 2.14.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1879))
 
@@ -73,9 +73,9 @@ Check out the 'vimrc' file for more...
 
      Maintains a history of previous yanks, changes and deletes 
 
-	 * `,y` to show the yankring
-	 * `,[`/`,]` - to cycle the just-pasted text though the yankring.
-	 * `:h yankring.txt` and `:h yankring-tutorial` for more
+     * `,y` to show the yankring
+     * `,[`/`,]` - to cycle the just-pasted text though the yankring.
+     * `:h yankring.txt` and `:h yankring-tutorial` for more
 
 *   fugitive ([github](http://github.com/tpope/vim-fugitive))
 
@@ -108,37 +108,37 @@ Check out the 'vimrc' file for more...
 
     Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 
-	* `:AV` - open "alternate" file in a new vertical split
-	* `:AS` - open "alternate" file in a new horizontal split
-	* `:RV` - open "related" file in a new vertical split
-	* `:RS` - open "related" file in a new horizontal split
-	* `:Rextract` - extract partial (select text for extraction first)
-	* `:Rinvert` - takes a self.up migration and writes a self.down.
-	* `gf` - remapped to take context into account. recognizes models
-	  associations, partials etc.
-	* `:h rails` for more info ;)
+    * `:AV` - open "alternate" file in a new vertical split
+    * `:AS` - open "alternate" file in a new horizontal split
+    * `:RV` - open "related" file in a new vertical split
+    * `:RS` - open "related" file in a new horizontal split
+    * `:Rextract` - extract partial (select text for extraction first)
+    * `:Rinvert` - takes a self.up migration and writes a self.down.
+    * `gf` - remapped to take context into account. recognizes models
+      associations, partials etc.
+    * `:h rails` for more info ;)
 
 *   syntastic ([github](http://github.com/scrooloose/syntastic))
-	
-	syntax checking plugin
+    
+    syntax checking plugin
 
-	it will display the number of syntax errors in the current file in the vim's status line.
+    it will display the number of syntax errors in the current file in the vim's status line.
 
-	use `:Errors` to display a window detailing the errors
+    use `:Errors` to display a window detailing the errors
 
 *   snipmate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2540)) ([github](http://github.com/msanders/snipmate.vim))
 
     TextMate-style snippets for Vim
 
-	write a snipped text and press TAB to expand it.
+    write a snipped text and press TAB to expand it.
 
     To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
 
 *   space ([github](http://github.com/scrooloose/vim-space))
 
-	Smart Space key for Vim
+    Smart Space key for Vim
 
-	press SPACE to repeat last motion command
+    press SPACE to repeat last motion command
 
 *   surround ([vim.org](http://www.vim.org/scripts/script.php?script_id=1697)) ([github](http://github.com/tpope/vim-surround))
 
@@ -155,21 +155,21 @@ Check out the 'vimrc' file for more...
 
     Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
 
-	* `,t=` - align on =
-	* `,tsp` - align on whitespace
-	* `,t,` - align on commas
-	* `,t|` - align on vertical bars
-	* `:AlignSEPARATORS` - align on separators
-	* `:h align` - see help for more options
+    * `,t=` - align on =
+    * `,tsp` - align on whitespace
+    * `,t,` - align on commas
+    * `,t|` - align on vertical bars
+    * `:AlignSEPARATORS` - align on separators
+    * `:h align` - see help for more options
 
 *   conque ([vim.org](http://www.vim.org/scripts/script.php?script_id=2771))
 
-	Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
+    Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
 
-	This one is much better then vimsh that I was using before
+    This one is much better then vimsh that I was using before
 
-	`,sh` - start a vimsh window
-	`,r`  - opens vim prompt for command to run
+    `,sh` - start a vimsh window
+    `,r`  - opens vim prompt for command to run
 
 *   drillctg 1.1.3 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2013))
 
