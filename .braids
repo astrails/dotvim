@@ -1,4 +1,11 @@
 --- 
+bundles/align: 
+  branch: master
+  remote: braid/bundles/align
+  revision: fa5fdeeea25269c3e83262c03dfa1ccd27dbd3c9
+  squashed: true
+  type: git
+  url: http://github.com/tsaleh/vim-align.git
 bundles/cucumber: 
   branch: master
   remote: braid/bundles/cucumber
