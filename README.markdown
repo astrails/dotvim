@@ -262,8 +262,13 @@ randomly chosen bits of vim goodness.
 * `ga` print ascii value of character under the cursor
 * `g#` like "#", but without using "\<" and "\>"
 * `g<` display previous command output
-* `z<CR>` redraw, cursor line to top of window
-* `z-` redraw, cursor line at bottom of window
+* `zt` scroll cursor line to top
+* `zz` scroll cursor line to center
+* `zb` scroll cursor line to bottom
 * `CTRL-W x` exchange current window with n-th window (or next if no count given)
 * `gv` reselect last selection
+* `gt` next tab
+* `gT` prev tab
+* `ci` change inside delimiters
+* `di` delete inside delimiters
 
