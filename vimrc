@@ -23,6 +23,10 @@ let g:rubycomplete_classes_in_global = 1
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 
+" delimitMate
+let g:delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 1
+
 colorscheme vividchalk
 set background=dark
 
