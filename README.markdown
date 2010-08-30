@@ -151,6 +151,17 @@ Check out the 'vimrc' file for more...
 
     You should REALLY read the docs if you want to use this one
 
+*   align ([vim.org](http://www.vim.org/scripts/script.php?script_id=294)) ([github](http://github.com/tsaleh/vim-align))
+
+    Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
+
+	* `,t=` - align on =
+	* `,tsp` - align on whitespace
+	* `,t,` - align on commas
+	* `,t|` - align on vertical bars
+	* `:AlignSEPARATORS` - align on separators
+	* `:h align` - see help for more options
+
 *   conque ([vim.org](http://www.vim.org/scripts/script.php?script_id=2771))
 
 	Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
