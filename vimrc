@@ -8,25 +8,6 @@ end
 syntax on
 filetype plugin indent on
 
-"set completeopt=menuone,preview,longest
-set completeopt=menuone,preview
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Omni completion settings
-set ofu=syntaxcomplete#Complete
-let g:rubycomplete_buffer_loading = 0
-let g:rubycomplete_classes_in_global = 1
-" completing Rails hangs a lot
-"let g:rubycomplete_rails = 1
-
-" syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-
-" delimitMate
-let g:delimitMate_expand_space = 1
-let g:delimitMate_expand_cr = 1
-
 colorscheme vividchalk
 set background=dark
 
@@ -95,9 +76,28 @@ hi! link ShowMarksHLu LineNr
 hi! link ShowMarksHLo LineNr
 hi! link ShowMarksHLm LineNr
 
-
 " Make
 :command -nargs=* Make make <args> | cwindow 3
+
+"set completeopt=menuone,preview,longest
+set completeopt=menuone,preview
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Omni completion settings
+set ofu=syntaxcomplete#Complete
+let g:rubycomplete_buffer_loading = 0
+let g:rubycomplete_classes_in_global = 1
+" completing Rails hangs a lot
+"let g:rubycomplete_rails = 1
+
+" syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+
+" delimitMate
+let g:delimitMate_expand_space = 1
+let g:delimitMate_expand_cr = 1
+
 
 let mapleader = ","
 
@@ -154,8 +154,6 @@ nmap <Leader>sh :ConqueSplit bash<cr>
 
 " ,r to open vimshell window
 nmap <Leader>r :ConqueSplit 
-
-
 
 " map ,y to show the yankring
 nmap <leader>y :YRShow<cr>
