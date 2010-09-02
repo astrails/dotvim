@@ -159,6 +159,7 @@ Check out the 'vimrc' file for more...
     * `,tsp` - align on whitespace
     * `,t,` - align on commas
     * `,t|` - align on vertical bars
+    * `,acom` - align comments (C/C++)
     * `:AlignSEPARATORS` - align on separators
     * `:h align` - see help for more options
 
