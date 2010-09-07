@@ -71,7 +71,7 @@ Check out the 'vimrc' file for more...
 
 *    yankring 100 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1234))
 
-     Maintains a history of previous yanks, changes and deletes 
+     Maintains a history of previous yanks, changes and deletes
 
      * `,y` to show the yankring
      * `,[`/`,]` - to cycle the just-pasted text though the yankring.
@@ -119,7 +119,7 @@ Check out the 'vimrc' file for more...
     * `:h rails` for more info ;)
 
 *   syntastic ([github](http://github.com/scrooloose/syntastic))
-    
+
     syntax checking plugin
 
     it will display the number of syntax errors in the current file in the vim's status line.
@@ -146,7 +146,7 @@ Check out the 'vimrc' file for more...
 
     * `dsX` - delete surround X
     * `csXY` - change surround X with Y
-    * `s/S` in visual mode - wrap selection 
+    * `s/S` in visual mode - wrap selection
     * `ysMovementX` - surround movement with X
 
     You should REALLY read the docs if you want to use this one
@@ -191,13 +191,13 @@ Check out the 'vimrc' file for more...
 
     Already configured
 
-*   misc-lang-settings 
+*   misc-lang-settings
 
     ts/sw/et settings for various filetypes
 
 *   endwise ([vim.org](http://www.vim.org/scripts/script.php?script_id=2386)) ([github](http://github.com/tpope/vim-endwise))
 
-    Wisely add "end" in ruby, endfunction/endif/more in vim script, etc 
+    Wisely add "end" in ruby, endfunction/endif/more in vim script, etc
 
 *   delimitMate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2754)) ([github](http://github.com/Raimondi/delimitMate))
 
@@ -225,7 +225,7 @@ Check out the 'vimrc' file for more...
 
 #### Syntax plugins
 
-*   tmux 
+*   tmux
 
     [tmux](http://tmux.sourceforge.net/) syntax  suupport (extracted from tmux-1.1)
 
