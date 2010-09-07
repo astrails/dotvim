@@ -182,6 +182,15 @@ Check out the 'vimrc' file for more...
 
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
 
+*   sessionman ([vim.org](http://www.vim.org/scripts/script.php?script_id=2010))
+
+    work with Vim sessions by keeping them in the dedicated location and by providing commands to list, open, and save sessions.
+
+	* `:SessionList` list sessions
+	* `:SessionSave` save session
+	* `:SessionSaveAs` save new session
+	* check out "Sessions" submenu under "File"
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
