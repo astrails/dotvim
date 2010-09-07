@@ -186,9 +186,9 @@ Check out the 'vimrc' file for more...
 
     work with Vim sessions by keeping them in the dedicated location and by providing commands to list, open, and save sessions.
 
-	* `:SessionList` list sessions
-	* `:SessionSave` save session
-	* `:SessionSaveAs` save new session
+	* `,S`, `:SessionList` - list sessions
+	* `,SS`, `:SessionSave` - save session
+	* `,SA`, `:SessionSaveAs` - save new session
 	* check out "Sessions" submenu under "File"
 
 #### "Support" and minor plugins

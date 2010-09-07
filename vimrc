@@ -140,6 +140,10 @@ nmap <leader>e :e **/
 " ,f to fast finding files using fuzzy finder.
 nmap <leader>f :FufFile **/<CR>
 
+nmap <leader>S :SessionList<CR>
+nmap <leader>SS :SessionSave<CR>
+nmap <leader>SA :SessionSaveAs<CR>
+
 " ,b to display current buffers list
 let g:miniBufExplVSplit = 25
 let g:miniBufExplorerMoreThanOne = 100
