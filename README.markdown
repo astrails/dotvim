@@ -285,4 +285,5 @@ randomly chosen bits of vim goodness.
 * `gT` prev tab
 * `ci` change inside delimiters
 * `di` delete inside delimiters
+* `@@` execute last macro
 
