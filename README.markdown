@@ -262,6 +262,10 @@ Check out the 'vimrc' file for more...
 
     syntax for [Markdown](http://daringfireball.net/projects/markdown/)
 
+*   coffe-script ([github](http://github.com/kchmck/vim-coffee-script))
+
+	syntax for [Coffee script](http://jashkenas.github.com/coffee-script/)
+
 ### Misc
 
 The following is a list of commands and key bindings that I personally find interesting
