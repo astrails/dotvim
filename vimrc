@@ -2,6 +2,7 @@ set nocompatible
 
 runtime! autoload/pathogen.vim
 if exists('g:loaded_pathogen')
+  call pathogen#helptags()
   call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
 end
 
@@ -42,6 +43,7 @@ set autowriteall        " Automatically save before commands like :next and :mak
 set hlsearch            " Highlight search match
 set hidden              " enable multiple modified buffers
 set nobackup            " do not write backup files
+"set noswapfile          " do not write .swp files
 set foldcolumn=0        " columns for folding
 set foldmethod=indent
 set foldlevel=9
@@ -51,6 +53,7 @@ set ruler
 set visualbell
 set autoread            " automatically read feil that has been changed on disk and doesn't have changes in vim
 set backspace=indent,eol,start
+set guioptions-=T       " disable toolbar"
 
 set ts=4
 set sw=4
