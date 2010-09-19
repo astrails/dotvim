@@ -12,6 +12,8 @@ From your homedirectory (on Linux/Mac OSX):
 * `git clone git://github.com/astrails/dotvim.git`
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
+* you create and edit ~/.vim\_local if you want to have your some
+  local/personal settings you don't want to commit into the repo
 
 Note: if you alrady have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them ifirst :)
 
