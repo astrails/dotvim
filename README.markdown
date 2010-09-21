@@ -193,6 +193,14 @@ Check out the 'vimrc' file for more...
 	* `,SA`, `:SessionSaveAs` - save new session
 	* check out "Sessions" submenu under "File"
 
+*   ack.vim ([vim.org](http://www.vim.org/scripts/script.php?script_id=2572)) ([github](http://github.com/mileszs/ack.vim))
+
+    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
+
+	* `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
+	* `:Ack --ruby ...` - search only ruby files.
+	* `:h Ack` - more help about Ack
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
