@@ -46,6 +46,15 @@ Check out the 'vimrc' file for more...
     * `,cu` - Uncomment
     * check docs for more
 
+*   [PeepOpen](http://peepcode.com/products/peepopen)
+
+    * `,,` - open PeepOpen popup
+
+	Dont forget to set MacVim's general setting:
+	Apple+, to open macvim pref pane => General:
+	change "Open files from applications" to "in the current window / with a
+	tab for each file"
+
 *   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
 
     buffer/file/command/tag/etc explorer with fuzzy matching
