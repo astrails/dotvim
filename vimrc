@@ -76,7 +76,7 @@ set backupdir=~/.backup,.
 set directory=~/.backup,~/tmp,.
 
 " enable showmmarks
-let g:showmarks_enable = 1
+let g:showmarks_enable = 0
 hi! link ShowMarksHLl LineNr
 hi! link ShowMarksHLu LineNr
 hi! link ShowMarksHLo LineNr
