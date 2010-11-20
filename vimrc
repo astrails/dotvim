@@ -1,10 +1,6 @@
-set nocompatible
+call pathogen#runtime_append_all_bundles()
 
-runtime! autoload/pathogen.vim
-if exists('g:loaded_pathogen')
-  call pathogen#helptags()
-  call pathogen#runtime_prepend_subdirectories(expand('~/.vim/bundles'))
-end
+set nocompatible
 
 syntax on
 filetype plugin indent on
