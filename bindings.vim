@@ -3,6 +3,9 @@ let mapleader = ","
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
+"make Y consistent with C and D
+nnoremap Y y$
+
 " highlight trailing whitespace  
 set listchars=tab:▷⋅,trail:·,eol:$
 nmap <silent> <leader>s :set nolist!<CR>
