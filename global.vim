@@ -75,6 +75,7 @@ set noswapfile          " do not write .swp files
 set foldcolumn=0        " columns for folding
 set foldmethod=indent
 set foldlevel=9
+set nofoldenable        "dont fold by default "
 
 " prevent vim from adding that stupid empty line at the end of every file
 set noeol
