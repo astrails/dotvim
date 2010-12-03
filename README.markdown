@@ -15,6 +15,9 @@ From your homedirectory (on Linux/Mac OSX):
 * you create and edit ~/.vim\_local if you want to have your some
   local/personal settings you don't want to commit into the repo
 
+* If you want to use command-t file finder plugin you need to compile native extension first.
+  just run `make` at the top of .vim directory
+
 Note: if you alrady have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them ifirst :)
 
 #### General configuration
@@ -45,6 +48,12 @@ Check out the 'vimrc' file for more...
     * `,cc` - add commenting
     * `,cu` - Uncomment
     * check docs for more
+
+*   command-t 1.0 ([vim.org](http://www.vim.org/scripts/script.php?script_id=3025) [git](git://git.wincent.com/command-t.git))
+
+	TextMate Command-T like file finder for vim
+
+    * `,,` - find file
 
 *   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
 
