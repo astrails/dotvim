@@ -1,3 +1,4 @@
-default:
-	echo 1 2 3
-	false
+install: install-command-t
+
+install-command-t:
+	cd bundle/command-t/ruby/command-t/ && ruby extconf.rb && make
