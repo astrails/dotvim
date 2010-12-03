@@ -13,6 +13,13 @@ bundle/align:
   squashed: true
   type: git
   url: http://github.com/tsaleh/vim-align.git
+bundle/command-t: 
+  branch: master
+  remote: braid/bundle/command-t
+  revision: a338c4c3a964ec79215aed92b4337763757b17bd
+  squashed: true
+  type: git
+  url: git://git.wincent.com/command-t.git
 bundle/cucumber: 
   branch: master
   remote: braid/bundles/cucumber
