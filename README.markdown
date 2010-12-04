@@ -54,6 +54,10 @@ Check out the 'vimrc' file for more...
 	TextMate Command-T like file finder for vim
 
     * `,,` - find file
+	* while at the finder prompt:
+	  * `Ctrl-Enter` - open file in a new split
+	  * `Ctrl-s` - open file in a new split
+	  * `Ctrl-v` - open file in a new vertical split
 
 *   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
 
