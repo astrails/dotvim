@@ -41,7 +41,6 @@ set guioptions-=T       " disable toolbar"
 set completeopt=menuone,preview
 let bash_is_sh=1        " syntax shell files as bash scripts
 set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for details
-set gdefault            " use /g by default on regexes
 set modelines=5         " number of lines to check for vim: directives at the start/end of file
 
 set ts=4                " number of spaces in a tab
