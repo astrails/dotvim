@@ -59,3 +59,7 @@ nmap <leader>y :YRShow<cr>
 " rails
 " completing Rails hangs a lot
 "let g:rubycomplete_rails = 1
+
+" command-t
+nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+let g:CommandTMatchWindowAtTop=1

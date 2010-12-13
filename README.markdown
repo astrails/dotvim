@@ -15,6 +15,9 @@ From your homedirectory (on Linux/Mac OSX):
 * you create and edit ~/.vim\_local if you want to have your some
   local/personal settings you don't want to commit into the repo
 
+* If you want to use command-t file finder plugin you need to compile native extension first.
+  just run `make` at the top of .vim directory
+
 Note: if you alrady have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them ifirst :)
 
 #### General configuration
@@ -45,6 +48,19 @@ Check out the 'vimrc' file for more...
     * `,cc` - add commenting
     * `,cu` - Uncomment
     * check docs for more
+
+*   command-t 1.0 ([vim.org](http://www.vim.org/scripts/script.php?script_id=3025) [git](git://git.wincent.com/command-t.git))
+
+    TextMate Command-T like file finder for vim
+
+    * `,,` - find file
+    * while at the finder prompt:
+      * `Ctrl-Enter` - open file in a new split
+      * `Ctrl-s` - open file in a new split
+      * `Ctrl-v` - open file in a new vertical split
+      * `Ctrl-U` - clear current partial path
+      * `Esc` - calcel
+      * `Ctrl-c` - cancel
 
 *   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
 
@@ -188,18 +204,18 @@ Check out the 'vimrc' file for more...
 
     work with Vim sessions by keeping them in the dedicated location and by providing commands to list, open, and save sessions.
 
-	* `,S`, `:SessionList` - list sessions
-	* `,SS`, `:SessionSave` - save session
-	* `,SA`, `:SessionSaveAs` - save new session
-	* check out "Sessions" submenu under "File"
+    * `,S`, `:SessionList` - list sessions
+    * `,SS`, `:SessionSave` - save session
+    * `,SA`, `:SessionSaveAs` - save new session
+    * check out "Sessions" submenu under "File"
 
 *   ack.vim ([vim.org](http://www.vim.org/scripts/script.php?script_id=2572)) ([github](http://github.com/mileszs/ack.vim))
 
     This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
 
-	* `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
-	* `:Ack --ruby ...` - search only ruby files.
-	* `:h Ack` - more help about Ack
+    * `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
+    * `:Ack --ruby ...` - search only ruby files.
+    * `:h Ack` - more help about Ack
 
 #### "Support" and minor plugins
 
@@ -274,7 +290,7 @@ Check out the 'vimrc' file for more...
 
 *   coffe-script ([github](http://github.com/kchmck/vim-coffee-script))
 
-	syntax for [Coffee script](http://jashkenas.github.com/coffee-script/)
+    syntax for [Coffee script](http://jashkenas.github.com/coffee-script/)
 
 ### Misc
 
