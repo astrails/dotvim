@@ -63,3 +63,8 @@ nmap <leader>y :YRShow<cr>
 " command-t
 nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
 let g:CommandTMatchWindowAtTop=1
+
+" vim-latex
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
