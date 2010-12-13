@@ -14,7 +14,9 @@ set ruler               " line and column number of the cursor position
 set wildmenu            " enhanced command completion
 set visualbell          " use visual bell instead of beeping
 set laststatus=2        " always show the status line
-"fixdel                 " fix terminal code for delete (if delete is broken but backspace works)
+"set listchars=tab:▷⋅,trail:·,eol:$
+set listchars=tab:▷⋅,trail:·
+set list
 
 colorscheme vividchalk
 set background=dark
@@ -42,6 +44,7 @@ set completeopt=menuone,preview
 let bash_is_sh=1        " syntax shell files as bash scripts
 set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for details
 set modelines=5         " number of lines to check for vim: directives at the start/end of file
+"set fixdel                 " fix terminal code for delete (if delete is broken but backspace works)
 
 set ts=4                " number of spaces in a tab
 set sw=4                " number of spaces for indent

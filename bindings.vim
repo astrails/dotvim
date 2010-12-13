@@ -6,8 +6,7 @@ map Q gq
 "make Y consistent with C and D
 nnoremap Y y$
 
-" highlight trailing whitespace  
-set listchars=tab:▷⋅,trail:·,eol:$
+" toggle highlight trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 
 " Ctrl-N to disable search match highlight
