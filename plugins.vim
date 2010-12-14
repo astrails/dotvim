@@ -63,3 +63,7 @@ nmap <leader>y :YRShow<cr>
 " command-t
 nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
 let g:CommandTMatchWindowAtTop=1
+
+" Fugitive
+" ,e for Ggrep
+nmap <leader>g :Ggrep 
