@@ -30,7 +30,7 @@ bundle/cucumber:
 bundle/delimitMate: 
   branch: master
   remote: braid/bundles/delimitMate
-  revision: 8f5a45f9e7b38bd1bcc5b901c0981ec90053a677
+  revision: e551885c249892a91e9627379944c1e20cd078ad
   squashed: true
   type: git
   url: http://github.com/Raimondi/delimitMate.git

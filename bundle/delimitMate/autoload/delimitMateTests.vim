@@ -3,7 +3,7 @@ function! delimitMateTests#Main()
 		echoerr "delimitMateTests#Main(): If you really want to use me, you must set delimitMate_testing to any value."
 		return
 	elseif g:delimitMate_testing == "fork"
-		!gvim -N -u NONE -U NONE -c "set backspace=eol,start" -c "set background=light" -c "syntax on" -c "let delimitMate_testing = 1" -c "so autoload/delimitMate.vim" -c "so autoload/delimitMateTests.vim" -c "so plugin/delimitMate.vim" -c "call delimitMateTests\#Main()"
+		!gvim -N -u NONE -U NONE -c "set runtimepath+=~/.vim/bundle/pathogen" -c "call pathogen\#runtime_append_all_bundles('bundle','symlinks')" -c "set backspace=eol,start" -c "set background=light" -c "syntax on" -c "let delimitMate_testing = 1" -c "ru autoload/delimitMate.vim" -c "ru autoload/delimitMateTests.vim" -c "ru plugin/delimitMate.vim" -c "call delimitMateTests\#Main()"
 		return ""
 	endif
 	nmap <F1> :qall!<CR>
@@ -19,7 +19,6 @@ function! delimitMateTests#Main()
 		let b:delimitMate_matchpairs = &matchpairs
 		let b:delimitMate_quotes = "\" ' `"
 		let b:delimitMate_excluded_regions = "Comment"
-		silent! unlet b:delimitMate_visual_leader
 		let b:delimitMate_expand_space = 0
 		let b:delimitMate_expand_cr = 0
 		let b:delimitMate_smart_quotes = 1
@@ -27,8 +26,12 @@ function! delimitMateTests#Main()
 		let b:delimitMate_tab2exit = 1
 		" Set current test options:
 		for str in a:list
-			let pair = split(str, ':')
-			exec "let b:delimitMate_" . pair[0] . " = " . pair[1]
+			"echom '1:'.str
+			let op = strpart(str, 0, stridx(str,':'))
+			"echom op
+			let val = strpart(str, stridx(str, ':' ) + 1)
+			"echom val
+			exec "let b:delimitMate_" . op . " = " . val
 		endfor
 		DelimitMateReload
 	endfunction " }}}
@@ -160,36 +163,6 @@ function! delimitMateTests#Main()
 	call Type("BS with CR expansion", "(\<CR>\<BS>", ['(|)'], ['expand_cr:1'])
 	call RepeatLast("BS with CR expansion", ['(|)(|)'], 1)
 
-	" Visual wrapping
-	call Type("Visual wrapping left paren", "1234\<Esc>v,(", ['123(4)'], ['visual_leader:","'])
-	cal RepeatLast("Visual wrapping left paren", ['(1)23(4)'], 1)
-
-	" Visual line wrapping
-	call Type("Visual line wrapping left paren", "1234\<Esc>V,(", ['(1234)'], ['visual_leader:","'])
-	cal RepeatLast("Visual line wrapping left paren", ['((1234))'], 1)
-
-	" Visual wrapping
-	call Type("Visual wrapping right paren", "1234\<Esc>v,)", ['123(4)'], ['visual_leader:","'])
-	cal RepeatLast("Visual wrapping right paren", ['(1)23(4)'], 1)
-
-	" Visual line wrapping
-	call Type("Visual line wrapping right paren", "1234\<Esc>V,)", ['(1234)'], ['visual_leader:","'])
-	cal RepeatLast("Visual line wrapping right paren", ['((1234))'], 1)
-
-	" Visual wrapping
-	call Type("Visual wrapping quote", "1234\<Esc>v,\"", ['123"4"'], ['visual_leader:","'])
-	cal RepeatLast("Visual wrapping quote", ['"1"23"4"'], 1)
-
-	" Visual line wrapping
-	call Type("Visual line wrapping quote", "1234\<Esc>V,\"", ['"1234"'], ['visual_leader:","'])
-	cal RepeatLast("Visual line wrapping quote", ['""1234""'], 1)
-
-	" Visual line wrapping empty line
-	call Type("Visual line wrapping paren empty line", "\<Esc>V,(", ['()'], ['visual_leader:","'])
-
-	" Visual line wrapping empty line
-	call Type("Visual line wrapping quote empty line", "\<Esc>V,\"", ['""'], ['visual_leader:","'])
-
 	" Smart quotes
 	call Type("Smart quote alphanumeric", "a\"4", ['a"4|'], [])
 	call RepeatLast("Smart quote alphanumeric", ['a"4|a"4|'])
@@ -242,6 +215,12 @@ function! delimitMateTests#Main()
 
 	" Manual close at start of line
 	call Type("Manual close at start of line", "m)\<Left>\<Left>)", [')|m)'], ["autoclose:0"])
+
+	" Use | in quotes
+	call Type("Use <Bar> in quotes", "\<Bar>bars", ['|bars|'], ["quotes:'|'"])
+
+	" Use | in matchpairs
+	call Type("Use <Bar> in matchpairs", "\<Bar>bars", ['|bars|$$'], ["matchpairs:'|:$'"])
 
 	"}}}
 
