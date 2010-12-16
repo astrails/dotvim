@@ -67,3 +67,7 @@ let g:CommandTMatchWindowAtTop=1
 " Fugitive
 " ,e for Ggrep
 nmap <leader>g :Ggrep 
+
+" Ack
+" ,a for Ack
+nmap <leader>k :Ack
