@@ -28,9 +28,6 @@ vmap <leader>/ :call NERDComment(0, "invert")<cr>
 let Tlist_Show_Menu=1
 nmap <leader>t :TlistToggle<CR>
 
-" ,f to fast finding files using fuzzy finder.
-nmap <leader>f :FufFile **/<CR>
-
 " sessionman
 nmap <leader>S :SessionList<CR>
 nmap <leader>SS :SessionSave<CR>

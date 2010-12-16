@@ -62,12 +62,6 @@ Check out the 'vimrc' file for more...
       * `Esc` - calcel
       * `Ctrl-c` - cancel
 
-*   fuzzyfinder 3.5 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1984))
-
-    buffer/file/command/tag/etc explorer with fuzzy matching
-
-    * `,f` - FufFile - fuzzy find file
-
 *   autocomplpop 2.14.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1879))
 
     Automatically opens popup menu for completions
