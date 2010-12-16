@@ -184,12 +184,6 @@ Check out the 'vimrc' file for more...
     `,sh` - start a vimsh window
     `,r`  - opens vim prompt for command to run
 
-*   drillctg 1.1.3 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2013))
-
-    Allows fast drill-down search across the pathnames in your ctags file
-
-    `:Drill` to open drill window
-
 *   vividchalk ([vim.org](http://www.vim.org/scripts/script.php?script_id=1891)) ([github](http://github.com/vitaly/vim-vividchalk))
 
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
