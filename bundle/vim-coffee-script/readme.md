@@ -1,5 +1,5 @@
 This project adds [CoffeeScript] support to the vim editor. Currently, it
-supports [almost][todo] all of CoffeeScript 0.9.2's syntax and indentation style.
+supports [almost][todo] all of CoffeeScript's syntax and indentation style.
 
 ![Screenshot][screenshot]
 
@@ -23,7 +23,7 @@ supports [almost][todo] all of CoffeeScript 0.9.2's syntax and indentation style
      > so you actually need to "filetype off" before "filetype plugin indent on"
      > to force reloading.
 
-[pathogen]: http://vim.org/scripts/script.php?script_id=2332
+[pathogen]: http://www.vim.org/scripts/script.php?script_id=2332
 
 2. Create, and change into, the `~/.vim/bundle/` directory:
 
@@ -50,12 +50,19 @@ extension or a `Cakefile` will load all the CoffeeScript stuff.
 
         $ git pull
 
-Everything will then be brought up to date!
+Everything will then be brought up to date.
 
 ### Customizing
 
-Some of the possibly unwanted syntax highlighting elements can be disabled
-in the following ways.
+#### Compile the current file on write/save
+
+If you are using the NodeJS version of CofeeScript, with the `coffee` command 
+in your `$PATH`, you can enable auto-compiling on file write/save like so:
+	
+    let coffee_compile_on_save = 1
+
+This will compile the CoffeeScript to JavaScript. For example,
+`/Users/brian/ZOMG.coffee` will compile to `/Users/brian/ZOMG.js`.
 
 #### Disable trailing whitespace error highlighting
 

@@ -22,14 +22,11 @@
         }
       └─ bracket should be put here
 
-- Should indent if the previous line ends, or the current line starts, with one
-  of these:
+- Fix assignments with brackets in this case:
 
-      + - * / % | & , . is isnt and or && || 
+      (a[b] = c) for d in e[f]
 
-- Support `else unless` in indentation:
+- Highlight `++` and `--` as assignments:
 
-      unless a
-        b
-      else unless c
-        d
+      ++a  --a
+      a++  a--
