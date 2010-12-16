@@ -58,7 +58,7 @@ bundle/haml:
 bundle/nerdcommenter: 
   branch: master
   remote: braid/bundles/nerdcommenter
-  revision: 5c9359d3cfed3593b7a01b2deba2a58fb75c6a43
+  revision: 760df352734666753ceb66a0886e0f0a844c3a48
   squashed: true
   type: git
   url: git://github.com/scrooloose/nerdcommenter.git
