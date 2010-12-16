@@ -142,7 +142,7 @@ bundle/vividchalk:
 vim-pathogen: 
   branch: master
   remote: braid/vim-pathogen
-  revision: f4f79bc7205b6c101955f32985a4d1b1da0be556
+  revision: 968e87ef7fa5ce19dbd3ffe23f0e0d58d88fae43
   squashed: true
   type: git
   url: git://github.com/tpope/vim-pathogen.git
