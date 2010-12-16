@@ -16,7 +16,7 @@ bundle/align:
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
-  revision: a338c4c3a964ec79215aed92b4337763757b17bd
+  revision: a08fed9f6c37519e8ca58e6cf0b0c99ae8581ffe
   squashed: true
   type: git
   url: git://git.wincent.com/command-t.git
