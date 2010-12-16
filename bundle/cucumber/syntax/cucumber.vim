@@ -97,8 +97,8 @@ exe 'syn match cucumberExamples "\%(^\s*\)\@<='.s:pattern('examples').':" nextgr
 
 syn match   cucumberPlaceholder   "<[^<>]*>" contained containedin=@cucumberStepRegions
 syn match   cucumberExampleTable  "\%(^\s*\)\@<=|.*" contains=cucumberDelimiter
-syn match   cucumberDelimiter     "|" contained
-syn match   cucumberTags          "\%(^\s*\)\@<=\%(@[^@[:space:]]\+\s\+\)*@[^@[:space:]]\+\s*$"
+syn match   cucumberDelimiter     "\\\@<!\%(\\\\\)*\zs|" contained
+syn match   cucumberTags          "\%(^\s*\)\@<=\%(@[^@[:space:]]\+\s\+\)*@[^@[:space:]]\+\s*$" contains=@NoSpell
 syn region  cucumberString   start=+\%(^\s*\)\@<="""+ end=+"""+
 
 call s:Add('Then')
