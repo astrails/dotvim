@@ -66,9 +66,9 @@ Rails application development.
    fixtures, and more. |rails-rake|
 
 6. Interface to script/*.  Generally, use ":Rscript about" to call
-   "script/about".  Most commands have wrappers with additional features:
-   ":Rgenerate controller Blog" generates a blog controller and edits
-   app/controllers/blog_controller.rb.  |rails-scripts|
+   "script/about" or "script/rails about".  Most commands have wrappers with
+   additional features: ":Rgenerate controller Blog" generates a blog
+   controller and edits app/controllers/blog_controller.rb.  |rails-scripts|
 
 7. Partial extraction and migration inversion.  |:Rextract| {file} replaces
    the desired range (ideally selected in visual line mode) with "render
@@ -394,8 +394,9 @@ itself!).
 			defaults to editing test/test_helper.rb.
 
 						*rails-:Rjavascript*
-:Rjavascript [{name}]	Edit the javascript for the specified name or current
-			controller.
+:Rjavascript [{name}]	Edit the JavaScript for the specified name or current
+			controller.  Also supports CoffeeScript in
+			app/scripts/.
 
 						*rails-:Rlayout*
 :Rlayout [{name}]	Edit the specified layout.  Defaults to the layout for
@@ -460,7 +461,7 @@ itself!).
 
 						*rails-:Rstylesheet*
 :Rstylesheet [{name}]	Edit the stylesheet for the specified name or current
-			controller.
+			controller.  Also supports Sass and SCSS.
 
 						*rails-:Rtask*
 :Rtask [{name}]		Edit the .rake file from lib/tasks for the specified
