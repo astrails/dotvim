@@ -3,6 +3,10 @@ set nocompatible
 syntax on
 filetype plugin indent on
 
+" prevent vim from adding that stupid empty line at the end of every file
+set noeol
+set binary
+
 " presentation settings
 set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
@@ -79,9 +83,6 @@ set foldmethod=indent
 set foldlevel=9
 set nofoldenable        "dont fold by default "
 
-" prevent vim from adding that stupid empty line at the end of every file
-set noeol
-set binary
-
 " extended '%' mapping for if/then/else/end etc
 runtime macros/matchit.vim
+
