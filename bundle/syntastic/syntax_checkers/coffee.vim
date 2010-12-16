@@ -1,7 +1,7 @@
 "============================================================================
-"File:        sass.vim
+"File:        coffee.vim
 "Description: Syntax checking plugin for syntastic.vim
-"Maintainer:  Martin Grenfell <martin.grenfell at gmail dot com>
+"Maintainer:  Lincoln Stoll <l@lds.li>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
 "             it and/or modify it under the terms of the Do What The Fuck You
@@ -9,25 +9,19 @@
 "             See http://sam.zoy.org/wtfpl/COPYING for more details.
 "
 "============================================================================
-if exists("loaded_sass_syntax_checker")
+if exists("loaded_coffee_syntax_checker")
     finish
 endif
-let loaded_sass_syntax_checker = 1
+let loaded_coffee_syntax_checker = 1
 
-"bail if the user doesnt have the sass binary installed
-if !executable("sass")
+"bail if the user doesnt have ruby installed
+if !executable("coffee")
     finish
 endif
 
-function! SyntaxCheckers_sass_GetLocList()
-    let makeprg='sass --check '.shellescape(expand('%'))
-    let errorformat = '%Wwarning on line %l:,%Z%m,Syntax %trror on line %l: %m'
-    let loclist = SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+function! SyntaxCheckers_coffee_GetLocList()
+    let makeprg = 'coffee -c -l -o /dev/null %'
+    let errorformat =  '%EError: In %f\, Parse error on line %l: %m,%EError: In %f\, %m on line %l,%W%f(%l): lint warning: %m,%-Z%p^,%W%f(%l): warning: %m,%-Z%p^,%E%f(%l): SyntaxError: %m,%-Z%p^,%-G'
 
-    let bn = bufnr("")
-    for i in loclist
-        let i['bufnr'] = bn
-    endfor
-
-    return loclist
+    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
 endfunction

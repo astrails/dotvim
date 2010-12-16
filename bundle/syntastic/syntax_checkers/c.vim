@@ -74,17 +74,20 @@ function! s:Init()
                 \ ['opengl', 'gl'])
     call s:RegHandler('ruby', 's:CheckRuby', [])
     call s:RegHandler('Python\.h', 's:CheckPython', [])
+    call s:RegHandler('php\.h', 's:CheckPhp', [])
 
     unlet! s:RegHandler
 endfunction
 
 function! SyntaxCheckers_c_GetLocList()
-    let makeprg = 'gcc -fsyntax-only %'
-    let errorformat =  '%-G%f:%s:,%f:%l: %m'
+    let makeprg = 'gcc -fsyntax-only '.shellescape(expand('%')).' -I. -I..'
+    let errorformat = '%-G%f:%s:,%-G%f:%l: %#error: %#(Each undeclared '.
+                \ 'identifier is reported only%.%#,%-G%f:%l: %#error: %#for '.
+                \ 'each function it appears%.%#,%f:%l: %trror: %m,%f:%l: %m'
 
     if expand('%') =~? '.h$'
         if exists('g:syntastic_c_check_header')
-            let makeprg = 'gcc -c %'
+            let makeprg = 'gcc -c '.shellescape(expand('%')).' -I. -I..'
         else
             return []
         endif
@@ -95,10 +98,10 @@ function! SyntaxCheckers_c_GetLocList()
                     \ g:syntastic_c_no_include_search != 1
             if exists('g:syntastic_c_auto_refresh_includes') &&
                         \ g:syntastic_c_auto_refresh_includes != 0
-                let makeprg .= s:SearchHeaders(s:handlers)
+                let makeprg .= s:SearchHeaders()
             else
                 if !exists('b:syntastic_c_includes')
-                    let b:syntastic_c_includes = s:SearchHeaders(s:handlers)
+                    let b:syntastic_c_includes = s:SearchHeaders()
                 endif
                 let makeprg .= b:syntastic_c_includes
             endif
@@ -112,20 +115,24 @@ endfunction
 
 " search the first 100 lines for include statements that are
 " given in the s:handlers dictionary
-function! s:SearchHeaders(handlers)
+function! s:SearchHeaders()
     let includes = ''
-    let l:handlers = copy(a:handlers)
     let files = []
+    let found = []
+    let lines = filter(getline(1, 100), 'v:val =~# "#\s*include"')
 
     " search current buffer
-    for i in range(100)
-        for handler in l:handlers
-            let line = getline(i)
-            if line =~# '^#include.*' . handler["regex"]
+    for line in lines
+        let file = matchstr(line, '"\zs\S\+\ze"')
+        if file != ''
+            call add(files, file)
+            continue
+        endif
+        for handler in s:handlers
+            if line =~# handler["regex"]
                 let includes .= call(handler["func"], handler["args"])
-                call remove(l:handlers, index(l:handlers, handler))
-            elseif line =~# '^#include\s\+"\S\+"'
-                call add(files, matchstr(line, '^#include\s\+"\zs\S\+\ze"'))
+                call add(found, handler["regex"])
+                break
             endif
         endfor
     endfor
@@ -140,11 +147,16 @@ function! s:SearchHeaders(handlers)
             catch /E484/
                 continue
             endtry
-            for line in lines
-                for handler in l:handlers
-                    if line =~# '^#include.*' . handler["regex"]
+            let lines = filter(lines, 'v:val =~# "#\s*include"')
+            for handler in s:handlers
+                if index(found, handler["regex"]) != -1
+                    continue
+                endif
+                for line in lines
+                    if line =~# handler["regex"]
                         let includes .= call(handler["func"], handler["args"])
-                        call remove(l:handlers, index(l:handlers, handler))
+                        call add(found, handler["regex"])
+                        break
                     endif
                 endfor
             endfor
@@ -171,6 +183,18 @@ function! s:CheckPKG(name, ...)
         else
             return s:cflags[a:name]
         endif
+    endif
+    return ''
+endfunction
+
+" try to find PHP includes with 'php-config'
+function! s:CheckPhp()
+    if executable('php-config')
+        if !exists('s:php_flags')
+            let s:php_flags = system('php-config --includes')
+            let s:php_flags = ' ' . substitute(s:php_flags, "\n", '', '')
+        endif
+        return s:php_flags
     endif
     return ''
 endfunction
