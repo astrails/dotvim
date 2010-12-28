@@ -205,6 +205,25 @@ Check out the 'vimrc' file for more...
     * `:Ack --ruby ...` - search only ruby files.
     * `:h Ack` - more help about Ack
 
+*   textobj-rubyblock ([vim.org](http://www.vim.org/scripts/script.php?script_id=3382)) ([github](https://github.com/nelstrom/vim-textobj-rubyblock))
+
+    A custom text object for selecting ruby blocks.
+
+    In other words it teaches vim to understand what is ruby block, just like vim already understands what is word, paragraph, sentence etc.
+
+    It works with begin/end, if/else/end etc.
+
+    * `var` - select ruby block around the cursor including begin/end
+    * `vir` - select insides of a ruby block around the cursor not including begin/end
+    * `dar` - delete ruby block around the cursor
+    * etc...
+
+    Some 'trickier' usage patterns.
+
+    * `varar` - select the ruby block that is around the ruby block that is around the cursor. including begin/end
+    * `vararir` - select insides of the ruby block that is around the ruby block that is around the cursor. not including begin/end
+    * ...
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
@@ -213,6 +232,10 @@ Check out the 'vimrc' file for more...
     is used as the common root for all the plugins.
 
     Already configured
+
+*   textobj-user ([vim.org](http://www.vim.org/scripts/script.php?script_id=2100)) ([github](https://github.com/kana/vim-textobj-user))
+
+    Support for user-defined text objects
 
 *   misc-lang-settings
 
