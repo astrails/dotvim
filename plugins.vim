@@ -67,4 +67,4 @@ nmap <leader>g :Ggrep
 
 " Ack
 " ,a for Ack
-nmap <leader>k :Ack
+nmap <leader>k :Ack 
