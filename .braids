@@ -132,6 +132,13 @@ bundle/vim-coffee-script:
   squashed: true
   type: git
   url: http://github.com/kchmck/vim-coffee-script.git
+bundle/vim-textobj-user: 
+  branch: master
+  remote: braid/bundle/vim-textobj-user
+  revision: 8dc78888b7e3bbd562b2f8c29c96365f61cba194
+  squashed: true
+  type: git
+  url: https://github.com/kana/vim-textobj-user.git
 bundle/vividchalk: 
   branch: master
   remote: braid/bundles/vividchalk
