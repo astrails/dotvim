@@ -224,6 +224,17 @@ Check out the 'vimrc' file for more...
     * `vararir` - select insides of the ruby block that is around the ruby block that is around the cursor. not including begin/end
     * ...
 
+*   vim-indentobject ([github](https://github.com/austintaylor/vim-indentobject))
+
+    A text object for manipulating blocks based on their indentation
+
+    This is good for Python, YAML, HAML etc.
+
+    Usage is similar to textobj-rubyblock, just with `i` instead of `r`
+
+    * `vai` / `vii` - select indent block including / excluding the outer lines
+    * ...
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
