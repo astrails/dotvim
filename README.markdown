@@ -235,6 +235,20 @@ Check out the 'vimrc' file for more...
     * `vai` / `vii` - select indent block including / excluding the outer lines
     * ...
 
+*   greplace ([vim.org](http://www.vim.org/scripts/script.php?script_id=1813))
+
+    Replace a pattern across multiple files interactively
+
+    Use `:Gsearch` to search for pattenr. Edit the result buffer to your
+    liking, then `:Greplace` to incorporate your edits into the source files
+
+    * `:Gsearch` - Search for a given pattern in the specified group of files
+      and display the matches in the replace buffer.
+    * `:Gbuffersearch` - Search for a given pattern in all the buffers in the Vim buffer list.
+    * `:Greplace` - Incorporate the modifications from the replace buffer into
+      the corresponding files.
+
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
