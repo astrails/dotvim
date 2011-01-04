@@ -348,4 +348,7 @@ randomly chosen bits of vim goodness.
 * `ci` change inside delimiters
 * `di` delete inside delimiters
 * `@@` execute last macro
-
+* `"xyy` copy line into `x` register (replace x with any other)
+* `<C-R>x` while in insert mote will paste content of register x (replace x with any other)
+* `"xp` paste from register x
+* `:reg` Display the contents of all numbered and named registers.
