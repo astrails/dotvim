@@ -248,6 +248,19 @@ Check out the 'vimrc' file for more...
     * `:Greplace` - Incorporate the modifications from the replace buffer into
       the corresponding files.
 
+*   vim-ruby-refactoring ([github](https://github.com/ecomba/vim-ruby-refactoring))
+
+    Refactoring tool for Ruby in vim!
+
+    * `,rap`  :RAddParameter           - Add Parameter(s) to a method
+    * `,rcpc` :RConvertPostConditional - Convert Post Conditional
+    * `,rel`  :RExtractLet             - Extract to Let (Rspec)
+    * `,rec`  :RExtractConstant        - Extract Constant (visual selection)
+    * `,relv` :RExtractLocalVariable   - Extract Local Variable (visual selection)
+    * `,rit`  :RInlineTemp             - Inline Temp. replace temp parameter by direct function call
+    * `,rrlv` :RRenameLocalVariable    - Rename Local Variable (visual selection/variable under the cursor
+    * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
+    * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
 #### "Support" and minor plugins
 
