@@ -45,7 +45,7 @@ let g:Conque_TERM = 'xterm'
 " ,sh shell window
 nmap <Leader>sh :ConqueSplit bash<cr>
 " ,r run command
-nmap <Leader>r :ConqueSplit 
+nmap <Leader>R :ConqueSplit
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['

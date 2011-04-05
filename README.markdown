@@ -182,7 +182,7 @@ Check out the 'vimrc' file for more...
     This one is much better then vimsh that I was using before
 
     `,sh` - start a vimsh window
-    `,r`  - opens vim prompt for command to run
+    `,R`  - opens vim prompt for command to run
 
 *   vividchalk ([vim.org](http://www.vim.org/scripts/script.php?script_id=1891)) ([github](http://github.com/vitaly/vim-vividchalk))
 
