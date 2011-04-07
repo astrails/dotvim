@@ -139,6 +139,13 @@ bundle/vim-indentobject:
   squashed: true
   type: git
   url: https://github.com/austintaylor/vim-indentobject.git
+bundle/vim-makegreen: 
+  branch: master
+  remote: braid/bundle/vim-makegreen
+  revision: 2269d77fc7e644331b21ef7de961d21ec66a4d9d
+  squashed: true
+  type: git
+  url: https://github.com/reinh/vim-makegreen.git
 bundle/vim-ruby-refactoring: 
   branch: master
   remote: braid/bundle/vim-ruby-refactoring
