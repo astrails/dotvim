@@ -13,6 +13,13 @@ bundle/align:
   squashed: true
   type: git
   url: http://github.com/tsaleh/vim-align.git
+bundle/colors-solarized: 
+  branch: master
+  remote: braid/bundle/colors-solarized
+  revision: 4b0568dd06b5d04bb2c79ffd49d0898abe10ca18
+  squashed: true
+  type: git
+  url: https://github.com/altercation/vim-colors-solarized.git
 bundle/command-t: 
   branch: master
   remote: braid/bundle/command-t
