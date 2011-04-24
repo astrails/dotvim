@@ -80,7 +80,7 @@ endfunction
 " Mappings" {{{1
 
 if !hasmapto('MakeGreen')
-  map <unique> <silent> <Leader>t :call MakeGreen()<cr>
+  map <unique> <silent> <Leader>. :call MakeGreen()<cr>
 endif
 " }}}1
 
