@@ -1,6 +1,6 @@
 This is a complete Vim configuration that I'm using everywhere
 
-Plugins that are available form a git repository were added with
+Plugins that are available from a git repository were added with
 [Braid](http://github.com/evilchelu/braid) for easy upgrading.
 
 *Some* help tips are provided for *some* of the plugins. please check out the plugin's docs for more info.
@@ -18,7 +18,7 @@ From your homedirectory (on Linux/Mac OSX):
 * If you want to use command-t file finder plugin you need to compile native extension first.
   just run `make` at the top of .vim directory
 
-Note: if you alrady have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them ifirst :)
+Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
 
 #### General configuration
 
@@ -59,7 +59,7 @@ Check out the 'vimrc' file for more...
       * `Ctrl-s` - open file in a new split
       * `Ctrl-v` - open file in a new vertical split
       * `Ctrl-U` - clear current partial path
-      * `Esc` - calcel
+      * `Esc` - cancel
       * `Ctrl-c` - cancel
 
 *   autocomplpop 2.14.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1879))
@@ -98,7 +98,7 @@ Check out the 'vimrc' file for more...
          Bring up the output of git-status in the preview
          window.  Press `-` to stage or unstage the file on the
          cursor line.  Press `p` to do so on a per hunk basis
-         (--patch).  Press `C` to invoke |:Gcommit|.
+         (--patch).  Press `C` to invoke :Gcommit.
 
     *    `:Gcommit [args]`
 
@@ -106,7 +106,7 @@ Check out the 'vimrc' file for more...
 
     *    `:Ggrep [args]`
 
-         |:grep| with git-grep as 'grepprg'.
+         :grep with git-grep as 'grepprg'.
 
     *   `:Gblame`
 
@@ -128,7 +128,7 @@ Check out the 'vimrc' file for more...
     * `:Rinvert` - takes a self.up migration and writes a self.down.
     * `gf` - remapped to take context into account. recognizes models
       associations, partials etc.
-    * `:h rails` for more info ;)
+    * `:h rails` for much more info ;)
 
 *   syntastic ([github](http://github.com/scrooloose/syntastic))
 
@@ -239,7 +239,7 @@ Check out the 'vimrc' file for more...
 
     Replace a pattern across multiple files interactively
 
-    Use `:Gsearch` to search for pattenr. Edit the result buffer to your
+    Use `:Gsearch` to search for a pattern. Edit the result buffer to your
     liking, then `:Greplace` to incorporate your edits into the source files
 
     * `:Gsearch` - Search for a given pattern in the specified group of files
@@ -337,7 +337,7 @@ Check out the 'vimrc' file for more...
 
     syntax for [Markdown](http://daringfireball.net/projects/markdown/)
 
-*   coffe-script ([github](http://github.com/kchmck/vim-coffee-script))
+*   coffee-script ([github](http://github.com/kchmck/vim-coffee-script))
 
     syntax for [Coffee script](http://jashkenas.github.com/coffee-script/)
 
