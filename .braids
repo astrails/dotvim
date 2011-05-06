@@ -13,6 +13,13 @@ bundle/align:
   squashed: true
   type: git
   url: http://github.com/tsaleh/vim-align.git
+bundle/apidock: 
+  branch: master
+  remote: braid/bundle/apidock
+  revision: a0e19b4eb806cbd2571886518984cf4b740ec4f3
+  squashed: true
+  type: git
+  url: https://github.com/alexandrov/apidock.vim.git
 bundle/colors-solarized: 
   branch: master
   remote: braid/bundle/colors-solarized
