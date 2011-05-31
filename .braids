@@ -135,7 +135,7 @@ bundle/unimpaired:
 bundle/vim-coffee-script: 
   branch: master
   remote: braid/bundles/vim-coffee-script
-  revision: f8f847c8465f6fa312687b33c187d127c0826e57
+  revision: feab54e0036b6a7aa524c293d02cf9ca40026ce7
   squashed: true
   type: git
   url: http://github.com/kchmck/vim-coffee-script.git
