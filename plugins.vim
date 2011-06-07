@@ -59,6 +59,7 @@ nmap <leader>y :YRShow<cr>
 
 " command-t
 nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
+nmap <unique> <silent> <Leader><Leader><Leader> :CommandTFlush<CR>:CommandT<CR>
 let g:CommandTMatchWindowAtTop=1
 
 " Fugitive
