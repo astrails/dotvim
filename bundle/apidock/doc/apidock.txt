@@ -1,0 +1,34 @@
+*apidock.txt* Plugin that allows you to query apidock.com from Vim
+
+Author:  Cassio Marques <cassiommc@gmail.com>                   *apidock-author*
+
+Maintainer: Miles Z. Sterrett <miles.sterrett@gmail.com>
+(Bug this guy if something is wrong with the plugin.)
+
+License: Same terms as Vim itself (see |license|)
+
+==============================================================================
+INTRODUCTION                                                        *apidock*
+
+This plugin allows you to browse http://apidock.com Ruby, Rails, and RSpec docs
+from within Vim.  It will invoke Firefox from the command line, and open the
+query in a new tab.
+
+==============================================================================
+USAGE                                                         *apidock-usage*
+
+RR                       Search the Rails docs for the word under the cursor.
+RB                       Search the Ruby docs for the word under the cursor.
+RS                       Search the RSpec docs fro the word under the cursor.
+
+==============================================================================
+CUSTOMIZATION                                         *apidock-customization*
+
+If you don't want to use Firefox, the fix is pretty simple.  Edit
+~/.vim/plugin/apidock.vim, and edit the line,
+
+ let g:browser = 'firefox -new-tab '
+
+using the shell command for your preferred browser.
+
+See http://github.com/mileszs/apidock.vim/tree/master for more information.
