@@ -1,7 +1,7 @@
 "============================================================================
-"File:        coffee.vim
+"File:        docbk.vim
 "Description: Syntax checking plugin for syntastic.vim
-"Maintainer:  Lincoln Stoll <l@lds.li>
+"Maintainer:  Martin Grenfell <martin.grenfell at gmail dot com>
 "License:     This program is free software. It comes without any warranty,
 "             to the extent permitted by applicable law. You can redistribute
 "             it and/or modify it under the terms of the Do What The Fuck You
@@ -9,19 +9,21 @@
 "             See http://sam.zoy.org/wtfpl/COPYING for more details.
 "
 "============================================================================
-if exists("loaded_coffee_syntax_checker")
+if exists("loaded_docbk_syntax_checker")
     finish
 endif
-let loaded_coffee_syntax_checker = 1
+let loaded_docbk_syntax_checker = 1
 
-"bail if the user doesnt have coffee installed
-if !executable("coffee")
+"bail if the user doesnt have tidy or grep installed
+if !executable("xmllint")
     finish
 endif
 
-function! SyntaxCheckers_coffee_GetLocList()
-    let makeprg = 'coffee -c -l -o /tmp %'
-    let errorformat =  '%EError: In %f\, Parse error on line %l: %m,%EError: In %f\, %m on line %l,%W%f(%l): lint warning: %m,%-Z%p^,%W%f(%l): warning: %m,%-Z%p^,%E%f(%l): SyntaxError: %m,%-Z%p^,%-G'
+function! SyntaxCheckers_docbk_GetLocList()
 
-    return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+    let makeprg="xmllint --xinclude --noout --postvalid %"
+    let errorformat='%E%f:%l: parser error : %m,%W%f:%l: parser warning : %m,%E%f:%l:%.%# validity error : %m,%W%f:%l:%.%# validity warning : %m,%-Z%p^,%-C%.%#,%-G%.%#'
+    let loclist = SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
+
+    return loclist
 endfunction
