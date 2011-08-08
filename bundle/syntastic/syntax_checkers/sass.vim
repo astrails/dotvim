@@ -29,7 +29,13 @@ function! SyntaxCheckers_sass_GetLocList()
         let g:syntastic_sass_imports = ""
     endif
 
-    let makeprg='sass '.g:syntastic_sass_imports.' --check '.shellescape(expand('%'))
+	if executable("compass") && filereadable("config/compass.rb")
+		let local_imports = "--compass"
+	else
+		let local_imports = ""
+	endif
+
+    let makeprg='sass '.g:syntastic_sass_imports.' '.local_imports.' --check '.shellescape(expand('%'))
     let errorformat = '%ESyntax %trror:%m,%C        on line %l of %f,%Z%m'
     let errorformat .= ',%Wwarning on line %l:,%Z%m,Syntax %trror on line %l: %m'
     let loclist = SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat })
