@@ -11,6 +11,6 @@ endif
 function! SyntaxCheckers_coffee_GetLocList()
     let errorformat =  '%EError: In %f\, Parse error on line %l: %m,%Z%p^,%W%f:%l: warning: %m'
 
-    return SyntasticMake({ 'makeprg': 'coffee -o /dev/null -c %', 'errorformat': errorformat })
+    return SyntasticMake({ 'makeprg': 'coffee -o /tmp -c %', 'errorformat': errorformat })
 endfunction
 
