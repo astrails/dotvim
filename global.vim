@@ -28,11 +28,6 @@ set background=dark
 " highlight spell errors
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
 
-" status line
-set statusline=%<%1*%f%*\ %h%m%r%#warningmsg#%{SyntasticStatuslineFlag()}%*%=%-14.(%l,%c%V%)\ %P
-" highlihgt status line file name
-hi User1 term=bold,reverse cterm=bold ctermfg=4 ctermbg=2 gui=bold guifg=Blue guibg=#44aa00
-
 " behavior
                         " ignore these files when completing names and in
                         " explorer
@@ -85,4 +80,3 @@ set nofoldenable        "dont fold by default "
 
 " extended '%' mapping for if/then/else/end etc
 runtime macros/matchit.vim
-
