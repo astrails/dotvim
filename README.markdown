@@ -108,6 +108,14 @@ Check out the 'vimrc' file for more...
 
          :grep with git-grep as 'grepprg'.
 
+    *    `,g`
+
+         shortcut to run :Ggrep
+
+    *   `//`
+
+        global git search for the word under the cursor for for selection (in visual mode)
+
     *   `:Gblame`
 
         Run git-blame on the file and open the results in a

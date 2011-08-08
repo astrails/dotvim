@@ -66,6 +66,11 @@ let g:CommandTMatchWindowAtTop=1
 " ,e for Ggrep
 nmap <leader>g :Ggrep 
 
+" // for global git serach for word under the cursor (with highlight)
+nmap // :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:cw<CR><CR>
+
+" same in visual mode
+:vmap // y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:cw<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"')<CR>"<CR>
 " Ack
 " ,a for Ack
 nmap <leader>k :Ack 
