@@ -30,3 +30,4 @@ set completeopt=menuone,preview
 
 " driving me insane this thing
 nmap :W :w
+nmap :Q :q
