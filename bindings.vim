@@ -24,6 +24,7 @@ map! <S-Insert> <MiddleMouse>
 
 " ,n to get the next location (compilation errors, grep etC)
 nmap <leader>n :cn<CR>
+nmap <leader>N :cp<CR>
 
 "set completeopt=menuone,preview,longest
 set completeopt=menuone,preview

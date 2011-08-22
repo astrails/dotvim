@@ -26,6 +26,8 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 
 * `,e` mapped to `:e **/`. essentially you do `,efoo<tab>` to get a list of all files starting with foo
 * `,s` - toggle invisible characters display
+* `,n` - next `quicklist` result (like :Ggrep etc)
+* `,N` - previous `quicklist` result (like :Ggrep etc)
 * `Ctrl-E` - switch between 2 last buffers  (its just a `:b#<cr>` :)
 * `Ctrl-N` to cancel current search highlighing
 
