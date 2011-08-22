@@ -1,0 +1,52 @@
+*bundler.vim*  Support for Ruby's Bundler
+
+Author:  Tim Pope <http://tpo.pe/>
+License: Same terms as Vim itself (see |license|)
+
+This plugin is only available if 'compatible' is not set.
+
+INTRODUCTION                                    *bundler*
+
+This lightweight companion to rails.vim and rake.vim provides support for
+Bundler.  In addition to the below commands, it also syntax highlights
+Gemfile and Gemfile.lock, and alters 'path' and 'tags' to include bundled
+gems.  I recommend gem-ctags for generating tags for your gems.
+
+COMMANDS                                        *bundler-commands*
+
+                                                *bundler-:Bundle*
+:Bundle[!] [args]       Invoke `bundle` via |:make|.
+
+
+                                                *bundler-:Bopen*
+:Bopen[!] [gem]         With no argument, edits the Gemfile.  Otherwise,
+                        effectively does a `bundle open` of a gem inside of
+                        Vim, including an |:lcd| to the gem's root directory.
+                        Add ! to discard the current buffer's changes.
+
+                                                *bundler-:Bedit*
+:Bedit[!] [gem]         Like |:Bopen|, but don't |:lcd| afterwards.
+
+                                                *bundler-:Bsplit*
+:Bsplit[!] [gem]        Like |:Bopen|, but horizontally split.  Add ! to
+                        suppress the |:lcd|.
+
+                                                *bundler-:Bvsplit*
+:Bvsplit[!] [gem]       Like |:Bopen|, but vertically split.  Add ! to
+                        suppress the |:lcd|.
+
+                                                *bundler-:Btabedit*
+:Btabedit[!] [gem]      Like |:Bopen|, but use a new tab.  Add ! to
+                        suppress the |:lcd|.
+
+                                                *bundler-:Bpedit*
+:Bpedit[!] [gem]        Like |:Bopen|, but use a preview window.  Add ! to
+                        suppress the |:lcd|.
+
+ABOUT                                           *bundler-about*
+
+Grab the latest version or report a bug on GitHub:
+
+http://github.com/tpope/vim-bundler
+
+ vim:tw=78:et:ft=help:norl:

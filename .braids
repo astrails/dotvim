@@ -139,6 +139,13 @@ bundle/unimpaired:
   squashed: true
   type: git
   url: git://github.com/tpope/vim-unimpaired.git
+bundle/vim-bundler: 
+  branch: master
+  remote: braid/bundle/vim-bundler
+  revision: 3f1e6e9f58fa3e04122430714e0b2180fb683f0b
+  squashed: true
+  type: git
+  url: https://github.com/tpope/vim-bundler.git
 bundle/vim-coffee-script: 
   branch: master
   remote: braid/bundles/vim-coffee-script
