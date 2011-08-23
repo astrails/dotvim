@@ -30,6 +30,7 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `,N` - previous `quicklist` result (like :Ggrep etc)
 * `Ctrl-E` - switch between 2 last buffers  (its just a `:b#<cr>` :)
 * `Ctrl-N` to cancel current search highlighing
+* `,\` global Ggrep for word under the cursor or for selection
 
 Check out the 'vimrc' file for more...
 
