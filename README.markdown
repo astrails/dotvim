@@ -281,6 +281,14 @@ Check out the 'vimrc' file for more...
     * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
     * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
+*   apidoc ([github](https://github.com/alexandrov/apidock.vim))
+
+    Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim.
+
+    * `RR` - Search the Rails docs for the word under the cursor.
+    * `RB` - Search the Ruby docs for the word under the cursor.
+    * `RS` - Search the RSpec docs for the word under the cursor.
+
 #### "Support" and minor plugins
 
 *   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
