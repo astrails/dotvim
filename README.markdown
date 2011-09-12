@@ -161,7 +161,7 @@ Check out the 'vimrc' file for more...
     * `\d` - cycle diff combinations
     * `\D` - turn off all diffs
 
-    * `CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
+    * `\CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
 
     * `:h threesome` - you should probably read it ;)
 
