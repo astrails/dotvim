@@ -66,7 +66,7 @@ let g:CommandTMatchWindowAtTop=1
 " ,e for Ggrep
 nmap <leader>g :Ggrep 
 
-" // for global git serach for word under the cursor (with highlight)
+" ,f for global git serach for word under the cursor (with highlight)
 nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
 
 " same in visual mode
