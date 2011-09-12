@@ -23,6 +23,7 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 #### General configuration
 
 `,` is used as mapleader
+`backslash` is used as localleader
 
 * `,e` mapped to `:e **/`. essentially you do `,efoo<tab>` to get a list of all files starting with foo
 * `,s` - toggle invisible characters display
@@ -126,6 +127,43 @@ Check out the 'vimrc' file for more...
         reblame the file as it was in that commit.
 
     Much more in the plugin's doc
+
+*   threesome ([vim.org](http://www.vim.org/scripts/script.php?script_id=3721)) ([github](https://github.com/sjl/threesome.vim))
+
+    A plugin for resolving conflicts during three-way merges.
+
+    Add the following lines to ~/.gitconfig to use
+
+    [merge]
+    tool = threesome
+
+    [mergetool "threesome"]
+    cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+    trustExitCode = true
+
+    Bindings:
+
+    * `\\g` - switch to grid view
+    * `\\l` - switch to loupe view
+    * `\\c` - switch to compare view
+    * `\\p` - switch to path view
+
+    * `\\o` - select the original file
+    * `\\1` - select file one
+    * `\\2` - select file two
+    * `\\r` - select the results file
+
+    * `\\n` - next unresolved conflict
+    * `\\N` - prev unresolved conflict
+
+    * `\\<space>` - cycle layout
+    * `\\s` - toggle scrolllocking
+    * `\\d` - cycle diff combinations
+    * `\\D` - turn off all diffs
+
+    * `CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
+
+    * `:h threesome` - you should probably read it ;)
 
 *   rails ([vim.org](http://www.vim.org/scripts/script.php?script_id=1567)) ([github](http://github.com/tpope/vim-rails))
 
