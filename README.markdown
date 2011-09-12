@@ -128,7 +128,7 @@ Check out the 'vimrc' file for more...
 
     Much more in the plugin's doc
 
-*   threesome ([vim.org](http://www.vim.org/scripts/script.php?script_id=3721)) ([github](https://github.com/sjl/threesome.vim))
+*   threesome ([homepage](http://sjl.bitbucket.org/threesome.vim/#demo)) ([vim.org](http://www.vim.org/scripts/script.php?script_id=3721)) ([github](https://github.com/sjl/threesome.vim))
 
     A plugin for resolving conflicts during three-way merges.
 
