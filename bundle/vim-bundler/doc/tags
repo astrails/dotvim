@@ -1,0 +1,11 @@
+bundler	bundler.txt	/*bundler*
+bundler-:Bedit	bundler.txt	/*bundler-:Bedit*
+bundler-:Bopen	bundler.txt	/*bundler-:Bopen*
+bundler-:Bpedit	bundler.txt	/*bundler-:Bpedit*
+bundler-:Bsplit	bundler.txt	/*bundler-:Bsplit*
+bundler-:Btabedit	bundler.txt	/*bundler-:Btabedit*
+bundler-:Bundle	bundler.txt	/*bundler-:Bundle*
+bundler-:Bvsplit	bundler.txt	/*bundler-:Bvsplit*
+bundler-about	bundler.txt	/*bundler-about*
+bundler-commands	bundler.txt	/*bundler-commands*
+bundler.vim	bundler.txt	/*bundler.vim*

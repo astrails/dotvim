@@ -1,7 +1,9 @@
+'syntastic_auto_jump'	syntastic.txt	/*'syntastic_auto_jump'*
 'syntastic_auto_loc_list'	syntastic.txt	/*'syntastic_auto_loc_list'*
 'syntastic_disabled_filetypes'	syntastic.txt	/*'syntastic_disabled_filetypes'*
 'syntastic_enable_signs'	syntastic.txt	/*'syntastic_enable_signs'*
 'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
+'syntastic_stl_format'	syntastic.txt	/*'syntastic_stl_format'*
 :Errors	syntastic.txt	/*:Errors*
 :SyntasticDisable	syntastic.txt	/*:SyntasticDisable*
 :SyntasticEnable	syntastic.txt	/*:SyntasticEnable*
