@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+*.swp
+*.swo
+*.un~
+.ropeproject
+tags
+tests/one
+tests/two
+tests/original
+tests/result
+tests/*.err
+site/index.html

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <base href="/threesome.vim/">
+
+    <title>{{ title }}</title>
+
+    <meta name="description" content="Threesome is a Vim plugin for resolving three-way merge conflicts"/>
+    <meta name="author" content="Steve Losh"/>
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="stylesheets/base.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+    <link rel="stylesheet" href="stylesheets/layout.css">
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png" />
+
+    <link href='http://fonts.googleapis.com/css?family=Redressed&subset=latin&v2' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div class="container">
+        <div class="five columns sidebar">
+            <h1 class="logo"><a href="">threesome</a></h1>
+
+            <p>
+                Threesome is a Vim plugin for resolving conflicts during&nbsp;three-way&nbsp;merges.
+            </p>
+
+            <p>
+                It's designed to be used as a merge tool for version control systems like
+                Mercurial&nbsp;and&nbsp;Git.
+            </p>
+
+            <nav class="toc">
+                <ul>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#requirements">Requirements</a></li>
+                    <li><a href="#installation">Installation</a></li>
+                    <li><a href="#more-information">More Information</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="ten columns content offset-by-one">
+            {{ content }}
+        </div>
+        <div class="sixteen columns">
+            <footer>
+                Made by <a href="http://stevelosh.com/">Steve Losh</a>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script>window.jQuery || document.write("<script src='javascripts/jquery-1.5.1.min.js'>\x3C/script>")</script>
+    <script src="javascripts/app.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15328874-3']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+         })();
+    </script>
+</body>
+</html>

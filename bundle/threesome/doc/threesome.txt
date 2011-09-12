@@ -1,0 +1,649 @@
+*threesome.txt*   A plugin for resolving three-way merge conflicts.
+
+==============================================================================
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+==============================================================================
+
+               This plugin is still under active development.
+
+         It probably won't eat your data, but don't hate me if it does.
+
+==============================================================================
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+==============================================================================
+
+
+Threesome is a Vim plugin for resolving conflicts during three-way merges.
+It's designed to be used as a merge tool for version control systems like
+Mercurial and Git.
+
+==============================================================================
+CONTENTS                                                  *Threesome-contents*
+
+    1. Version Control Integration ................. |ThreesomeVCS|
+        1.1 Mercurial .............................. |ThreesomeVCS_hg|
+        1.2 Git .................................... |ThreesomeVCS_git|
+    2. Basic Usage ................................. |ThreesomeUsage|
+        2.1 Files .................................. |ThreesomeUsage_files|
+        2.2 Modes .................................. |ThreesomeUsage_modes|
+    3. Key Bindings ................................ |ThreesomeKeys|
+        3.1 Mode Selection Keys .................... |ThreesomeKeys_mode|
+        3.2 File Selection Keys .................... |ThreesomeKeys_file|
+        3.3 Other Keys ............................. |ThreesomeKeys_other|
+    4. Modes ....................................... |ThreesomeModes|
+        4.1 Grid ................................... |ThreesomeModes_grid|
+        4.2 Loupe .................................. |ThreesomeModes_loupe|
+        4.3 Compare ................................ |ThreesomeModes_compare|
+        4.4 Path ................................... |ThreesomeModes_path|
+    5. Configuration ............................... |ThreesomeConfig|
+        5.1 threesome_debug ........................ |ThreesomeConfig_debug|
+        5.2 threesome_disable ...................... |ThreesomeConfig_disable|
+        5.3 threesome_initial_diff_grid ............ |ThreesomeConfig_id_grid|
+        5.4 threesome_initial_diff_loupe ........... |ThreesomeConfig_id_loupe|
+        5.5 threesome_initial_diff_compare ......... |ThreesomeConfig_id_compare|
+        5.6 threesome_initial_diff_path ............ |ThreesomeConfig_id_path|
+        5.7 threesome_initial_layout_grid .......... |ThreesomeConfig_il_grid|
+        5.8 threesome_initial_layout_loupe ......... |ThreesomeConfig_il_loupe|
+        5.9 threesome_initial_layout_compare ....... |ThreesomeConfig_il_compare|
+        5.10 threesome_initial_layout_path ......... |ThreesomeConfig_il_path|
+        5.11 threesome_initial_scrollbind_grid ..... |ThreesomeConfig_is_grid|
+        5.12 threesome_initial_scrollbind_loupe .... |ThreesomeConfig_is_loupe|
+        5.13 threesome_initial_scrollbind_compare .. |ThreesomeConfig_is_compare|
+        5.14 threesome_initial_scrollbind_path ..... |ThreesomeConfig_is_path|
+        5.15 threesome_initial_mode ................ |ThreesomeConfig_im|
+        5.16 threesome_leader ...................... |ThreesomeConfig_leader|
+        5.17 threesome_wrap ........................ |ThreesomeConfig_wrap|
+    6. License ..................................... |ThreesomeLicense|
+    7. Bugs ........................................ |ThreesomeBugs|
+    8. Contributing ................................ |ThreesomeContributing|
+    9. Changelog ................................... |ThreesomeChangelog|
+   10. Credits ..................................... |ThreesomeCredits|
+
+
+==============================================================================
+1. Version Control Integration                                  *ThreesomeVCS*
+
+Threesome is meant to be called by your version control system when it needs
+you to resolve merge conflicts.  You will need to configure your VCS to do
+this before you can use Threesome.
+
+*Note: If you'd like to use a Vim GUI instead of console vim, replace
+       "vim" in the following commands with your choice of "mvim" or "gvim".
+
+------------------------------------------------------------------------------
+1.1 Mercurial                                                *ThreesomeVCS_hg*
+
+Add the following lines to "~/.hgrc": >
+
+    [merge-tools]
+    threesome.executable = vim
+    threesome.args = -f $base $local $other $output -c 'ThreesomeInit'
+    threesome.premerge = keep
+    threesome.priority = 1
+
+Mercurial will now open Vim with Threesome whenever a file has merge conflicts
+which need to be resolved.
+
+------------------------------------------------------------------------------
+1.2 Git                                                     *ThreesomeVCS_git*
+
+Add the following lines to "~/.gitconfig": >
+
+    [merge]
+    tool = threesome
+
+    [mergetool "threesome"]
+    cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+    trustExitCode = true
+
+If a "git merge" or "git pull" fails with merge conflicts you can now run
+"git mergetool".  Git will loop over all the files with conflicts and allow
+you to resolve them with Vim and Threesome.
+
+==============================================================================
+2. Basic Usage                                                *ThreesomeUsage*
+
+Threesome takes a lot of inspiration for its user interface from Adobe
+Lightroom, a photo editing program.
+
+When resolving merge conflicts your goal is:
+
+  - Examine the three files describing the changes being merged.
+  - Combine these changes into a fourth file (the "result").
+  - Save the result to disk.
+  - Exit Vim with a non-error status code to tell the VCS the merge succeeded.
+
+Threesome has several "modes" to help you work with the various files.
+
+------------------------------------------------------------------------------
+2.1 Files                                               *ThreesomeUsage_files*
+
+When resolving a merge there are four files you will work with:
+
+Original                                       *ThreesomeUsage_files_original*
+    The original file, as it appears in the parent revision of the two
+    revisions being merged.
+
+One                                                 *ThreesomeUsage_files_one*
+    The file as it appears in the first revision being merged.
+
+    This is usually the "current" revision, or the one you are at when you
+    run "hg merge REV").
+
+Two                                                 *ThreesomeUsage_files_two*
+    The file as it appears in the second revision being merged.
+
+    This is usually the "target" revision, or the one you specify in the
+    "hg merge REV" command).
+
+Result                                           *ThreesomeUsage_files_result*
+    The result of merging the two revisions of the file.
+
+    This is the file that your version control system expects to contain the
+    final result once you're done.
+
+------------------------------------------------------------------------------
+2.2 Modes                                               *ThreesomeUsage_modes*
+
+Threesome has four "modes" or "views" for working with the files.
+
+Grid                                               *ThreesomeUsage_modes_grid*
+    Shows all four files at once to give you an overview of the merge.
+
+    See |ThreesomeModes-grid| for more information.
+
+Loupe                                             *ThreesomeUsage_modes_loupe*
+    Shows a single file at a time for close examination of a single file.
+
+    See |ThreesomeModes-loupe| for more information.
+
+Compare                                         *ThreesomeUsage_modes_compare*
+    Shows two files at a time for examining the movement of changes between
+    pairs of files.
+
+    See |ThreesomeModes-compare| for more information.
+
+Path                                               *ThreesomeUsage_modes_path*
+    Shows three files at a time:
+
+      - The original
+      - Either one or two
+      - The result
+
+    Used for examining how a change moves through one "path" or "branch"
+    of the merge.
+
+    See |ThreesomeModes-path| for more information.
+
+
+==============================================================================
+3. Key Bindings                                                *ThreesomeKeys*
+
+Threesome makes use of <localleader> for all of its key bindings to avoid
+clashing with global mappings. If you've never used <localleader> now
+would be a good time to read the |maplocalleader| documentation and
+configure a key for it.
+
+All keybindings are used across (almost) all modes.
+
+The behavior of some of them changes depending on the current mode, but the
+effects should be fairly intuitive.
+
+------------------------------------------------------------------------------
+3.1 Mode Selection Keys                                   *ThreesomeKeys_mode*
+
+<localleader>g                                       *Grid*
+                        Switch to grid view.
+
+<localleader>l                                      *Loupe*
+                        Switch to loupe view.
+
+<localleader>c                                    *Compare*
+                        Switch to compare view.
+
+<localleader>p                                       *Path*
+                        Switch to path view.
+
+------------------------------------------------------------------------------
+3.2 File Selection Keys                                    *ThreesomeKeys_file*
+
+<localleader>o                                   *Original*
+                        Select the original file.
+
+<localleader>1                                        *One*
+                        Select file one.
+
+<localleader>2                                        *Two*
+                        Select file two.
+
+<localleader>r                                     *Result*
+                        Select the result file.
+
+------------------------------------------------------------------------------
+3.3 Other Keys                                           *ThreesomeKeys_other*
+
+<localleader>d                                       *Diff*
+                        Cycle through various diff combinations.
+
+<localleader>D                                    *DiffOff*
+                        Turn off all diffs.
+
+<localleader>u                                    *UseHunk*
+                        Place a hunk from file one or two into
+                        the result file.
+
+<localleader>s                                     *Scroll*
+                        Toggle scroll locking on and off.
+
+<localleader><space>                               *Layout*
+                        Cycle through various layouts of the
+                        current view.
+
+<localleader>n                                       *Next*
+                        Move to the next unresolved conflict.
+
+<localleader>N                                   *Previous*
+                        Move to the previous unresolved conflict.
+
+<localleader>q                                       *Quit*
+                        Save the result file and exit Vim.
+
+                        Indicates to the VCS that the merge was
+                        successful and it should use the current
+                        contents of the result file as the result.
+
+<localleader>CC                                    *Cancel*
+                        Exits Vim with an error code (like |:cquit|).
+                        Indicates to the VCS that the merge was
+                        NOT successful.
+
+==============================================================================
+4. Modes                                                      *ThreesomeModes*
+
+This section describes each mode in detail.
+
+------------------------------------------------------------------------------
+4.1 Grid                                                 *ThreesomeModes_grid*
+
+The grid view is used to get an overview of all files at once to get a birds'
+eye view of the merge.
+
+Grid Layouts                                     *ThreesomeModes_grid_layouts*
+------------
+
+    Layout 0                 Layout 1                        Layout 2
+    +-------------------+    +--------------------------+    +---------------+
+    |     Original      |    | One    | Result | Two    |    |      One      |
+    |                   |    |        |        |        |    |               |
+    +-------------------+    |        |        |        |    +---------------+
+    |  One    |    Two  |    |        |        |        |    |     Result    |
+    |         |         |    |        |        |        |    |               |
+    +-------------------+    |        |        |        |    +---------------+
+    |      Result       |    |        |        |        |    |      Two      |
+    |                   |    |        |        |        |    |               |
+    +-------------------+    +--------------------------+    +---------------+
+
+Grid-Specific Key Bindings                          *ThreesomeModes_grid_keys*
+--------------------------
+
+<localleader>o                                   *Original-Grid*
+                        Select the original file, but only in layout 1.
+
+<localleader>u                                    *UseHunk-Grid*
+                        Disabled in this mode.
+
+<localleader>u1                                  *UseHunk1-Grid*
+                        Place a hunk from file one into the result file.
+
+<localleader>u2                                  *UseHunk2-Grid*
+                        Place a hunk from file two into the result file.
+
+Grid Diffs                                         *ThreesomeModes_grid_diffs*
+----------
+
+1. No diff.
+2. Diff all files.
+
+------------------------------------------------------------------------------
+4.2 Loupe                                               *ThreesomeModes_loupe*
+
+The loupe view is used to focus on and examine a single file in detail.
+
+Loupe Layouts                                   *ThreesomeModes_loupe_layouts*
+-------------
+
+    Layout 0
+    +-----------------+
+    | Any Single File |
+    |                 |
+    |                 |
+    |                 |
+    |                 |
+    |                 |
+    +-----------------+
+
+Loupe-Specific Key Bindings                        *ThreesomeModes_loupe_keys*
+---------------------------
+
+<localleader>u                                    *UseHunk-Loupe*
+                        Disabled in this mode.
+
+Loupe Diffs                                       *ThreesomeModes_loupe_diffs*
+-----------
+
+No diffs are possible in loupe mode.
+
+------------------------------------------------------------------------------
+4.3 Compare                                           *ThreesomeModes_compare*
+
+The compare view is used to examine the differences between two files at
+a time.
+
+Compare Layouts                               *ThreesomeModes_compare_layouts*
+---------------
+
+    Layout 0                 Layout 1
+    +-------------------+    +-------------------+
+    | Orig    | Result  |    | Orig              |
+    |         |         |    | or One            |
+    |    or   |    or   |    | or Two            |
+    |         |         |    |                   |
+    | One     | One     |    +-------------------+
+    |         |         |    | One               |
+    |    or   |    or   |    | or Two            |
+    |         |         |    | or Result         |
+    | Two     | Two     |    |                   |
+    +-------------------+    +-------------------+
+
+Compare-Specific Key Bindings                    *ThreesomeModes_compare_keys*
+-----------------------------
+
+<localleader>u                                    *UseHunk-Compare*
+                        If the result file and file one/two are
+                        both visible, place a hunk from one/two
+                        into the result file.  Otherwise: disabled.
+
+Compare Diffs                                   *ThreesomeModes_compare_diffs*
+-------------
+
+1. No diff.
+2. Diff both files.
+
+------------------------------------------------------------------------------
+4.4 Path                                                 *ThreesomeModes_path*
+
+The path view is used to view the flow of changed through one "path" or
+"branch" of the merge.
+
+Path Layouts                                     *ThreesomeModes_path_layouts*
+------------
+
+    Layout 0                        Layout 1
+    +--------------------------+    +-------------------+
+    | Orig   |        | Result |    | Orig              |
+    |        | One    |        |    |                   |
+    |        |        |        |    +-------------------+
+    |        |   or   |        |    | One               |
+    |        |        |        |    | or Two            |
+    |        | Two    |        |    +-------------------+
+    |        |        |        |    | Result            |
+    |        |        |        |    |                   |
+    +--------------------------+    +-------------------+
+    
+
+Path-Specific Key Bindings                          *ThreesomeModes_path_keys*
+--------------------------
+
+<localleader>u                                    *UseHunk-Path*
+                        Place a hunk from file one or two (whichever
+                        is currently in the center window) into the
+                        result file.
+
+Path Diffs                                         *ThreesomeModes_path_diffs*
+----------
+
+1. No diff.
+2. Diff the original and center windows.
+3. Diff the center and result windows.
+4. Diff the original and result windows.
+
+==============================================================================
+5. Configuration                                             *ThreesomeConfig*
+
+You can tweak the behavior of Threesome by setting a few variables in your
+|vimrc| file. For example: >
+
+    let g:threesome_initial_mode = "compare"
+    let g:threesome_initial_layout_grid = 2
+    let g:threesome_initial_layout_compare = 1
+
+------------------------------------------------------------------------------
+5.1 g:threesome_debug                                  *ThreesomeConfig_debug*
+
+Set this to 1 to force Threesome to reload every time its file is sourced.
+
+Options: 0 or 1
+Default: 0 (Threesome is loaded only once)
+
+------------------------------------------------------------------------------
+5.2 g:threesome_disable                              *ThreesomeConfig_disable*
+
+Set this to 1 to disable Threesome entirely.
+
+Useful if you use the same ~/.vim folder on multiple machines and some of
+them may not have Python support.
+
+Options: 0 or 1
+Default: 0 (Threesome is enabled as usual)
+
+------------------------------------------------------------------------------
+5.3 g:threesome_initial_diff_grid                    *ThreesomeConfig_id_grid*
+
+Set this to change the diff the grid mode starts in.
+
+See |ThreesomeModes-grid-diffs| for the list of diffs.
+
+Options: 0, or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.4 g:threesome_initial_diff_loupe                  *ThreesomeConfig_id_loupe*
+
+Set this to change the diff the loupe mode starts in.
+
+See |ThreesomeModes-loupe-diffs| for the list of diffs.
+
+Options: 0
+Default: 0
+
+------------------------------------------------------------------------------
+5.5 g:threesome_initial_diff_compare              *ThreesomeConfig_id_compare*
+
+Set this to change the diff the compare mode starts in.
+
+See |ThreesomeModes-compare-diffs| for the list of diffs.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.6 g:threesome_initial_diff_path                    *ThreesomeConfig_id_path*
+
+Set this to change the diff the path mode starts in.
+
+See |ThreesomeModes-path-diffs| for the list of diffs.
+
+options: 0, 1, 2, 3, or 4
+Default: 0
+
+------------------------------------------------------------------------------
+5.7 g:threesome_initial_layout_grid                  *ThreesomeConfig_il_grid*
+
+Set this to change the layout the grid mode starts in.
+
+See |ThreesomeModes-grid-layouts| for the list of layouts.
+
+Options: 0, 1, or 2
+Default: 0
+
+------------------------------------------------------------------------------
+5.8 g:threesome_initial_layout_loupe                *ThreesomeConfig_il_loupe*
+
+Set this to change the layout the loupe mode starts in.
+
+See |ThreesomeModes-loupe-layouts| for the list of layouts.
+
+Options: 0
+Default: 0
+
+------------------------------------------------------------------------------
+5.9 g:threesome_initial_layout_compare            *ThreesomeConfig_il_compare*
+
+Set this to change the layout the compare mode starts in.
+
+See |ThreesomeModes-compare-layouts| for the list of layouts.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.10 g:threesome_initial_layout_path                 *ThreesomeConfig_il_path*
+
+Set this to change the layout the path mode starts in.
+
+See |ThreesomeModes-path-layouts| for the list of layouts.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.11 g:threesome_initial_scrollbind_grid             *ThreesomeConfig_is_grid*
+
+Set this to 1 to enable |scrollbind| by default in grid mode.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.12 g:threesome_initial_scrollbind_loupe           *ThreesomeConfig_is_loupe*
+
+Set this to 1 to enable |scrollbind| by default in loupe mode.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.13 g:threesome_initial_scrollbind_compare       *ThreesomeConfig_is_compare*
+
+Set this to 1 to enable |scrollbind| by default in compare mode.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.14 g:threesome_initial_scrollbind_path             *ThreesomeConfig_is_path*
+
+Set this to 1 to enable |scrollbind| by default in path mode.
+
+Options: 0 or 1
+Default: 0
+
+------------------------------------------------------------------------------
+5.15 g:threesome_initial_mode                             *ThreesomeConfig_im*
+
+Set this to change the mode Threesome initially starts up in.
+
+See |ThreesomeModes| for a description of each mode.
+
+Options: "grid", "loupe", "compare", or "path"
+Default: "grid"
+
+------------------------------------------------------------------------------
+5.16 g:threesome_leader                               *ThreesomeConfig_leader*
+
+Set this to change the leader Threesome will bind all of its mappings to.
+
+For example: >
+
+    let g:threesome_leader = "<leader>t"
+
+Will make all Threesome commands start with <leader>t instead of the default
+<localleader>.
+
+Options: Any valid key mapping string
+Default: "<localleader>"
+
+------------------------------------------------------------------------------
+5.17 g:threesome_wrap                                   *ThreesomeConfig_wrap*
+
+Set this to "wrap" or "nowrap" to set |wrap| or |nowrap| on all windows by
+default.
+
+By default Threesome will use your default settings.
+
+Options: "wrap", "nowrap"
+Default: None (use the default settings)
+
+==============================================================================
+6. License                                                  *ThreesomeLicense*
+
+Threesome is copyright Steve Losh & contributors, 2011+ and is licensed
+under the MIT/X11 license.
+
+==============================================================================
+7. Bugs                                                        *ThreesomeBugs*
+
+Please report any bugs you may find on the GitHub issue tracker:
+
+    http://github.com/sjl/threesome.vim/issues
+
+==============================================================================
+8. Contributing                                        *ThreesomeContributing*
+
+Think you can make Threesome better?  Awesome.  New contributors are always
+welcome.
+
+Fork the project on BitBucket or GitHub and send a pull request.
+
+    BitBucket: http://bitbucket.org/sjl/threesome.vim
+    GitHub:    http://github.com/sjl/threesome.vim
+
+==============================================================================
+9. Changelog                                              *ThreesomeChangelog*
+
+v0.2.0
+    * Add threesome_leader as a config option.
+v0.1.1
+    * Fix a bug when the user doesn't use :set hidden.
+v0.1.0
+    * Preliminary "it probably won't eat your data" release!
+v0.0.8
+    * A bunch of cleanup.
+v0.0.7
+    * Add use hunk functionality.
+v0.0.6
+    * Add the HUD.
+    * Configurable wrapping.
+v0.0.5
+    * Configurable scrollbinding.
+v0.0.4
+    * Basic configuration settings.
+v0.0.3
+    * Multiple layout support.
+v0.0.2
+    * There's still not much working, but at least there's some help now!
+v0.0.1
+    * Oh god nothing works please don't use this for real work yet.
+
+==============================================================================
+10. Credits                                                 *ThreesomeCredits*
+
+Threesome was originally written by Steve Losh after he got fed up with the
+lack of a powerful, intuitive, beautiful three-way merge program on OS X.
+
+A lot of the inspiration for the layout of the code came from vim-orgmode.
+
+The UI is a combination of ideas from Conflict2Diff.vim, Fugitive.vim, and
+Adobe Lightroom.
+
+==============================================================================
