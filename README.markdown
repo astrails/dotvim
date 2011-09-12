@@ -143,23 +143,23 @@ Check out the 'vimrc' file for more...
 
     Bindings:
 
-    * `\\g` - switch to grid view
-    * `\\l` - switch to loupe view
-    * `\\c` - switch to compare view
-    * `\\p` - switch to path view
+    * `\g` - switch to grid view
+    * `\l` - switch to loupe view
+    * `\c` - switch to compare view
+    * `\p` - switch to path view
 
-    * `\\o` - select the original file
-    * `\\1` - select file one
-    * `\\2` - select file two
-    * `\\r` - select the results file
+    * `\o` - select the original file
+    * `\1` - select file one
+    * `\2` - select file two
+    * `\r` - select the results file
 
-    * `\\n` - next unresolved conflict
-    * `\\N` - prev unresolved conflict
+    * `\n` - next unresolved conflict
+    * `\N` - prev unresolved conflict
 
-    * `\\<space>` - cycle layout
-    * `\\s` - toggle scrolllocking
-    * `\\d` - cycle diff combinations
-    * `\\D` - turn off all diffs
+    * `\<space>` - cycle layout
+    * `\s` - toggle scrolllocking
+    * `\d` - cycle diff combinations
+    * `\D` - turn off all diffs
 
     * `CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
 
