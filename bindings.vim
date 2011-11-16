@@ -1,6 +1,3 @@
-let mapleader = ","
-let maplocalleader = "\\"
-
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
