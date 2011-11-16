@@ -31,3 +31,11 @@ set completeopt=menuone,preview
 nmap :W :w
 nmap :Q :q
 nmap :E :e
+
+" center display after searching
+nnoremap n   nzz
+nnoremap N   Nzz
+nnoremap *   *zz
+nnoremap #   #zz
+nnoremap g*  g*zz
+nnoremap g#  g#z
