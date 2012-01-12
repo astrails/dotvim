@@ -181,6 +181,13 @@ bundle/vim-makegreen:
   squashed: true
   type: git
   url: https://github.com/reinh/vim-makegreen.git
+bundle/vim-powerline: 
+  branch: develop
+  remote: develop/braid/bundle/vim-powerline
+  revision: 4df0cdc009e590c1d6ec32a2a3c12ff8deeb6f25
+  squashed: true
+  type: git
+  url: https://github.com/Lokaltog/vim-powerline.git
 bundle/vim-ruby-refactoring: 
   branch: master
   remote: braid/bundle/vim-ruby-refactoring
