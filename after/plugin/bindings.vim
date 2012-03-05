@@ -51,6 +51,7 @@ nnoremap j gj
 nnoremap k gk
 
 " absolute line numbers in insert mode, relative otherwise for easy movement
+set rnu
 au InsertEnter * :set nu
 au InsertLeave * :set rnu
 
