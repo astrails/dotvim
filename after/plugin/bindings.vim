@@ -30,7 +30,7 @@ set completeopt=menuone,preview
 " driving me insane this thing
 cmap W w
 cmap Q q
-cmap E e
+"cmap E e
 
 " center display after searching
 nnoremap n   nzz
