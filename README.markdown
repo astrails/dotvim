@@ -11,11 +11,9 @@ From your homedirectory (on Linux/Mac OSX):
 * `git clone git://github.com/astrails/dotvim.git`
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
+* `cd .vim; make install`
 * create ~/.vim\_local if you want to have some
   local/personal settings you don't want to commit into the repo
-
-* If you want to use command-t file finder plugin you need to compile native extension first.
-  just run `make` at the top of .vim directory
 
 Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
 
