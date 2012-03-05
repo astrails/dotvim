@@ -28,9 +28,9 @@ nmap <leader>N :cp<CR>
 set completeopt=menuone,preview
 
 " driving me insane this thing
-nmap :W :w
-nmap :Q :q
-nmap :E :e
+cmap W w
+cmap Q q
+cmap E e
 
 " center display after searching
 nnoremap n   nzz
