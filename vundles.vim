@@ -39,13 +39,14 @@ Bundle 'tpope/vim-vividchalk'
 
 " syntax support
 Bundle 'tsaleh/vim-tmux'
-"Bundle 'vim-rcov'
+Bundle 'vitaly/vim-rcov'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'JSON.vim'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'vitaly/vim-syntastic-coffee'
 Bundle 'vim-scripts/jade.vim'
 Bundle 'wavded/vim-stylus'
 
@@ -53,6 +54,7 @@ Bundle 'wavded/vim-stylus'
 " Support and minor
 Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-repeat'
+Bundle 'vitaly/vim-gitignore'
 
 
 
