@@ -39,3 +39,24 @@ nnoremap *   *zz
 nnoremap #   #zz
 nnoremap g*  g*zz
 nnoremap g#  g#z
+
+""""""""""" awesome stuff from vimbits
+
+" keep selection after in/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" better navigation of wrapped lines
+nnoremap j gj
+nnoremap k gk
+
+" absolute line numbers in insert mode, relative otherwise for easy movement
+au InsertEnter * :set nu
+au InsertLeave * :set rnu
+
+" easier increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+" remove trailing spaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
