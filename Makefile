@@ -1,6 +1,6 @@
 update: submodules vundles install-command-t
 
-install: cleanup install
+install: cleanup update
 
 cleanup:
 	rm -rf bundle
