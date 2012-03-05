@@ -29,8 +29,8 @@ set completeopt=menuone,preview
 
 " driving me insane this thing
 command Q q
-command -nargs=* W w <args>
-command -nargs=* E e <args>
+command -nargs=* -complete=file W w <args>
+command -nargs=* -complete=file E e <args>
 
 " center display after searching
 nnoremap n   nzz
