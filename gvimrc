@@ -1,2 +1,0 @@
-"set cuc
-set cul

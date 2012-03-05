@@ -1,7 +1,6 @@
 This is a complete Vim configuration that I'm using everywhere
 
-Plugins that are available from a git repository were added with
-[Braid](http://github.com/evilchelu/braid) for easy upgrading.
+The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading.
 
 *Some* help tips are provided for *some* of the plugins. please check out the plugin's docs for more info.
 
@@ -12,7 +11,7 @@ From your homedirectory (on Linux/Mac OSX):
 * `git clone git://github.com/astrails/dotvim.git`
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
-* you create and edit ~/.vim\_local if you want to have your some
+* create ~/.vim\_local if you want to have some
   local/personal settings you don't want to commit into the repo
 
 * If you want to use command-t file finder plugin you need to compile native extension first.
@@ -33,18 +32,18 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `Ctrl-N` to cancel current search highlighing
 * `,f` global Ggrep for word under the cursor or for selection
 
-Check out the 'vimrc' file for more...
+Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
 #### "Interesting" Plugins:
 
-*   nerdtree ([github](http://github.com/scrooloose/nerdtree))
+*   [nerdtree](http://github.com/scrooloose/nerdtree)
 
     hax0r vim script to give you a tree explorer
 
     * `Ctrl-P` - open directory browser
     * `,p` - to find and highlight the currently open file in the tree
 
-*   nerdcommenter ([github](http://github.com/scrooloose/nerdcommenter))
+*   [nerdcommenter](http://github.com/scrooloose/nerdcommenter)
 
     Vim plugin for intensely orgasmic commenting
 
@@ -53,7 +52,7 @@ Check out the 'vimrc' file for more...
     * `,cu` - Uncomment
     * check docs for more
 
-*   command-t 1.0 ([vim.org](http://www.vim.org/scripts/script.php?script_id=3025) [git](git://git.wincent.com/command-t.git))
+*   [Command-T](http://github.com/vim-scripts/Command-T)
 
     TextMate Command-T like file finder for vim
 
@@ -66,34 +65,27 @@ Check out the 'vimrc' file for more...
       * `Esc` - cancel
       * `Ctrl-c` - cancel
 
-*   autocomplpop 2.14.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1879))
+*   [AutoComplPop](http://github.com/vim-scripts/AutoComplPop)
 
     Automatically opens popup menu for completions
 
     Shouldn't require config.
 
-*   taglist ([vim.org](http://www.vim.org/scripts/script.php?script_id=273))
+*   [taglist.vim](http://github.com/vim-scripts/taglist.vim)
 
     Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 
     * `,t` - toggle tags window
 
-*   minibufexpl 6.3.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=159))
+*   [YankRing.vim](http://github.com/vim-scripts/YankRing.vim)
 
-    Elegant buffer explorer - takes very little screen space
+    Maintains a history of previous yanks, changes and deletes
 
-    * `,b` to open buffer list window.
-    * `Enter` in the list window to open the buffer
+    * `,y` to show the yankring
+    * `,[`/`,]` - to cycle the just-pasted text though the yankring.
+    * `:h yankring.txt` and `:h yankring-tutorial` for more
 
-*    yankring 100 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1234))
-
-     Maintains a history of previous yanks, changes and deletes
-
-     * `,y` to show the yankring
-     * `,[`/`,]` - to cycle the just-pasted text though the yankring.
-     * `:h yankring.txt` and `:h yankring-tutorial` for more
-
-*   fugitive ([github](http://github.com/tpope/vim-fugitive))
+*   [vim-fugitive](http://github.com/tpope/vim-fugitive)
 
     A Git wrapper so awesome, it should be illegal
 
@@ -128,7 +120,82 @@ Check out the 'vimrc' file for more...
 
     Much more in the plugin's doc
 
-*   threesome ([homepage](http://sjl.bitbucket.org/threesome.vim/#demo)) ([vim.org](http://www.vim.org/scripts/script.php?script_id=3721)) ([github](https://github.com/sjl/threesome.vim))
+*   [syntastic](http://github.com/scrooloose/syntastic)
+
+    syntax checking plugin
+
+    it will display the number of syntax errors in the current file in the vim's status line.
+
+    use `:Errors` to display a window detailing the errors
+
+*   [snipmate](http://github.com/msanders/snipmate.vim)
+
+    TextMate-style snippets for Vim
+
+    write a snipped text and press TAB to expand it.
+
+    To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
+
+*   [vim-surround](http://github.com/tpope/vim-surround)
+
+    Delete/change/add parentheses/quotes/XML-tags/much more with ease
+
+    * `dsX` - delete surround X
+    * `csXY` - change surround X with Y
+    * `s/S` in visual mode - wrap selection
+    * `ysMovementX` - surround movement with X
+
+    You should REALLY read the docs if you want to use this one
+
+*   [vim-align](http://github.com/tsaleh/vim-align)
+
+    Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
+
+    * `,t=` - align on =
+    * `,tsp` - align on whitespace
+    * `,t,` - align on commas
+    * `,t|` - align on vertical bars
+    * `,acom` - align comments (C/C++)
+    * `:AlignSEPARATORS` - align on separators
+    * `:h align` - see help for more options
+
+*   [ack.vim](http://github.com/mileszs/ack.vim)
+
+    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
+
+    * `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
+    * `:Ack --ruby ...` - search only ruby files.
+    * `:h Ack` - more help about Ack
+
+*   [vim-indentobject](https://github.com/austintaylor/vim-indentobject)
+
+    A text object for manipulating blocks based on their indentation
+
+    This is good for Python, YAML, HAML etc.
+
+    Usage is similar to textobj-rubyblock, just with `i` instead of `r`
+
+    * `vai` / `vii` - select indent block including / excluding the outer lines
+    * ...
+
+*   [greplace.vim](http://github.com/vim-scripts/greplace.vim)
+
+    Replace a pattern across multiple files interactively
+
+    Use `:Gsearch` to search for a pattern. Edit the result buffer to your
+    liking, then `:Greplace` to incorporate your edits into the source files
+
+    * `:Gsearch` - Search for a given pattern in the specified group of files
+      and display the matches in the replace buffer.
+    * `:Gbuffersearch` - Search for a given pattern in all the buffers in the Vim buffer list.
+    * `:Greplace` - Incorporate the modifications from the replace buffer into
+      the corresponding files.
+
+*   [vim-powerline](TBD)
+
+    TBD
+
+*   [threesome.vim](https://github.com/sjl/threesome.vim)
 
     A plugin for resolving conflicts during three-way merges.
 
@@ -165,7 +232,18 @@ Check out the 'vimrc' file for more...
 
     * `:h threesome` - you should probably read it ;)
 
-*   rails ([vim.org](http://www.vim.org/scripts/script.php?script_id=1567)) ([github](http://github.com/tpope/vim-rails))
+*   [vim-endwise](http://github.com/tpope/vim-endwise)
+
+    Wisely add "end" in ruby, endfunction/endif/more in vim script, etc
+
+*   [delimitMate](http://github.com/Raimondi/delimitMate)
+
+    auto-completion for quotes, parens, brackets, etc. in insert mode.
+
+
+#### Ruby/Rails support:
+
+*   [vim-rails](http://github.com/tpope/vim-rails)
 
     Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 
@@ -179,7 +257,7 @@ Check out the 'vimrc' file for more...
       associations, partials etc.
     * `:h rails` for much more info ;)
 
-*   vim-bundler ([github](https://github.com/tpope/vim-bundler))
+*   [vim-bundler](https://github.com/tpope/vim-bundler)
 
     Lightweight support for Ruby's Bundler
 
@@ -187,82 +265,11 @@ Check out the 'vimrc' file for more...
     * `:Bopen NAME` does bundle open NAME - opens gem NAME's lib diretory in the current window.
     * `:Bundle` - runs bundler
 
-*   syntastic ([github](http://github.com/scrooloose/syntastic))
+*   [vim-rake](https://github.com/tpope/vim-rake)
 
-    syntax checking plugin
+    TBD
 
-    it will display the number of syntax errors in the current file in the vim's status line.
-
-    use `:Errors` to display a window detailing the errors
-
-*   snipmate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2540)) ([github](http://github.com/msanders/snipmate.vim))
-
-    TextMate-style snippets for Vim
-
-    write a snipped text and press TAB to expand it.
-
-    To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
-
-*   space ([github](http://github.com/scrooloose/vim-space))
-
-    Smart Space key for Vim
-
-    press SPACE to repeat last motion command
-
-*   surround ([vim.org](http://www.vim.org/scripts/script.php?script_id=1697)) ([github](http://github.com/tpope/vim-surround))
-
-    Delete/change/add parentheses/quotes/XML-tags/much more with ease
-
-    * `dsX` - delete surround X
-    * `csXY` - change surround X with Y
-    * `s/S` in visual mode - wrap selection
-    * `ysMovementX` - surround movement with X
-
-    You should REALLY read the docs if you want to use this one
-
-*   align ([vim.org](http://www.vim.org/scripts/script.php?script_id=294)) ([github](http://github.com/tsaleh/vim-align))
-
-    Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
-
-    * `,t=` - align on =
-    * `,tsp` - align on whitespace
-    * `,t,` - align on commas
-    * `,t|` - align on vertical bars
-    * `,acom` - align comments (C/C++)
-    * `:AlignSEPARATORS` - align on separators
-    * `:h align` - see help for more options
-
-*   conque ([vim.org](http://www.vim.org/scripts/script.php?script_id=2771))
-
-    Conque is a Vim plugin allowing users to execute and interact with programs, typically a shell such as bash, inside a buffer window.
-
-    This one is much better then vimsh that I was using before
-
-    `,sh` - start a vimsh window
-    `,R`  - opens vim prompt for command to run
-
-*   vividchalk ([vim.org](http://www.vim.org/scripts/script.php?script_id=1891)) ([github](http://github.com/vitaly/vim-vividchalk))
-
-    A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
-
-*   sessionman ([vim.org](http://www.vim.org/scripts/script.php?script_id=2010))
-
-    work with Vim sessions by keeping them in the dedicated location and by providing commands to list, open, and save sessions.
-
-    * `,S`, `:SessionList` - list sessions
-    * `,SS`, `:SessionSave` - save session
-    * `,SA`, `:SessionSaveAs` - save new session
-    * check out "Sessions" submenu under "File"
-
-*   ack.vim ([vim.org](http://www.vim.org/scripts/script.php?script_id=2572)) ([github](http://github.com/mileszs/ack.vim))
-
-    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
-
-    * `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
-    * `:Ack --ruby ...` - search only ruby files.
-    * `:h Ack` - more help about Ack
-
-*   textobj-rubyblock ([vim.org](http://www.vim.org/scripts/script.php?script_id=3382)) ([github](https://github.com/nelstrom/vim-textobj-rubyblock))
+*   [vim-textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock)
 
     A custom text object for selecting ruby blocks.
 
@@ -281,31 +288,7 @@ Check out the 'vimrc' file for more...
     * `vararir` - select insides of the ruby block that is around the ruby block that is around the cursor. not including begin/end
     * ...
 
-*   vim-indentobject ([github](https://github.com/austintaylor/vim-indentobject))
-
-    A text object for manipulating blocks based on their indentation
-
-    This is good for Python, YAML, HAML etc.
-
-    Usage is similar to textobj-rubyblock, just with `i` instead of `r`
-
-    * `vai` / `vii` - select indent block including / excluding the outer lines
-    * ...
-
-*   greplace ([vim.org](http://www.vim.org/scripts/script.php?script_id=1813))
-
-    Replace a pattern across multiple files interactively
-
-    Use `:Gsearch` to search for a pattern. Edit the result buffer to your
-    liking, then `:Greplace` to incorporate your edits into the source files
-
-    * `:Gsearch` - Search for a given pattern in the specified group of files
-      and display the matches in the replace buffer.
-    * `:Gbuffersearch` - Search for a given pattern in all the buffers in the Vim buffer list.
-    * `:Greplace` - Incorporate the modifications from the replace buffer into
-      the corresponding files.
-
-*   vim-ruby-refactoring ([github](https://github.com/ecomba/vim-ruby-refactoring))
+*   [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring)
 
     Refactoring tool for Ruby in vim!
 
@@ -319,7 +302,7 @@ Check out the 'vimrc' file for more...
     * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
     * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
-*   apidoc ([github](https://github.com/alexandrov/apidock.vim))
+*   [apidock.vim](https://github.com/alexandrov/apidock.vim)
 
     Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim.
 
@@ -327,88 +310,70 @@ Check out the 'vimrc' file for more...
     * `RB` - Search the Ruby docs for the word under the cursor.
     * `RS` - Search the RSpec docs for the word under the cursor.
 
-#### "Support" and minor plugins
 
-*   pathogen 1.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2332)) ([github](http://github.com/tpope/vim-pathogen))
+#### Color themes
 
-    Allows to separate each plugin into its own subdirectory. `~/.vim/bundles` directory
-    is used as the common root for all the plugins.
+*   [vim-colors-solarized](http://github.com/altercation/vim-colors-solarized)
 
-    Already configured
+    precision colorscheme for the vim text editor
 
-*   textobj-user ([vim.org](http://www.vim.org/scripts/script.php?script_id=2100)) ([github](https://github.com/kana/vim-textobj-user))
+*   [vim-vividchalk](http://github.com/tpope/vim-vividchalk)
 
-    Support for user-defined text objects
+    A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
 
-*   misc-lang-settings
-
-    ts/sw/et settings for various filetypes
-
-*   endwise ([vim.org](http://www.vim.org/scripts/script.php?script_id=2386)) ([github](http://github.com/tpope/vim-endwise))
-
-    Wisely add "end" in ruby, endfunction/endif/more in vim script, etc
-
-*   delimitMate ([vim.org](http://www.vim.org/scripts/script.php?script_id=2754)) ([github](http://github.com/Raimondi/delimitMate))
-
-    auto-completion for quotes, parens, brackets, etc. in insert mode.
-
-*   kwdbi 1.1 ([vim.org](http://www.vim.org/scripts/script.php?script_id=2103))
-
-    Keep Window on Buffer Delete - Improved
-
-*   pastie ([vim.org](http://www.vim.org/scripts/script.php?script_id=1624)) ([github](http://github.com/tpope/vim-pastie))
-
-    integration with http://pastie.org
-
-*   repeat ([vim.org](http://www.vim.org/scripts/script.php?script_id=2136)) ([github](http://github.com/tpope/vim-repeat))
-
-    Use the repeat command "." with supported plugins
-
-*   showmarks 2.2 ([vim.org](http://www.vim.org/scripts/script.php?script_id=152))
-
-    Visually shows the location of marks.
-
-*   unimpaired ([github](http://github.com/tpope/vim-unimpaired))
-
-    pairs of assorted bracket maps
 
 #### Syntax plugins
 
-*   tmux
+*   [vim-tmux](http://tmux.sourceforge.net/)
 
-    [tmux](http://tmux.sourceforge.net/) syntax  suupport (extracted from tmux-1.1)
+    syntax  suupport (extracted from tmux-1.1)
 
 *   rcov
 
-    [rcov](http://eigenclass.org/hiki.rb?rcov) support (extracted from rcov-0.8.1.2.0 ruby gem)
+    support (extracted from rcov-0.8.1.2.0 ruby gem)
 
-*   puppet ([vim.org](http://www.vim.org/scripts/script.php?script_id=2094))
+*   [Puppet-Syntax-Highlighting](https://github.com/vim-scripts/Puppet-Syntax-Highlighting)
 
     Syntax Highlighting for Puppet
 
-*   json 0.4 ([vim.org](http://www.vim.org/scripts/script.php?script_id=1945))
+*   [JSON.vim](https://github.com/vim-scripts/JSON.vim)
 
     synntax highlighting file for JSON
 
-*   cucumber ([github](http://github.com/tpope/vim-cucumber))
+*   [vim-cucumber](http://github.com/tpope/vim-cucumber)
 
     syntax, indent, etc. for [Cucumber](http://github.com/aslakhellesoy/cucumber)
 
-*   haml ([vim.org](http://www.vim.org/scripts/script.php?script_id=1433)) ([github](http://github.com/tpope/vim-haml))
+*   [vim-haml](http://github.com/tpope/vim-haml)
 
     [HAML](http://haml-lang.com/) syntax etc.
 
-*   markdown ([github](http://github.com/plasticboy/vim-markdown))
+*   [vim-markdown](http://github.com/plasticboy/vim-markdown)
 
     syntax for [Markdown](http://daringfireball.net/projects/markdown/)
 
-*   coffee-script ([github](http://github.com/kchmck/vim-coffee-script))
+*   [vim-coffee-script](http://github.com/kchmck/vim-coffee-script)
 
     syntax for [Coffee script](http://jashkenas.github.com/coffee-script/)
 
-*   jade ([vim.org](http://www.vim.org/scripts/script.php?script_id=3192))([github](https://github.com/vim-scripts/jade.vim))
+*   [jade.vim](https://github.com/vim-scripts/jade.vim)
 
     syntax for [Jade](http://jade-lang.com/)
+
+*   stylus
+
+    TBD
+
+#### "Support" and "minor" plugins
+
+*   [vim-textobj-user](https://github.com/kana/vim-textobj-user)
+
+    Support for user-defined text objects
+
+*   [vim-repeat](http://github.com/tpope/vim-repeat)
+
+    Use the repeat command "." with supported plugins
+
 
 ### Misc
 
@@ -434,3 +399,17 @@ randomly chosen bits of vim goodness.
 * `<C-R>x` while in insert mote will paste content of register x (replace x with any other)
 * `"xp` paste from register x
 * `:reg` Display the contents of all numbered and named registers.
+
+
+#### Currently disabled
+
+*   [vim-unimpaired](http://github.com/tpope/vim-unimpaired)
+
+    pairs of assorted bracket maps
+
+*   space ([github](http://github.com/scrooloose/vim-space))
+
+    Smart Space key for Vim
+
+    press SPACE to repeat last motion command
+

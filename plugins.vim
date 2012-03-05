@@ -7,7 +7,7 @@ hi! link ShowMarksHLm LineNr
 
 " syntastic
 let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=2
 
 " delimitMate
 let g:delimitMate_expand_space = 1
@@ -78,3 +78,7 @@ nmap <leader>k :Ack
 " vim-indentobject
 " add Markdown to the list of indentation based languages
 let g:indentobject_meaningful_indentation = ["haml", "sass", "python", "yaml", "markdown"]
+
+" indent-guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
