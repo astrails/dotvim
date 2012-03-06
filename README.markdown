@@ -55,6 +55,7 @@ Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
     TextMate Command-T like file finder for vim
 
     * `,,` - find file
+    * `,.` - refresh the file list and then find a file
     * while at the finder prompt:
       * `Ctrl-Enter` - open file in a new split
       * `Ctrl-s` - open file in a new split
