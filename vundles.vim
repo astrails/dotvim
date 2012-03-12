@@ -38,6 +38,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-vividchalk'
 
 " syntax support
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'tsaleh/vim-tmux'
 Bundle 'vitaly/vim-rcov'
 Bundle 'Puppet-Syntax-Highlighting'
@@ -55,15 +56,6 @@ Bundle 'wavded/vim-stylus'
 Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-repeat'
 Bundle 'vitaly/vim-gitignore'
-
-
-
-
-
-
-
-
-
 
 "Bundle 'ShowMarks'
 "Bundle 'scrooloose/vim-space'
