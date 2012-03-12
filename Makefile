@@ -9,7 +9,7 @@ submodules:
 	git submodule update --init
 
 vundles:
-	vim +BundleInstall
+	vim -u ./vundles.vim +BundleInstall
 
 install-command-t:
 	cd bundle/command-t/ruby/command-t/ && /opt/local/bin/ruby extconf.rb && make
