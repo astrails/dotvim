@@ -376,6 +376,12 @@ Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
     Use the repeat command "." with supported plugins
 
+*   [vim-space](http://github.com/scrooloose/vim-space)
+
+    Smart Space key for Vim
+
+    press SPACE to repeat last motion command
+
 
 ### Misc
 
@@ -408,10 +414,4 @@ randomly chosen bits of vim goodness.
 *   [vim-unimpaired](http://github.com/tpope/vim-unimpaired)
 
     pairs of assorted bracket maps
-
-*   space ([github](http://github.com/scrooloose/vim-space))
-
-    Smart Space key for Vim
-
-    press SPACE to repeat last motion command
 
