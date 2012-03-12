@@ -40,7 +40,7 @@ nnoremap #   #zz
 nnoremap g*  g*zz
 nnoremap g#  g#z
 
-""""""""""" awesome stuff from vimbits
+""""""""""" awesome stuff from vimbits.com
 
 " keep selection after in/outdent
 vnoremap < <gv
@@ -56,3 +56,9 @@ nnoremap - <C-x>
 
 " remove trailing spaces
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
+
+" easy split navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l

@@ -29,6 +29,9 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `Ctrl-E` - switch between 2 last buffers  (its just a `:b#<cr>` :)
 * `Ctrl-N` to cancel current search highlighing
 * `,f` global Ggrep for word under the cursor or for selection
+* `+`, `-` - easily inc/decrement integers
+* `,W` - remove trailing spaces
+* `Ctrl-g`/`h`/`j`/`k` - simplified split panes navigation
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
