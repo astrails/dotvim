@@ -50,7 +50,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'vitaly/vim-syntastic-coffee'
 Bundle 'vim-scripts/jade.vim'
 Bundle 'wavded/vim-stylus'
-
+Bundle 'VimClojure'
 
 " Support and minor
 Bundle 'kana/vim-textobj-user'
