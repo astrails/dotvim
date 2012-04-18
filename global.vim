@@ -56,12 +56,6 @@ if has("mouse")
 endif
 set mousehide                           " Hide mouse pointer on insert mode."
 
-
-if version >= 700 && has("macunix")
-  " Default yank and paste go to Mac's clipboard
-  set clipboard=unnamed
-end
-
 " search settings
 set incsearch           " Incremental search
 set hlsearch            " Highlight search match
