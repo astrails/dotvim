@@ -57,6 +57,8 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'tpope/vim-repeat'
 Bundle 'vitaly/vim-gitignore'
 Bundle 'scrooloose/vim-space'
+Bundle 'mattn/gist-vim'
+Bundle 'mattn/webapi-vim'
 
 "Bundle 'ShowMarks'
 "Bundle 'tpope/vim-unimpaired'
