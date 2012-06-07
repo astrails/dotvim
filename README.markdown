@@ -12,7 +12,7 @@ From your homedirectory (on Linux/Mac OSX):
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
 * `cd .vim; make install`
-* create ~/.vim\_local if you want to have some
+* create ~/.local.vim if you want to have some
   local/personal settings you don't want to commit into the repo
 
 Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
