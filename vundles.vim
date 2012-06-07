@@ -7,7 +7,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'wincent/Command-T'
 Bundle 'AutoComplPop'
 Bundle 'taglist.vim'
 Bundle 'YankRing.vim'

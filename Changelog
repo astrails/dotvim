@@ -5,3 +5,5 @@
   - new file ~/.local.vim
   - macros.vim - a couple of useful macros
   - added CHANGELOG ;)
+  - change command-t repo to github. original is down all the time
+    use 'make install' or remove bundle/command-t before you update
