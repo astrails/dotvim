@@ -410,7 +410,7 @@ The following is a list of commands and key bindings that I personally find inte
 stored for easy refreshing my memory of them. there is no much 'system' to it, just
 randomly chosen bits of vim goodness.
 
-
+* `]p` paste with autoindent.
 * `ga` print ascii value of character under the cursor
 * `g#` like "#", but without using "\<" and "\>"
 * `g<` display previous command output
