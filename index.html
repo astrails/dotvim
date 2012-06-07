@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Dotvim : a very good collection of vim configuration options and plugins specifically tailored for Rails development" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Dotvim</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/astrails/dotvim">View on GitHub</a>
+
+          <h1 id="project_title">Dotvim</h1>
+          <h2 id="project_tagline">a very good collection of vim configuration options and plugins specifically tailored for Rails development</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/astrails/dotvim/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/astrails/dotvim/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Dotvim</h2>
+
+<h3>This is a complete Vim configuration that I'm using everywhere.</h3>
+
+<p>The config is using <a href="http://github.com/gmarik/vundle">Vundle</a> for easy upgrading.</p>
+
+<p><em>Some</em> help tips are provided for <em>some</em> of the plugins. please check out the plugin's docs for more info.</p>
+
+<h5>Installation</h5>
+
+<p>From your homedirectory (on Linux/Mac OSX):</p>
+
+<ul>
+<li><code>git clone git://github.com/astrails/dotvim.git</code></li>
+<li><code>ln -sfn dotvim .vim</code></li>
+<li><code>ln -sfn dotvim/vimrc .vimrc</code></li>
+<li><code>cd .vim; make install</code></li>
+<li>create ~/.local.vim if you want to have some
+local/personal settings you don't want to commit into the repo</li>
+</ul><p>Note: if you already have <code>~/.vim</code> <code>~/.vimrc</code> REMOVE THEM (you might want to backup them first :)</p>
+
+<h4>General configuration</h4>
+
+<p><code>,</code> is used as mapleader
+<code>backslash</code> is used as localleader</p>
+
+<ul>
+<li>
+<code>,e</code> mapped to <code>:e **/</code>. essentially you do <code>,efoo&lt;tab&gt;</code> to get a list of all files starting with foo</li>
+<li>
+<code>,s</code> - toggle invisible characters display</li>
+<li>
+<code>,n</code> - next <code>quicklist</code> result (like :Ggrep etc)</li>
+<li>
+<code>,N</code> - previous <code>quicklist</code> result (like :Ggrep etc)</li>
+<li>
+<code>Ctrl-E</code> - switch between 2 last buffers  (its just a <code>:b#&lt;cr&gt;</code> :)</li>
+<li>
+<code>Ctrl-N</code> to cancel current search highlighing</li>
+<li>
+<code>,f</code> global Ggrep for word under the cursor or for selection</li>
+<li>
+<code>+</code>, <code>-</code> - easily inc/decrement integers</li>
+<li>
+<code>,W</code> - remove trailing spaces</li>
+<li>
+<code>Ctrl-g</code>/<code>h</code>/<code>j</code>/<code>k</code> - simplified split panes navigation</li>
+</ul><p>Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...</p>
+
+<h4>Macros</h4>
+
+<p>I included a couple of macros that I frequently use in macros.vim which
+is loaded from after.vim:</p>
+
+<ul>
+<li>   <code>@q</code> (re)format paragraph forward</li>
+<li>   <code>@s</code> enclose selection with double *. e.g. **foo**.</li>
+</ul><p>You really should start writing your own macros. The life will never be the
+same ;).</p>
+
+<p>I recommend editing your macros in a vim buffer.</p>
+
+<p>To load a macro into a register you can 'yank' it.</p>
+
+<p>For example if you have a line with a macro and cursor is at the beginning of
+it <code>"ay$</code>  will load the macro into register <code>a</code>, so that you will be able to
+execute it with <code>@a</code>.</p>
+
+<h4>"Interesting" Plugins:</h4>
+
+<ul>
+<li>
+<p><a href="http://github.com/scrooloose/nerdtree">nerdtree</a></p>
+
+<p>hax0r vim script to give you a tree explorer</p>
+
+<ul>
+<li>
+<code>Ctrl-P</code> - open directory browser</li>
+<li>
+<code>,p</code> - to find and highlight the currently open file in the tree</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/scrooloose/nerdcommenter">nerdcommenter</a></p>
+
+<p>Vim plugin for intensely orgasmic commenting</p>
+
+<ul>
+<li>
+<code>,/</code> - toggle comment</li>
+<li>
+<code>,cc</code> - add commenting</li>
+<li>
+<code>,cu</code> - Uncomment</li>
+<li>check docs for more</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/vim-scripts/Command-T">Command-T</a></p>
+
+<p>TextMate Command-T like file finder for vim</p>
+
+<ul>
+<li>
+<code>,,</code> - find file</li>
+<li>
+<code>,.</code> - refresh the file list and then find a file</li>
+<li>while at the finder prompt:
+
+<ul>
+<li>
+<code>Ctrl-Enter</code> - open file in a new split</li>
+<li>
+<code>Ctrl-s</code> - open file in a new split</li>
+<li>
+<code>Ctrl-v</code> - open file in a new vertical split</li>
+<li>
+<code>Ctrl-U</code> - clear current partial path</li>
+<li>
+<code>Esc</code> - cancel</li>
+<li>
+<code>Ctrl-c</code> - cancel</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/vim-scripts/AutoComplPop">AutoComplPop</a></p>
+
+<p>Automatically opens popup menu for completions</p>
+
+<p>Shouldn't require config.</p>
+</li>
+<li>
+<p><a href="http://github.com/vim-scripts/taglist.vim">taglist.vim</a></p>
+
+<p>Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)</p>
+
+<ul>
+<li>
+<code>,t</code> - toggle tags window</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/vim-scripts/YankRing.vim">YankRing.vim</a></p>
+
+<p>Maintains a history of previous yanks, changes and deletes</p>
+
+<ul>
+<li>
+<code>,y</code> to show the yankring</li>
+<li>
+<code>,[</code>/<code>,]</code> - to cycle the just-pasted text though the yankring.</li>
+<li>
+<code>:h yankring.txt</code> and <code>:h yankring-tutorial</code> for more</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-fugitive">vim-fugitive</a></p>
+
+<p>A Git wrapper so awesome, it should be illegal</p>
+
+<ul>
+<li>
+<p><code>:Gstatus</code></p>
+
+<p>Bring up the output of git-status in the preview
+ window.  Press <code>-</code> to stage or unstage the file on the
+ cursor line.  Press <code>p</code> to do so on a per hunk basis
+ (--patch).  Press <code>C</code> to invoke :Gcommit.</p>
+</li>
+<li>
+<p><code>:Gcommit [args]</code></p>
+
+<p>A wrapper around git-commit.</p>
+</li>
+<li>
+<p><code>:Ggrep [args]</code></p>
+
+<p>:grep with git-grep as 'grepprg'.</p>
+</li>
+<li>
+<p><code>,g</code></p>
+
+<p>shortcut to run :Ggrep</p>
+</li>
+<li>
+<p><code>//</code></p>
+
+<p>global git search for the word under the cursor for for selection (in visual mode)</p>
+</li>
+<li>
+<p><code>:Gblame</code></p>
+
+<p>Run git-blame on the file and open the results in a
+scroll bound vertical split.  Press enter on a line to
+reblame the file as it was in that commit.</p>
+</li>
+</ul>
+<p>Much more in the plugin's doc</p>
+</li>
+<li>
+<p><a href="http://github.com/scrooloose/syntastic">syntastic</a></p>
+
+<p>syntax checking plugin</p>
+
+<p>it will display the number of syntax errors in the current file in the vim's status line.</p>
+
+<p>use <code>:Errors</code> to display a window detailing the errors</p>
+</li>
+<li>
+<p><a href="http://github.com/msanders/snipmate.vim">snipmate</a></p>
+
+<p>TextMate-style snippets for Vim</p>
+
+<p>write a snipped text and press TAB to expand it.</p>
+
+<p>To see the list of available snippets type <code>Ctrl-R &lt;Tab&gt;</code> in the insert mode</p>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-surround">vim-surround</a></p>
+
+<p>Delete/change/add parentheses/quotes/XML-tags/much more with ease</p>
+
+<ul>
+<li>
+<code>dsX</code> - delete surround X</li>
+<li>
+<code>csXY</code> - change surround X with Y</li>
+<li>
+<code>s/S</code> in visual mode - wrap selection</li>
+<li>
+<code>ysMovementX</code> - surround movement with X</li>
+</ul>
+<p>You should REALLY read the docs if you want to use this one</p>
+</li>
+<li>
+<p><a href="http://github.com/tsaleh/vim-align">vim-align</a></p>
+
+<p>Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.</p>
+
+<ul>
+<li>
+<code>,t=</code> - align on =</li>
+<li>
+<code>,tsp</code> - align on whitespace</li>
+<li>
+<code>,t,</code> - align on commas</li>
+<li>
+<code>,t|</code> - align on vertical bars</li>
+<li>
+<code>,acom</code> - align comments (C/C++)</li>
+<li>
+<code>:AlignSEPARATORS</code> - align on separators</li>
+<li>
+<code>:h align</code> - see help for more options</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/mileszs/ack.vim">ack.vim</a></p>
+
+<p>This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.</p>
+
+<ul>
+<li>
+<code>:Ack [options] {pattern} [{directory}]</code> - grep for the pattern in side directory and open result in a QuickFix window</li>
+<li>
+<code>:Ack --ruby ...</code> - search only ruby files.</li>
+<li>
+<code>:h Ack</code> - more help about Ack</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/austintaylor/vim-indentobject">vim-indentobject</a></p>
+
+<p>A text object for manipulating blocks based on their indentation</p>
+
+<p>This is good for Python, YAML, HAML etc.</p>
+
+<p>Usage is similar to textobj-rubyblock, just with <code>i</code> instead of <code>r</code></p>
+
+<ul>
+<li>
+<code>vai</code> / <code>vii</code> - select indent block including / excluding the outer lines</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/vim-scripts/greplace.vim">greplace.vim</a></p>
+
+<p>Replace a pattern across multiple files interactively</p>
+
+<p>Use <code>:Gsearch</code> to search for a pattern. Edit the result buffer to your
+liking, then <code>:Greplace</code> to incorporate your edits into the source files</p>
+
+<ul>
+<li>
+<code>:Gsearch</code> - Search for a given pattern in the specified group of files
+and display the matches in the replace buffer.</li>
+<li>
+<code>:Gbuffersearch</code> - Search for a given pattern in all the buffers in the Vim buffer list.</li>
+<li>
+<code>:Greplace</code> - Incorporate the modifications from the replace buffer into
+the corresponding files.</li>
+</ul>
+</li>
+<li>
+<p><a href="TBD">vim-powerline</a></p>
+
+<p>TBD</p>
+</li>
+<li>
+<p><a href="https://github.com/sjl/threesome.vim">threesome.vim</a></p>
+
+<p>A plugin for resolving conflicts during three-way merges.</p>
+
+<p>Add the following lines to ~/.gitconfig to use</p>
+
+<p>[merge]
+tool = threesome</p>
+
+<p>[mergetool "threesome"]
+cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+trustExitCode = true</p>
+
+<p>Bindings:</p>
+
+<ul>
+<li>
+<code>\g</code> - switch to grid view</li>
+<li>
+<code>\l</code> - switch to loupe view</li>
+<li>
+<code>\c</code> - switch to compare view</li>
+<li>
+<code>\p</code> - switch to path view</li>
+<li>
+<code>\o</code> - select the original file</li>
+<li>
+<code>\1</code> - select file one</li>
+<li>
+<code>\2</code> - select file two</li>
+<li>
+<code>\r</code> - select the results file</li>
+<li>
+<code>\n</code> - next unresolved conflict</li>
+<li>
+<code>\N</code> - prev unresolved conflict</li>
+<li>
+<code>\&lt;space&gt;</code> - cycle layout</li>
+<li>
+<code>\s</code> - toggle scrolllocking</li>
+<li>
+<code>\d</code> - cycle diff combinations</li>
+<li>
+<code>\D</code> - turn off all diffs</li>
+<li>
+<code>\CC</code> - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed</li>
+<li>
+<code>:h threesome</code> - you should probably read it ;)</li>
+</ul>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-endwise">vim-endwise</a></p>
+
+<p>Wisely add "end" in ruby, endfunction/endif/more in vim script, etc</p>
+</li>
+<li>
+<p><a href="http://github.com/Raimondi/delimitMate">delimitMate</a></p>
+
+<p>auto-completion for quotes, parens, brackets, etc. in insert mode.</p>
+</li>
+</ul><h4>Ruby/Rails support:</h4>
+
+<ul>
+<li>
+<p><a href="http://github.com/tpope/vim-rails">vim-rails</a></p>
+
+<p>Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more</p>
+
+<ul>
+<li>
+<code>:AV</code> - open "alternate" file in a new vertical split</li>
+<li>
+<code>:AS</code> - open "alternate" file in a new horizontal split</li>
+<li>
+<code>:RV</code> - open "related" file in a new vertical split</li>
+<li>
+<code>:RS</code> - open "related" file in a new horizontal split</li>
+<li>
+<code>:Rextract</code> - extract partial (select text for extraction first)</li>
+<li>
+<code>:Rinvert</code> - takes a self.up migration and writes a self.down.</li>
+<li>
+<code>gf</code> - remapped to take context into account. recognizes models
+associations, partials etc.</li>
+<li>
+<code>:h rails</code> for much more info ;)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tpope/vim-bundler">vim-bundler</a></p>
+
+<p>Lightweight support for Ruby's Bundler</p>
+
+<ul>
+<li>
+<code>gf</code> when standing over a gem name in a Gemfile will go to gem's directory</li>
+<li>
+<code>:Bopen NAME</code> does bundle open NAME - opens gem NAME's lib diretory in the current window.</li>
+<li>
+<code>:Bundle</code> - runs bundler</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/tpope/vim-rake">vim-rake</a></p>
+
+<p>TBD</p>
+</li>
+<li>
+<p><a href="https://github.com/nelstrom/vim-textobj-rubyblock">vim-textobj-rubyblock</a></p>
+
+<p>A custom text object for selecting ruby blocks.</p>
+
+<p>In other words it teaches vim to understand what is ruby block, just like vim already understands what is word, paragraph, sentence etc.</p>
+
+<p>It works with begin/end, if/else/end etc.</p>
+
+<ul>
+<li>
+<code>var</code> - select ruby block around the cursor including begin/end</li>
+<li>
+<code>vir</code> - select insides of a ruby block around the cursor not including begin/end</li>
+<li>
+<code>dar</code> - delete ruby block around the cursor</li>
+<li>etc...</li>
+</ul>
+<p>Some 'trickier' usage patterns.</p>
+
+<ul>
+<li>
+<code>varar</code> - select the ruby block that is around the ruby block that is around the cursor. including begin/end</li>
+<li>
+<code>vararir</code> - select insides of the ruby block that is around the ruby block that is around the cursor. not including begin/end</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/ecomba/vim-ruby-refactoring">vim-ruby-refactoring</a></p>
+
+<p>Refactoring tool for Ruby in vim!</p>
+
+<ul>
+<li>
+<code>,rap</code>  :RAddParameter           - Add Parameter(s) to a method</li>
+<li>
+<code>,rcpc</code> :RConvertPostConditional - Convert Post Conditional</li>
+<li>
+<code>,rel</code>  :RExtractLet             - Extract to Let (Rspec)</li>
+<li>
+<code>,rec</code>  :RExtractConstant        - Extract Constant (visual selection)</li>
+<li>
+<code>,relv</code> :RExtractLocalVariable   - Extract Local Variable (visual selection)</li>
+<li>
+<code>,rit</code>  :RInlineTemp             - Inline Temp. replace temp parameter by direct function call</li>
+<li>
+<code>,rrlv</code> :RRenameLocalVariable    - Rename Local Variable (visual selection/variable under the cursor</li>
+<li>
+<code>,rriv</code> :RRenameInstanceVariable - Rename Instance Variable (visual selection)</li>
+<li>
+<code>,rem</code>  :RExtractMethod          - Extract Method (visual selection)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://github.com/alexandrov/apidock.vim">apidock.vim</a></p>
+
+<p>Vim plugin that searches <a href="http://apidock.com">http://apidock.com</a> Ruby, Rails, and RSpec docs from within Vim.</p>
+
+<ul>
+<li>
+<code>RR</code> - Search the Rails docs for the word under the cursor.</li>
+<li>
+<code>RB</code> - Search the Ruby docs for the word under the cursor.</li>
+<li>
+<code>RS</code> - Search the RSpec docs for the word under the cursor.</li>
+</ul>
+</li>
+</ul><h4>Color themes</h4>
+
+<ul>
+<li>
+<p><a href="http://github.com/altercation/vim-colors-solarized">vim-colors-solarized</a></p>
+
+<p>precision colorscheme for the vim text editor</p>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-vividchalk">vim-vividchalk</a></p>
+
+<p>A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor</p>
+</li>
+</ul><h4>Syntax plugins</h4>
+
+<ul>
+<li>
+<p><a href="http://tmux.sourceforge.net/">vim-tmux</a></p>
+
+<p>syntax  suupport (extracted from tmux-1.1)</p>
+</li>
+<li>
+<p>rcov</p>
+
+<p>support (extracted from rcov-0.8.1.2.0 ruby gem)</p>
+</li>
+<li>
+<p><a href="https://github.com/vim-scripts/Puppet-Syntax-Highlighting">Puppet-Syntax-Highlighting</a></p>
+
+<p>Syntax Highlighting for Puppet</p>
+</li>
+<li>
+<p><a href="https://github.com/vim-scripts/JSON.vim">JSON.vim</a></p>
+
+<p>synntax highlighting file for JSON</p>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-cucumber">vim-cucumber</a></p>
+
+<p>syntax, indent, etc. for <a href="http://github.com/aslakhellesoy/cucumber">Cucumber</a></p>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-haml">vim-haml</a></p>
+
+<p><a href="http://haml-lang.com/">HAML</a> syntax etc.</p>
+</li>
+<li>
+<p><a href="http://github.com/plasticboy/vim-markdown">vim-markdown</a></p>
+
+<p>syntax for <a href="http://daringfireball.net/projects/markdown/">Markdown</a></p>
+</li>
+<li>
+<p><a href="http://github.com/kchmck/vim-coffee-script">vim-coffee-script</a></p>
+
+<p>syntax for <a href="http://jashkenas.github.com/coffee-script/">Coffee script</a></p>
+</li>
+<li>
+<p><a href="https://github.com/vim-scripts/jade.vim">jade.vim</a></p>
+
+<p>syntax for <a href="http://jade-lang.com/">Jade</a></p>
+</li>
+<li>
+<p>stylus</p>
+
+<p>TBD</p>
+</li>
+</ul><h4>"Support" and "minor" plugins</h4>
+
+<ul>
+<li>
+<p><a href="https://github.com/kana/vim-textobj-user">vim-textobj-user</a></p>
+
+<p>Support for user-defined text objects</p>
+</li>
+<li>
+<p><a href="http://github.com/tpope/vim-repeat">vim-repeat</a></p>
+
+<p>Use the repeat command "." with supported plugins</p>
+</li>
+<li>
+<p><a href="http://github.com/scrooloose/vim-space">vim-space</a></p>
+
+<p>Smart Space key for Vim</p>
+
+<p>press SPACE to repeat last motion command</p>
+</li>
+</ul><h3>Misc</h3>
+
+<p>The following is a list of commands and key bindings that I personally find interesting
+stored for easy refreshing my memory of them. there is no much 'system' to it, just
+randomly chosen bits of vim goodness.</p>
+
+<ul>
+<li>
+<code>]p</code> paste with autoindent.</li>
+<li>
+<code>ga</code> print ascii value of character under the cursor</li>
+<li>
+<code>g#</code> like "#", but without using "&lt;" and "&gt;"</li>
+<li>
+<code>g&lt;</code> display previous command output</li>
+<li>
+<code>zt</code> scroll cursor line to top</li>
+<li>
+<code>zz</code> scroll cursor line to center</li>
+<li>
+<code>zb</code> scroll cursor line to bottom</li>
+<li>
+<code>CTRL-W x</code> exchange current window with n-th window (or next if no count given)</li>
+<li>
+<code>gv</code> reselect last selection</li>
+<li>
+<code>gt</code> next tab</li>
+<li>
+<code>gT</code> prev tab</li>
+<li>
+<code>ci</code> change inside delimiters</li>
+<li>
+<code>di</code> delete inside delimiters</li>
+<li>
+<code>@@</code> execute last macro</li>
+<li>
+<code>"xyy</code> copy line into <code>x</code> register (replace x with any other)</li>
+<li>
+<code>&lt;C-R&gt;x</code> while in insert mote will paste content of register x (replace x with any other)</li>
+<li>
+<code>"xp</code> paste from register x</li>
+<li>
+<code>:reg</code> Display the contents of all numbered and named registers.</li>
+</ul><h4>Currently disabled</h4>
+
+<ul>
+<li>
+<p><a href="http://github.com/tpope/vim-unimpaired">vim-unimpaired</a></p>
+
+<p>pairs of assorted bracket maps</p>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Dotvim maintained by <a href="https://github.com/astrails">astrails</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
