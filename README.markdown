@@ -1,4 +1,6 @@
-This is a complete Vim configuration that I'm using everywhere
+## Dotvim
+
+### This is a complete Vim configuration that I'm using everywhere.
 
 The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading.
 
@@ -34,6 +36,25 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `Ctrl-g`/`h`/`j`/`k` - simplified split panes navigation
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
+
+#### Macros
+
+I included a couple of macros that I frequently use in macros.vim which
+is loaded from after.vim:
+
+*    `@q` (re)format paragraph forward
+*    `@s` enclose selection with double \*. e.g. \*\*foo\*\*.
+
+You really should start writing your own macros. The life will never be the
+same ;).
+
+I recommend editing your macros in a vim buffer.
+
+To load a macro into a register you can 'yank' it.
+
+For example if you have a line with a macro and cursor is at the beginning of
+it `"ay$`  will load the macro into register `a`, so that you will be able to
+execute it with `@a`.
 
 #### "Interesting" Plugins:
 
