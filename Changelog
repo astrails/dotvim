@@ -1,0 +1,7 @@
+* 2012-06-07
+  - after.vim: reworked loading of bindings.vim after plugins.
+    local now also loaded after all the plugins
+  - deprecated ~/.vim_local
+  - new file ~/.local.vim
+  - macros.vim - a couple of useful macros
+  - added CHANGELOG ;)
