@@ -1,3 +1,7 @@
+# find out where ruby is. can override this by providing environment or command
+# line variable
+RUBY ?= $(shell ./find-ruby.sh)
+
 update: install-vundle vundles install-command-t
 
 install: cleanup update
@@ -12,4 +16,4 @@ vundles:
 	vim -u ./vundles.vim +BundleInstall
 
 install-command-t:
-	cd bundle/Command-T/ruby/command-t/ && /opt/local/bin/ruby extconf.rb && make
+	cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make
