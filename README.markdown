@@ -383,6 +383,10 @@ execute it with `@a`.
 
     syntax for [Jade](http://jade-lang.com/)
 
+*   [vim-slim](https://github.com/bbommarito/vim-slim)
+
+    [Slim](http://slim-lang.com/) syntax support.
+
 *   stylus
 
     TBD

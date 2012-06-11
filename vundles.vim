@@ -51,6 +51,7 @@ Bundle 'vitaly/vim-syntastic-coffee'
 Bundle 'vim-scripts/jade.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'VimClojure'
+Bundle 'bbommarito/vim-slim'
 
 " Support and minor
 Bundle 'kana/vim-textobj-user'
