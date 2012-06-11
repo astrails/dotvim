@@ -1,3 +1,7 @@
+* 2012-06-11
+  - attempt to support command-t install on non-OSX systems. trying to guess
+    ruby binary
+  - vim-slim plugin for Slim syntax support
 * 2012-06-07
   - after.vim: reworked loading of bindings.vim after plugins.
     local now also loaded after all the plugins
