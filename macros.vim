@@ -4,7 +4,7 @@
 " and cursor is at the beginning of it "ay$  will load the macro into register
 " 'a', so that you will be able to execute it with @a
 
-" 's' enclose selection in double *
+" 's' enclose selection in double * (bold in markdown)
 let @s="S*gvS*"
 
 " 'q' format paragraph
