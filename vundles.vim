@@ -24,6 +24,7 @@ Bundle 'sjl/threesome.vim'
 Bundle 'Indent-Guides'
 Bundle 'tpope/vim-endwise'
 Bundle 'Raimondi/delimitMate'
+Bundle 'calendar.vim--Matsumoto'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails'

@@ -40,6 +40,8 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
   * [vim-textobj-rubyblock](#vim-textobj-rubyblock)
   * [vim-ruby-refactoring](#vim-ruby-refactoring)
   * [apidock.vim](#apidock.vim)
+* [Org mode and support plugins](#orgmode)
+  * [calendar](#calendar)
 * [Color themes](#themes)
   * [vim-colors-solarized](#vim-colors-solarized)
   * [vim-vividchalk](#vim-vividchalk)
@@ -421,6 +423,27 @@ execute it with `@a`.
 
 
 [top](#top)
+
+<a name=orgmode>
+#### Org mode and support plugins
+
+Vim now has support for Emacs' [Org mode](http://orgmode.org/) provided by the
+[VimOrganizer](#VimOrganizer) plugin.
+
+Below you will also find a couple of plugins that support it, but can be also
+used intependently.
+
+*   <a name=calendar>[calendar.vim](https://github.com/vim-scripts/calendar.vim--Matsumoto) ([top](#top))
+
+    Calendar support w/o calling external programs.
+
+    * Commands:
+      * `:Calendar`        - open calendar
+      * `:Calendar 2012 8` - open calendar for 2012-08
+      * `:CalendarH`       - open horizontal calendar
+    * Bindings:
+      * `,cal` -  `:Calendar`
+      * `,caL` -  `:CalendarH`
 
 <a name=themes>
 #### Color themes

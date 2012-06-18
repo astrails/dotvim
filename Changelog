@@ -1,3 +1,6 @@
+* 2012-06-19
+  - calendar.vim
+
 * 2012-06-18
   - support persistent undo
   - OSX russian translit keyboard layout support
