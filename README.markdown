@@ -6,6 +6,23 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
 
 *Some* help tips are provided for *some* of the plugins. please check out the plugin's docs for more info.
 
+<a name=top>
+#### Contents
+
+* [Installation](#installation)
+* [General Configuration](#general)
+* [Backups](#backups)
+* [Persistent Undo](#undo)
+* [Macros](#macros)
+* [Interesting Plugins](#interesting)
+* [Ruby/Rails Support](#ruby)
+* [Color themes](#themes)
+* [Syntax plugins](#syntax)
+* ["Support" and "minor" plugins](#minor)
+* [Misc Bindings](#misc)
+* [Russian Translit Layout support](#russian)
+
+<a name=installation>
 ##### Installation
 
 From your homedirectory (on Linux/Mac OSX):
@@ -19,6 +36,9 @@ From your homedirectory (on Linux/Mac OSX):
 
 Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
 
+[top](#top)
+
+<a name=general>
 #### General configuration
 
 `,` is used as mapleader
@@ -37,6 +57,9 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
+[top](#top)
+
+<a name=backups>
 #### Backups
 
 Backups and swapfiles are disabled. I really hate them both.
@@ -53,6 +76,9 @@ backup dir is set to ~/.backup/
 
 The directory is created if it doesn't exist.
 
+[top](#top)
+
+<a name=undo>
 #### Persistent Undo
 
 Persistent undos are enabled by default.
@@ -61,6 +87,9 @@ You can disable by adding the following to your `~/.local.vim`:
 
     set noundo
 
+[top](#top)
+
+<a name=macros>
 #### Macros
 
 I included a couple of macros that I frequently use in macros.vim which
@@ -80,6 +109,9 @@ For example if you have a line with a macro and cursor is at the beginning of
 it `"ay$`  will load the macro into register `a`, so that you will be able to
 execute it with `@a`.
 
+[top](#top)
+
+<a name=interesting>
 #### "Interesting" Plugins:
 
 *   [nerdtree](http://github.com/scrooloose/nerdtree)
@@ -288,6 +320,9 @@ execute it with `@a`.
     auto-completion for quotes, parens, brackets, etc. in insert mode.
 
 
+[top](#top)
+
+<a name=ruby>
 #### Ruby/Rails support:
 
 *   [vim-rails](http://github.com/tpope/vim-rails)
@@ -358,6 +393,9 @@ execute it with `@a`.
     * `RS` - Search the RSpec docs for the word under the cursor.
 
 
+[top](#top)
+
+<a name=themes>
 #### Color themes
 
 *   [vim-colors-solarized](http://github.com/altercation/vim-colors-solarized)
@@ -369,6 +407,9 @@ execute it with `@a`.
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
 
 
+[top](#top)
+
+<a name=syntax>
 #### Syntax plugins
 
 *   [vim-tmux](http://tmux.sourceforge.net/)
@@ -415,6 +456,9 @@ execute it with `@a`.
 
     TBD
 
+[top](#top)
+
+<a name=minor>
 #### "Support" and "minor" plugins
 
 *   [vim-textobj-user](https://github.com/kana/vim-textobj-user)
@@ -432,7 +476,10 @@ execute it with `@a`.
     press SPACE to repeat last motion command
 
 
-### Misc
+[top](#top)
+
+<a name=misc>
+### Misc Bindings
 
 The following is a list of commands and key bindings that I personally find interesting
 stored for easy refreshing my memory of them. there is no much 'system' to it, just
@@ -458,6 +505,9 @@ randomly chosen bits of vim goodness.
 * `:reg` Display the contents of all numbered and named registers.
 
 
+[top](#top)
+
+<a name=russian>
 #### Russian Translit Layout support
 
 There is ~/.vim/bindings-ru-translit.vim file.
@@ -477,9 +527,9 @@ To use this feature: just include the file from your ~/.local.vim:
 
     source ~/.vim/bindings-ru-translit.vim
 
-#### Currently disabled
+[top](#top)
 
-*   [vim-unimpaired](http://github.com/tpope/vim-unimpaired)
 
-    pairs of assorted bracket maps
+#### Copyright
 
+&copy; 2012 [Vitaly Kushner](mailto:vitaly@astrails.com)

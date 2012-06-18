@@ -1,6 +1,7 @@
 * 2012-06-18
   - support persistent undo
   - OSX russian translit keyboard layout support
+  - READE table of contents
 
 * 2012-06-11
   - attempt to support command-t install on non-OSX systems. trying to guess
