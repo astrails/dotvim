@@ -37,6 +37,30 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
+#### Backups
+
+Backups and swapfiles are disabled. I really hate them both.
+
+You can re-enable backups by adding the following to your `~/.local.vim`:
+
+    set backup
+
+ and swapfiles by
+
+    set swapfile
+
+backup dir is set to ~/.backup/
+
+The directory is created if it doesn't exist.
+
+#### Persistent Undo
+
+Persistent undos are enabled by default.
+
+You can disable by adding the following to your `~/.local.vim`:
+
+    set noundo
+
 #### Macros
 
 I included a couple of macros that I frequently use in macros.vim which
