@@ -15,7 +15,31 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
 * [Persistent Undo](#undo)
 * [Macros](#macros)
 * [Interesting Plugins](#interesting)
+  * [nerdtree](#nerdtree)
+  * [nerdcommenter](#nerdcommenter)
+  * [Command-T](#Command-T)
+  * [AutoComplPop](#AutoComplPop)
+  * [taglist.vim](#taglist.vim)
+  * [YankRing.vim](#YankRing.vim)
+  * [vim-fugitive](#vim-fugitive)
+  * [syntastic](#syntastic)
+  * [snipmate](#snipmate)
+  * [vim-surround](#vim-surround)
+  * [vim-align](#vim-align)
+  * [ack.vim](#ack.vim)
+  * [vim-indentobject](#vim-indentobject)
+  * [greplace.vim](#greplace.vim)
+  * [vim-powerline](#vim-powerline)
+  * [threesome.vim](#threesome.vim)
+  * [vim-endwise](#vim-endwise)
+  * [delimitMate](#delimitMate)
 * [Ruby/Rails Support](#ruby)
+  * [vim-rails](#vim-rails)
+  * [vim-bundler](#vim-bundler)
+  * [vim-rake](#vim-rake)
+  * [vim-textobj-rubyblock](#vim-textobj-rubyblock)
+  * [vim-ruby-refactoring](#vim-ruby-refactoring)
+  * [apidock.vim](#apidock.vim)
 * [Color themes](#themes)
 * [Syntax plugins](#syntax)
 * ["Support" and "minor" plugins](#minor)
@@ -114,14 +138,15 @@ execute it with `@a`.
 <a name=interesting>
 #### "Interesting" Plugins:
 
-*   [nerdtree](http://github.com/scrooloose/nerdtree)
+
+*   <a name=nerdtree>[nerdtree](http://github.com/scrooloose/nerdtree)
 
     hax0r vim script to give you a tree explorer
 
     * `Ctrl-P` - open directory browser
     * `,p` - to find and highlight the currently open file in the tree
 
-*   [nerdcommenter](http://github.com/scrooloose/nerdcommenter)
+*   <a name=nerdcommenter>[nerdcommenter](http://github.com/scrooloose/nerdcommenter)
 
     Vim plugin for intensely orgasmic commenting
 
@@ -130,7 +155,7 @@ execute it with `@a`.
     * `,cu` - Uncomment
     * check docs for more
 
-*   [Command-T](http://github.com/vim-scripts/Command-T)
+*   <a name=Command-T>[Command-T](http://github.com/vim-scripts/Command-T)
 
     TextMate Command-T like file finder for vim
 
@@ -144,19 +169,19 @@ execute it with `@a`.
       * `Esc` - cancel
       * `Ctrl-c` - cancel
 
-*   [AutoComplPop](http://github.com/vim-scripts/AutoComplPop)
+*   <a name=AutoComplPop>[AutoComplPop](http://github.com/vim-scripts/AutoComplPop)
 
     Automatically opens popup menu for completions
 
     Shouldn't require config.
 
-*   [taglist.vim](http://github.com/vim-scripts/taglist.vim)
+*   <a name=taglist.vim>[taglist.vim](http://github.com/vim-scripts/taglist.vim)
 
     Source code browser (supports C/C++, java, perl, python, tcl, sql, php, etc)
 
     * `,t` - toggle tags window
 
-*   [YankRing.vim](http://github.com/vim-scripts/YankRing.vim)
+*   <a name=YankRing.vim>[YankRing.vim](http://github.com/vim-scripts/YankRing.vim)
 
     Maintains a history of previous yanks, changes and deletes
 
@@ -164,7 +189,7 @@ execute it with `@a`.
     * `,[`/`,]` - to cycle the just-pasted text though the yankring.
     * `:h yankring.txt` and `:h yankring-tutorial` for more
 
-*   [vim-fugitive](http://github.com/tpope/vim-fugitive)
+*   <a name=vim-fugitive>[vim-fugitive](http://github.com/tpope/vim-fugitive)
 
     A Git wrapper so awesome, it should be illegal
 
@@ -199,7 +224,7 @@ execute it with `@a`.
 
     Much more in the plugin's doc
 
-*   [syntastic](http://github.com/scrooloose/syntastic)
+*   <a name=syntastic>[syntastic](http://github.com/scrooloose/syntastic)
 
     syntax checking plugin
 
@@ -207,7 +232,7 @@ execute it with `@a`.
 
     use `:Errors` to display a window detailing the errors
 
-*   [snipmate](http://github.com/msanders/snipmate.vim)
+*   <a name=snipmate>[snipmate](http://github.com/msanders/snipmate.vim)
 
     TextMate-style snippets for Vim
 
@@ -215,7 +240,7 @@ execute it with `@a`.
 
     To see the list of available snippets type `Ctrl-R <Tab>` in the insert mode
 
-*   [vim-surround](http://github.com/tpope/vim-surround)
+*   <a name=vim-surround>[vim-surround](http://github.com/tpope/vim-surround)
 
     Delete/change/add parentheses/quotes/XML-tags/much more with ease
 
@@ -226,7 +251,7 @@ execute it with `@a`.
 
     You should REALLY read the docs if you want to use this one
 
-*   [vim-align](http://github.com/tsaleh/vim-align)
+*   <a name=vim-align>[vim-align](http://github.com/tsaleh/vim-align)
 
     Align and AlignMaps lets you align statements on their equal signs, make comment boxes, align comments, align declarations, etc.
 
@@ -238,7 +263,7 @@ execute it with `@a`.
     * `:AlignSEPARATORS` - align on separators
     * `:h align` - see help for more options
 
-*   [ack.vim](http://github.com/mileszs/ack.vim)
+*   <a name=ack.vim>[ack.vim](http://github.com/mileszs/ack.vim)
 
     This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
 
@@ -246,7 +271,7 @@ execute it with `@a`.
     * `:Ack --ruby ...` - search only ruby files.
     * `:h Ack` - more help about Ack
 
-*   [vim-indentobject](https://github.com/austintaylor/vim-indentobject)
+*   <a name=vim-indentobject>[vim-indentobject](https://github.com/austintaylor/vim-indentobject)
 
     A text object for manipulating blocks based on their indentation
 
@@ -257,7 +282,7 @@ execute it with `@a`.
     * `vai` / `vii` - select indent block including / excluding the outer lines
     * ...
 
-*   [greplace.vim](http://github.com/vim-scripts/greplace.vim)
+*   <a name=greplace.vim>[greplace.vim](http://github.com/vim-scripts/greplace.vim)
 
     Replace a pattern across multiple files interactively
 
@@ -270,11 +295,11 @@ execute it with `@a`.
     * `:Greplace` - Incorporate the modifications from the replace buffer into
       the corresponding files.
 
-*   [vim-powerline](TBD)
+*   <a name=vim-powerline>[vim-powerline](TBD)
 
     TBD
 
-*   [threesome.vim](https://github.com/sjl/threesome.vim)
+*   <a name=threesome.vim>[threesome.vim](https://github.com/sjl/threesome.vim)
 
     A plugin for resolving conflicts during three-way merges.
 
@@ -311,11 +336,11 @@ execute it with `@a`.
 
     * `:h threesome` - you should probably read it ;)
 
-*   [vim-endwise](http://github.com/tpope/vim-endwise)
+*   <a name=vim-endwise>[vim-endwise](http://github.com/tpope/vim-endwise)
 
     Wisely add "end" in ruby, endfunction/endif/more in vim script, etc
 
-*   [delimitMate](http://github.com/Raimondi/delimitMate)
+*   <a name=delimitMate>[delimitMate](http://github.com/Raimondi/delimitMate)
 
     auto-completion for quotes, parens, brackets, etc. in insert mode.
 
@@ -325,7 +350,7 @@ execute it with `@a`.
 <a name=ruby>
 #### Ruby/Rails support:
 
-*   [vim-rails](http://github.com/tpope/vim-rails)
+*   <a name=vim-rails>[vim-rails](http://github.com/tpope/vim-rails)
 
     Ruby on Rails: easy file navigation, enhanced syntax highlighting, and more
 
@@ -339,7 +364,7 @@ execute it with `@a`.
       associations, partials etc.
     * `:h rails` for much more info ;)
 
-*   [vim-bundler](https://github.com/tpope/vim-bundler)
+*   <a name=vim-bundler>[vim-bundler](https://github.com/tpope/vim-bundler)
 
     Lightweight support for Ruby's Bundler
 
@@ -347,11 +372,11 @@ execute it with `@a`.
     * `:Bopen NAME` does bundle open NAME - opens gem NAME's lib diretory in the current window.
     * `:Bundle` - runs bundler
 
-*   [vim-rake](https://github.com/tpope/vim-rake)
+*   <a name=vim-rake>[vim-rake](https://github.com/tpope/vim-rake)
 
     TBD
 
-*   [vim-textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock)
+*   <a name=vim-textobj-rubyblock>[vim-textobj-rubyblock](https://github.com/nelstrom/vim-textobj-rubyblock)
 
     A custom text object for selecting ruby blocks.
 
@@ -370,7 +395,7 @@ execute it with `@a`.
     * `vararir` - select insides of the ruby block that is around the ruby block that is around the cursor. not including begin/end
     * ...
 
-*   [vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring)
+*   <a name=vim-ruby-refactoring>[vim-ruby-refactoring](https://github.com/ecomba/vim-ruby-refactoring)
 
     Refactoring tool for Ruby in vim!
 
@@ -384,7 +409,7 @@ execute it with `@a`.
     * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
     * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
-*   [apidock.vim](https://github.com/alexandrov/apidock.vim)
+*   <a name=apidock.vim>[apidock.vim](https://github.com/alexandrov/apidock.vim)
 
     Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim.
 
@@ -398,11 +423,11 @@ execute it with `@a`.
 <a name=themes>
 #### Color themes
 
-*   [vim-colors-solarized](http://github.com/altercation/vim-colors-solarized)
+*   <a name=vim-colors-solarized>[vim-colors-solarized](http://github.com/altercation/vim-colors-solarized)
 
     precision colorscheme for the vim text editor
 
-*   [vim-vividchalk](http://github.com/tpope/vim-vividchalk)
+*   <a name=vim-vividchalk>[vim-vividchalk](http://github.com/tpope/vim-vividchalk)
 
     A colorscheme strangely reminiscent of Vibrant Ink for a certain OS X editor
 
