@@ -458,6 +458,25 @@ randomly chosen bits of vim goodness.
 * `:reg` Display the contents of all numbered and named registers.
 
 
+#### Russian Translit Layout support
+
+There is ~/.vim/bindings-ru-translit.vim file.
+
+OSX has a nice russian translit keyboard layout which I use when I need to
+write any russian text. The problem is that once I go to the normal mode
+nothing works. This is an attempt to make vim at least partially useful when
+the kerboard is in russioan translit mode and not in the default US mode. The
+idea is to remap the russian characters to the english characters that
+correspond to the same keyboard key. And a couple of userful multy-key
+combinations.
+
+Similar can be done for other keyboard layouts, your pull requests are
+welcome ;).
+
+To use this feature: just include the file from your ~/.local.vim:
+
+    source ~/.vim/bindings-ru-translit.vim
+
 #### Currently disabled
 
 *   [vim-unimpaired](http://github.com/tpope/vim-unimpaired)
