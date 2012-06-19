@@ -93,3 +93,9 @@ let g:vimclojure#DynamicHighlighting = 1
 if has("mac")
   let g:browser = "open "
 endif
+
+" Utl.vim
+if has("mac")
+  let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
+end
+nmap <leader>u :Utl

@@ -43,6 +43,7 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
 * [Org mode and support plugins](#orgmode)
   * [calendar](#calendar)
   * [NrrwRgn](#NrrwRgn)
+  * [utl.vim](#utl.vim)
 * [Color themes](#themes)
   * [vim-colors-solarized](#vim-colors-solarized)
   * [vim-vividchalk](#vim-vividchalk)
@@ -456,6 +457,17 @@ used intependently.
     * Commands
       * `[range]:NR` - open selection or range in a buffer. write the buffer when done
       * `:h NrrwRgn` - read the help ;)
+
+*   <a name=utl.vim>[utl.vim](https://github.com/vim-scripts/utl.vim) ([top](#top))
+
+    Universal Text Linking plugin allow to open urls from text files.
+
+    `:h utl_usr` to read the help.
+
+    Bindings:
+
+    * `,u` - types `:Utl`. you still need to press enter to open url. This way
+      it allows to type other commands if needed.
 
 [top](#top)
 

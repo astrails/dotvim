@@ -1,6 +1,7 @@
 * 2012-06-19
   - calendar.vim
   - NrrwRgn plugin (Narrow Region)
+  - utl.vim plugin (universal text links)
 
 * 2012-06-18
   - support persistent undo
