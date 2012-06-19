@@ -42,6 +42,7 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
   * [apidock.vim](#apidock.vim)
 * [Org mode and support plugins](#orgmode)
   * [calendar](#calendar)
+  * [NrrwRgn](#NrrwRgn)
 * [Color themes](#themes)
   * [vim-colors-solarized](#vim-colors-solarized)
   * [vim-vividchalk](#vim-vividchalk)
@@ -444,6 +445,19 @@ used intependently.
     * Bindings:
       * `,cal` -  `:Calendar`
       * `,caL` -  `:CalendarH`
+
+*   <a name=NrrwRgn>[NrrwRgn](https://github.com/chrisbra/NrrwRgn) ([top](#top))
+
+    A Narrow Region Plugin (similar to Emacs)
+
+    Allows to open selected text in a separate buffer for editing preserving
+    the rest of the file around it.
+
+    * Commands
+      * `[range]:NR` - open selection or range in a buffer. write the buffer when done
+      * `:h NrrwRgn` - read the help ;)
+
+[top](#top)
 
 <a name=themes>
 #### Color themes
