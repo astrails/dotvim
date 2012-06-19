@@ -4,6 +4,7 @@
   - utl.vim plugin (universal text links)
   - VimOrganizer plugin (emacs' org mode support)
   - settings.vim merged into global.vim
+  - added after-plugins.vim to override plugin settings
 
 * 2012-06-18
   - support persistent undo

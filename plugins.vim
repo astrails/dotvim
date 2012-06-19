@@ -89,11 +89,6 @@ let g:indent_guides_color_change_percent = 5
 let g:vimclojure#ParenRainbow = 1
 let g:vimclojure#DynamicHighlighting = 1
 
-" apidoc.vim
-if has("mac")
-  let g:browser = "open "
-endif
-
 " Utl.vim
 if has("mac")
   let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
