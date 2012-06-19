@@ -88,3 +88,8 @@ let g:indent_guides_color_change_percent = 5
 " VimClojure
 let g:vimclojure#ParenRainbow = 1
 let g:vimclojure#DynamicHighlighting = 1
+
+" apidoc.vim
+if has("mac")
+  let g:browser = "open "
+endif
