@@ -2,6 +2,7 @@
   - calendar.vim
   - NrrwRgn plugin (Narrow Region)
   - utl.vim plugin (universal text links)
+  - VimOrganizer plugin (emacs' org mode support)
 
 * 2012-06-18
   - support persistent undo

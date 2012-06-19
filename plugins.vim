@@ -99,3 +99,7 @@ if has("mac")
   let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
 end
 nmap <leader>u :Utl
+
+" VimOrganizer
+au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
+au BufEnter *.org call org#SetOrgFileType()

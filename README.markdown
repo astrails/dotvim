@@ -44,6 +44,7 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
   * [calendar](#calendar)
   * [NrrwRgn](#NrrwRgn)
   * [utl.vim](#utl.vim)
+  * [VimOrganizer](#VimOrganizer)
 * [Color themes](#themes)
   * [vim-colors-solarized](#vim-colors-solarized)
   * [vim-vividchalk](#vim-vividchalk)
@@ -468,6 +469,42 @@ used intependently.
 
     * `,u` - types `:Utl`. you still need to press enter to open url. This way
       it allows to type other commands if needed.
+
+*   <a name=VimOrganizer>[VimOrganizer](https://github.com/hsitz/VimOrganizer) ([top](#top))
+
+    VimOrganizer is partly a clone of Emacs' Org-mode, and partly a front end
+    to Org-mode itself. Do Org in Vim.
+
+    Some bindings:
+
+    * `tab` - cycle visibility of single headline/subtree.
+    * `,1` - show level 1 only
+    * `,2` - show level 1 only
+    * ...
+    * In normal mode
+      * `Shift-Enter` - cycle TODO state
+      * `Enter` - add item of same level
+    * insert mode
+      * `Shift-Enter` - add item of same level
+    * Both modes
+      * `Ctrl-Enter` - add item of lover level
+      * `Shift-Ctrl-Enter` - add item of higher level
+    * `,dd` - add DEADLINE
+    * `,ds` - add SCHEDULED
+    * `,dc` - add CLOSED
+    * `,dt` - add a timestamp
+
+    Datetime prompt works mostly like the one in emacs org mode. See docs [here](http://orgmode.org/manual/The-date_002ftime-prompt.html#The-date_002ftime-prompt)
+
+    Its too big to give much userful information here. open any `.org` file to start using it. read the help:
+
+        :h VimOrganizer
+
+    You can find cheat sheet [here](https://github.com/hsitz/VimOrganizer/blob/master/VimOrganizerCheatsheet.org)
+
+    Working with TODO help is [here](http://orgmode.org/manual/TODO-Items.html)
+
+    Org mode site is [here](http://orgmode.org/]
 
 [top](#top)
 

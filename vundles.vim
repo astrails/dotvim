@@ -27,6 +27,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'calendar.vim--Matsumoto'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'utl.vim'
+Bundle 'hsitz/VimOrganizer'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails'
