@@ -1,2 +1,0 @@
-let mapleader = ","
-let maplocalleader = "\\"

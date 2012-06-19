@@ -3,6 +3,7 @@
   - NrrwRgn plugin (Narrow Region)
   - utl.vim plugin (universal text links)
   - VimOrganizer plugin (emacs' org mode support)
+  - settings.vim merged into global.vim
 
 * 2012-06-18
   - support persistent undo
