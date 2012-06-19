@@ -33,6 +33,7 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
   * [threesome.vim](#threesome.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
+  * [Gundo](#dgundo)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -351,6 +352,14 @@ execute it with `@a`.
 
     auto-completion for quotes, parens, brackets, etc. in insert mode.
 
+*   <a name=gundo>[Gundo](https://github.com/sjl/gundo.vim) ([top](#top))
+
+    Homepage is [here](http://sjl.bitbucket.org/gundo.vim/)
+
+    Graphs your vim undo tree in a side window.
+
+    * `,u` - toggle undo window
+    * `:h gundo.txt` - more help
 
 [top](#top)
 
@@ -467,7 +476,7 @@ used intependently.
 
     Bindings:
 
-    * `,u` - types `:Utl`. you still need to press enter to open url. This way
+    * `,o` - types `:Utl`. you still need to press enter to `o`pen url. This way
       it allows to type other commands if needed.
 
 *   <a name=VimOrganizer>[VimOrganizer](https://github.com/hsitz/VimOrganizer) ([top](#top))

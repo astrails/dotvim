@@ -28,6 +28,7 @@ Bundle 'calendar.vim--Matsumoto'
 Bundle 'chrisbra/NrrwRgn'
 Bundle 'utl.vim'
 Bundle 'hsitz/VimOrganizer'
+Bundle 'sjl/gundo.vim'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails'

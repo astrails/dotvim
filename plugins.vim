@@ -93,8 +93,12 @@ let g:vimclojure#DynamicHighlighting = 1
 if has("mac")
   let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
 end
-nmap <leader>u :Utl
+nmap <leader>o :Utl
 
 " VimOrganizer
 au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
 au BufEnter *.org call org#SetOrgFileType()
+
+" Gundo
+nmap <leader>u :GundoToggle<CR>
+let g:gundo_close_on_revert = 1
