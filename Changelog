@@ -1,3 +1,7 @@
+* 2012-07-01
+  - fixed missing space at the end of ,g and ,k maps
+  - mapped ,d to :diffupdate
+
 * 2012-06-24
   - added mapping for :QA and :Qa to be same as :qa
 
