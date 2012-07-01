@@ -24,6 +24,9 @@ map! <S-Insert> <MiddleMouse>
 nmap <leader>n :cn<CR>
 nmap <leader>N :cp<CR>
 
+" ,d to diffupdate
+nmap <leader>d :diffupdate<CR>
+
 "set completeopt=menuone,preview,longest
 set completeopt=menuone,preview
 
