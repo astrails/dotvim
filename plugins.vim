@@ -64,7 +64,7 @@ let g:CommandTMatchWindowAtTop=1
 
 " Fugitive
 " ,e for Ggrep
-nmap <leader>g :silent Ggrep
+nmap <leader>g :silent Ggrep<space>
 
 " ,f for global git serach for word under the cursor (with highlight)
 nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
@@ -73,7 +73,7 @@ nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R>
 :vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
 " Ack
 " ,a for Ack
-nmap <leader>k :Ack
+nmap <leader>k :Ack<space>
 
 " vim-indentobject
 " add Markdown to the list of indentation based languages
