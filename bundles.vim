@@ -45,7 +45,6 @@ Bundle 'tpope/vim-vividchalk'
 " syntax support
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tsaleh/vim-tmux'
-Bundle 'vitaly/vim-rcov'
 Bundle 'Puppet-Syntax-Highlighting'
 Bundle 'JSON.vim'
 Bundle 'tpope/vim-cucumber'
