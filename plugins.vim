@@ -58,9 +58,25 @@ nmap <leader>y :YRShow<cr>
 "let g:rubycomplete_rails = 1
 
 " command-t
-nmap <unique> <silent> <Leader>, :CommandT<CR>
-nmap <unique> <silent> <Leader>. :CommandTFlush<CR>:CommandT<CR>
-let g:CommandTMatchWindowAtTop=1
+"nmap <unique> <silent> <Leader>, :CommandT<CR>
+"nmap <unique> <silent> <Leader>. :CommandTFlush<CR>:CommandT<CR>
+"let g:CommandTMatchWindowAtTop=1
+
+nmap <leader>. :CtrlPBufTag<cr>
+nmap <leader>; :CtrlPBufTagAll<cr>
+let g:ctrlp_map = '<leader><leader>'
+" show on top
+let g:ctrlp_match_window_bottom = 0
+" current match is on top
+let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_max_height = 40
+" if in git repo - use git file listing command, should be faster
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+" open multiple files with <c-z> to mark and <c-o> to open. v - opening in
+" vertical splits; j - jump to first open buffer; r - open first in current buffer
+let g:ctrlp_open_multiple_files = 'vjr'
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed']
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 " Fugitive
 " ,g for Ggrep
