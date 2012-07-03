@@ -2,7 +2,9 @@
 # line variable
 RUBY ?= $(shell ./find-ruby.sh)
 
-update: install-vundle vundles install-command-t
+update: install-vundle bundles install-command-t
+
+upgrade: upgrade-bundles install-command-t
 
 install: cleanup update
 
@@ -12,8 +14,14 @@ cleanup:
 install-vundle:
 	test -d bundle/vundle || (mkdir -p bundle && cd bundle && git clone https://github.com/gmarik/vundle.git)
 
-vundles:
+bundles:
 	vim -u ./vundles.vim +BundleInstall
+
+cleanup-bundles:
+	ls bundle | while read b;do (cd bundle/$$b && git clean -f);done
+
+upgrade-bundles: cleanup-bundles
+	vim -u ./vundles.vim +BundleInstall!
 
 install-command-t:
 	cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make
