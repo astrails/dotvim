@@ -1,3 +1,6 @@
+* 2012-07-04
+  - mappings for :diffupdate/put/get
+
 * 2012-07-01
   - fixed missing space at the end of ,g and ,k maps
   - mapped ,d to :diffupdate

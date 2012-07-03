@@ -85,7 +85,10 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `,f` global Ggrep for word under the cursor or for selection
 * `+`, `-` - easily inc/decrement integers
 * `,W` - remove trailing spaces
-* `Ctrl-g`/`h`/`j`/`k` - simplified split panes navigation
+* `Ctrl`-`h`/`j`/`k`/`l` - simplified split panes navigation
+* `,d` - `:diffupdate`
+* `,dp` - `:diffput`
+* `,dg` - `:diffget`
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 

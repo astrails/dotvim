@@ -26,6 +26,8 @@ nmap <leader>N :cp<CR>
 
 " ,d to diffupdate
 nmap <leader>d :diffupdate<CR>
+nmap <leader>dp :diffput<CR>
+nmap <leader>dg :diffget<CR>
 
 "set completeopt=menuone,preview,longest
 set completeopt=menuone,preview
