@@ -1,6 +1,7 @@
 * 2012-07-04
   - mappings for :diffupdate/put/get
   - buttercream and colorzone themes
+  - changed mapping to remove trailing spaces from ,W to ,w
 
 * 2012-07-01
   - fixed missing space at the end of ,g and ,k maps

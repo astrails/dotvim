@@ -84,7 +84,7 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `Ctrl-N` to cancel current search highlighing
 * `,f` global Ggrep for word under the cursor or for selection
 * `+`, `-` - easily inc/decrement integers
-* `,W` - remove trailing spaces
+* `,w` - remove trailing spaces
 * `Ctrl`-`h`/`j`/`k`/`l` - simplified split panes navigation
 * `,d` - `:diffupdate`
 * `,dp` - `:diffput`
