@@ -63,7 +63,7 @@ nmap <unique> <silent> <Leader>. :CommandTFlush<CR>:CommandT<CR>
 let g:CommandTMatchWindowAtTop=1
 
 " Fugitive
-" ,e for Ggrep
+" ,g for Ggrep
 nmap <leader>g :silent Ggrep<space>
 
 " ,f for global git serach for word under the cursor (with highlight)
