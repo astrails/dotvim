@@ -69,6 +69,20 @@ nmap <leader>. :CtrlPClearCache<cr>:CtrlP<cr>
 nmap <leader>m :CtrlPBufTag<cr>
 nmap <leader>M :CtrlPBufTagAll<cr>
 
+" fine grain mappings for rails directories
+map <leader>gf :CtrlPClearCache<cr>:CtrlP %%<cr>
+map <leader>gv :CtrlPClearCache<cr>:CtrlP app/views<cr>
+map <leader>gc :CtrlPClearCache<cr>:CtrlP app/controllers<cr>
+map <leader>gm :CtrlPClearCache<cr>:CtrlP app/models<cr>
+map <leader>gh :CtrlPClearCache<cr>:CtrlP app/helpers<cr>
+map <leader>gl :CtrlPClearCache<cr>:CtrlP lib<cr>
+map <leader>ga :CtrlPClearCache<cr>:CtrlP app/assets<cr>
+map <leader>gs :CtrlPClearCache<cr>:CtrlP app/assets/stylesheets<cr>
+map <leader>gj :CtrlPClearCache<cr>:CtrlP app/assets/javascripts<cr>
+
+map <leader>gr :topleft :split config/routes.rb<cr>
+map <leader>gg :topleft 100 :split Gemfile<cr>
+
 let g:ctrlp_clear_cache_on_exit = 1
 " ctrlp leaves stale caches behind if there is another vim process runnin
 " which didn't use ctrlp. so we clear all caches on each new vim invocation
