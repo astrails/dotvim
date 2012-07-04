@@ -2,6 +2,7 @@
   - mappings for :diffupdate/put/get
   - buttercream and colorzone themes
   - renamed vundles.vim to bundles.vim
+  - Command-T replaced with CtrlP
 
 * 2012-07-01
   - fixed missing space at the end of ,g and ,k maps

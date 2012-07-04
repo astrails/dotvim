@@ -18,6 +18,7 @@ The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading
   * [nerdtree](#nerdtree)
   * [nerdcommenter](#nerdcommenter)
   * [Command-T](#Command-T)
+  * [CtrlP](#CtrlP)
   * [AutoComplPop](#AutoComplPop)
   * [taglist.vim](#taglist.vim)
   * [YankRing.vim](#YankRing.vim)
@@ -170,8 +171,11 @@ execute it with `@a`.
 
     TextMate Command-T like file finder for vim
 
-    * `,,` - find file
-    * `,.` - refresh the file list and then find a file
+    Note: This plugin is currently **DISABLED**. See [CtrlP](#CtrlP) plugin
+    that is used instead
+
+    * `,,` - `CommandT` - find file
+    * `,.` - `CommandTFlush` - refresh the file list and then find a file
     * while at the finder prompt:
       * `Ctrl-Enter` - open file in a new split
       * `Ctrl-s` - open file in a new split
@@ -179,6 +183,28 @@ execute it with `@a`.
       * `Ctrl-U` - clear current partial path
       * `Esc` - cancel
       * `Ctrl-c` - cancel
+
+*   <a name=CtrlP>[CtrlP](https://github.com/kien/ctrlp.vim) ([top](#top))
+
+    Fuzzy file, buffer, mru, tag, etc finder.
+
+    This is the new fuzzy finder used by dotvim. It replaced
+    [Command-T](#Command-T) that was used before.
+
+    The default mapping is still the same:
+
+    * `,,` - `CtrlPMixed` - fuzzy find.
+
+        The difference from `CommandT` is that CtrlPMixed searches MRU list and opened buffers
+
+    * `,.` - `CtrlPClearCache` followed by `CtrlP` - clears the cache and
+      searches the files (not including MRU and buffers)
+    * `,m` - `CtrlPBufTag` - search tags in the current buffer
+    * `,M` - `CtrlPBufTagAll` - search tags in all buffers
+    * `,,?<ENTER>` - to quickly open help for CtrlP
+
+
+   This plugin has lots of options, see `:h ctrlp` for more.
 
 *   <a name=AutoComplPop>[AutoComplPop](http://github.com/vim-scripts/AutoComplPop) ([top](#top))
 
