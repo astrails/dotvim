@@ -69,3 +69,12 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" fast expand current dir
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" maximize window
+" We have to have a winheight bigger than we want to set winminheight. But if
+" we set winheight to be huge before winminheight, the winminheight set will
+" fail.
+map <leader>mw :set lines=999 columns=999<cr>
