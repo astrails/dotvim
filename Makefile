@@ -2,9 +2,9 @@
 # line variable
 RUBY ?= $(shell ./find-ruby.sh)
 
-update: install-vundle bundles install-command-t
+update: install-vundle bundles compile-command-t
 
-upgrade: upgrade-bundles install-command-t
+upgrade: upgrade-bundles compile-command-t
 
 install: cleanup update
 
@@ -23,5 +23,8 @@ cleanup-bundles:
 upgrade-bundles: cleanup-bundles
 	vim -u ./bundles.vim +BundleInstall!
 
-install-command-t:
+# only run compilation if bundle installed
+compile-command-t:
+ifneq ($(wildcard bundle/Command-T),)
 	cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make
+endif
