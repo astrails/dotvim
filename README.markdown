@@ -89,6 +89,8 @@ Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to bac
 * `,d` - `:diffupdate`
 * `,dp` - `:diffput`
 * `,dg` - `:diffget`
+* `%%` - in **control mode**, i.e. after you typed `:` it will expand to the
+  directory name of the currently opened file.
 
 Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
