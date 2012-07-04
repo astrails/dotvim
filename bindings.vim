@@ -62,7 +62,7 @@ nnoremap + <C-a>
 nnoremap - <C-x>
 
 " remove trailing spaces
-nnoremap <leader>w :%s/\s\+$//<cr>:let @/=''<cr>
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<cr>
 
 " easy split navigation
 nnoremap <C-h> <C-w>h

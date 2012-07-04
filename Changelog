@@ -1,7 +1,6 @@
 * 2012-07-04
   - mappings for :diffupdate/put/get
   - buttercream and colorzone themes
-  - changed mapping to remove trailing spaces from ,W to ,w
   - renamed vundles.vim to bundles.vim
 
 * 2012-07-01
