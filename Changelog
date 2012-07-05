@@ -1,3 +1,5 @@
+* 2012-07-05
+  - make CtrlP see files that are not yet in the git
 * 2012-07-04
   - mappings for :diffupdate/put/get
   - buttercream and colorzone themes
