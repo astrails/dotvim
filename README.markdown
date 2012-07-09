@@ -1,10 +1,23 @@
 ## Dotvim
 
-### This is a complete Vim configuration that I'm using everywhere.
+### An attempt at The Ultimate Vim Configuration™ ;)
 
-The config is using [Vundle](http://github.com/gmarik/vundle) for easy upgrading.
+All the right plugins are in. Nerdtree, CtrlP, you name it.
 
-*Some* help tips are provided for *some* of the plugins. please check out the plugin's docs for more info.
+The focus is on supporting Rails, but there is a lot of generic stuff too, so
+it will surely serve you well with any language of your choice.
+
+The config is using [Vundle](http://github.com/gmarik/vundle) for easy
+upgrading.
+
+*Some* help tips are provided for *some* of the plugins. please check out the
+plugin's docs for more info.
+
+Follow [@vkushner][@vkushner] and [@astrails][@astrails] on Twitter to receive
+announcements of new versions, tips, etc.
+
+[@vkushner]: https://twitter.com/vkushner
+[@astrails]: https://twitter.com/astrails
 
 <a name=top>
 #### Contents
