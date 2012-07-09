@@ -15,16 +15,14 @@ install-vundle:
 	test -d bundle/vundle || (mkdir -p bundle && cd bundle && git clone https://github.com/gmarik/vundle.git)
 
 bundles:
-	vim -u ./bundles.vim +BundleInstall
+	vim -u ./bundles.vim +BundleClean! +BundleInstall
 
 cleanup-bundles:
 	ls bundle | while read b;do (cd bundle/$$b && git clean -f);done
 
 upgrade-bundles: cleanup-bundles
-	vim -u ./bundles.vim +BundleInstall!
+	vim -u ./bundles.vim +BundleClean! +BundleInstall!
 
 # only run compilation if bundle installed
 compile-command-t:
-ifneq ($(wildcard bundle/Command-T),)
-	cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make
-endif
+	test ! -d bundle/Command-T || (cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make)
