@@ -33,13 +33,6 @@ nmap <leader>S :SessionList<CR>
 nmap <leader>SS :SessionSave<CR>
 nmap <leader>SA :SessionSaveAs<CR>
 
-" minibufexpl
-let g:miniBufExplVSplit = 25
-let g:miniBufExplorerMoreThanOne = 100
-let g:miniBufExplUseSingleClick = 1
-" ,b to display current buffers list
-nmap <Leader>b :MiniBufExplorer<cr>
-
 let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
 let g:Conque_TERM = 'xterm'
 " ,sh shell window
