@@ -63,9 +63,10 @@ nmap <leader>y :YRShow<cr>
 "let g:CommandTMatchWindowAtTop=1
 
 let g:ctrlp_map = '<leader>,'
-let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_cmd = 'CtrlP'
 
 nmap <leader>. :CtrlPClearCache<cr>:CtrlP<cr>
+nmap <leader>l :CtrlPLine<cr>
 nmap <leader>m :CtrlPBufTag<cr>
 nmap <leader>M :CtrlPBufTagAll<cr>
 
@@ -90,7 +91,7 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files --exclude-standard -c
 " vertical splits; j - jump to first open buffer; r - open first in current buffer
 let g:ctrlp_open_multiple_files = 'vjr'
 
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed']
+let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 
 " Fugitive
 " ,g for Ggrep

@@ -208,14 +208,12 @@ execute it with `@a`.
 
     The default mapping is still the same:
 
-    * `,,` - `CtrlPMixed` - fuzzy find.
-
-        The difference from `CommandT` is that CtrlPMixed searches MRU list and opened buffers
-
+    * `,,` - `CtrlP` - fuzzy find.
     * `,.` - `CtrlPClearCache` followed by `CtrlP` - clears the cache and
       searches the files (not including MRU and buffers)
     * `,m` - `CtrlPBufTag` - search tags in the current buffer
     * `,M` - `CtrlPBufTagAll` - search tags in all buffers
+    * `,l` - `CtrlPLine` - fuzzy search lines in all opened buffers
     * `,,?<ENTER>` - to quickly open help for CtrlP
 
 
