@@ -214,6 +214,7 @@ execute it with `@a`.
     * `,m` - `CtrlPBufTag` - search tags in the current buffer
     * `,M` - `CtrlPBufTagAll` - search tags in all buffers
     * `,l` - `CtrlPLine` - fuzzy search lines in all opened buffers
+    * `,b` - `CtrlPBuff` - fuzzy search open buffers
     * `,,?<ENTER>` - to quickly open help for CtrlP
 
 
