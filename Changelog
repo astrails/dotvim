@@ -1,5 +1,7 @@
 * 2012-08-02
   - support for ~/.local-gui.vim
+  - removed default background and colorscheme settings
+    Those are highly personal and should go into ~/.local.vim and ~/.local-gui.vim
 
 * 2012-07-17
   - forced space and tab settings for markdown and haml
