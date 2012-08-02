@@ -22,9 +22,6 @@ set laststatus=2        " always show the status line
 set listchars=tab:▷⋅,trail:·
 set list
 
-colorscheme vividchalk
-set background=dark
-
 " highlight spell errors
 hi SpellErrors guibg=red guifg=black ctermbg=red ctermfg=black
 
