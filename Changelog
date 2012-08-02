@@ -1,3 +1,13 @@
+* 2012-07-17
+  - forced space and tab settings for markdown and haml
+  - auto wrap for markdown on 80 chars
+
+* 2012-07-12
+  - Changed CtrlP mapping `,,` to use CtrlP instead of CtrlPMixed
+  - added `,l` mapping to CtrlPLine
+  - removed minibufexpl settings (plugin removed long ago)
+  - added `,b` mapping to CtrlPBuff
+
 * 2012-07-10
   - CtrlP merged into master
 
