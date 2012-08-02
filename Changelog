@@ -1,3 +1,6 @@
+* 2012-08-02
+  - support for ~/.local-gui.vim
+
 * 2012-07-17
   - forced space and tab settings for markdown and haml
   - auto wrap for markdown on 80 chars
