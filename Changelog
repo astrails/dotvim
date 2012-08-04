@@ -1,3 +1,7 @@
+* 2012-08-04
+  - added .local-before.vim
+  - deprecated .local.vim. use .local-after.vim instead
+
 * 2012-08-02
   - support for ~/.local-gui.vim
   - removed default background and colorscheme settings
