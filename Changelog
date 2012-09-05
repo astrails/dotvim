@@ -1,3 +1,9 @@
+* 2012-09-05
+  - tomorrow-them
+
+* 2012-08-15
+  - improved utf8 support (thanks to Arik Fraimovich)
+
 * 2012-08-04
   - added .local-before.vim
   - deprecated .local.vim. use .local-after.vim instead
