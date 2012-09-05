@@ -1,5 +1,6 @@
 * 2012-09-05
   - tomorrow-them
+  - changed yankring_history file location to ~/.backup/
 
 * 2012-08-15
   - improved utf8 support (thanks to Arik Fraimovich)

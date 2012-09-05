@@ -45,6 +45,8 @@ let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 " ,y to show the yankring
 nmap <leader>y :YRShow<cr>
+" put the yankring_history file in ~/.backup
+let g:yankring_history_dir = '~/.backup'
 
 " rails
 " completing Rails hangs a lot
