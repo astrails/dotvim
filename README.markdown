@@ -81,7 +81,7 @@ From your homedirectory (on Linux/Mac OSX):
 * create ~/.local.vim if you want to have some
   local/personal settings you don't want to commit into the repo
 
-> IMPORTANT: **always** add a `conolrscheme` to your `~/.local-after.vim` file,
+> IMPORTANT: **always** add a `colorscheme` to your `~/.local-after.vim` file,
 > even if you use the defaults scheme add `colorscheme default`. Othewise you
 > will get a highlighting error `"E411: highlight group not found: Normal"`
 > during vim startup.
