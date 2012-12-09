@@ -30,6 +30,7 @@ Bundle 'chrisbra/NrrwRgn'
 Bundle 'utl.vim'
 Bundle 'hsitz/VimOrganizer'
 Bundle 'sjl/gundo.vim'
+Bundle 'AndrewRadev/switch.vim'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails'
