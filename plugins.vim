@@ -129,3 +129,11 @@ au BufEnter *.org call org#SetOrgFileType()
 " Gundo
 nmap <leader>u :GundoToggle<CR>
 let g:gundo_close_on_revert = 1
+
+" Switch
+" making some of the switches defined for ruby work in HAML files
+autocmd FileType haml let b:switch_definitions =
+      \ [
+      \   g:switch_builtins.ruby_hash_style,
+      \   g:switch_builtins.ruby_string,
+      \ ]
