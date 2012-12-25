@@ -48,7 +48,7 @@ announcements of new versions, tips, etc.
   * [threesome.vim](#threesome.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
-  * [Gundo](#dgundo)
+  * [Gundo](#gundo)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -441,6 +441,14 @@ execute it with `@a`.
 
     * `,u` - toggle undo window
     * `:h gundo.txt` - more help
+
+
+*   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
+
+    A plugin to switch segments of text with predefined replacements
+
+    it will switch `"foo"` to `'foo'` to `:foo`. or `{:foo => bar}` to `{foo: bar}`,
+    etc. See `:h switch` for more.
 
 [top](#top)
 
