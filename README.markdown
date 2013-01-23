@@ -44,7 +44,7 @@ announcements of new versions, tips, etc.
   * [ack.vim](#ack.vim)
   * [vim-indentobject](#vim-indentobject)
   * [greplace.vim](#greplace.vim)
-  * [vim-powerline](#vim-powerline)
+  * [powerline](#powerline)
   * [threesome.vim](#threesome.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
@@ -87,6 +87,12 @@ From your homedirectory (on Linux/Mac OSX):
 > during vim startup.
 
 Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
+
+> IMPORTANT: [powerline](#powerline) requires some extra glyphs to work properly.
+> Check the official documentation on
+> [font installation](http://lokaltog.github.com/powerline/overview.html#font-installation)
+> and follow the instructions. If you do not, then strange symbols will be
+> displayed instead. While this is not critical, it remains pretty annoying.
 
 [top](#top)
 
@@ -384,9 +390,9 @@ execute it with `@a`.
     * `:Greplace` - Incorporate the modifications from the replace buffer into
       the corresponding files.
 
-*   <a name=vim-powerline>[vim-powerline](TBD) ([top](#top))
+*   <a name=powerline>[powerline](https://github.com/Lokaltog/powerline) ([top](#top))
 
-    TBD
+    Add a nice status line to Vim
 
 *   <a name=threesome.vim>[threesome.vim](https://github.com/sjl/threesome.vim) ([top](#top))
 
