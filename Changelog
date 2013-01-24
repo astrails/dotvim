@@ -1,7 +1,10 @@
 * 2012-01-24
   - .vimrc.before and .vimrc.after support
   - removed .vim_local and .local.vim support
-	- reprecated .local-before and .local-after
+  - reprecated .local-before and .local-after
+  - updated repo for vim-slim plugin
+  - powerline upgraded to the new pythin based project. (the old one is
+    deprecated)
 
 * 2012-12-25
   - 'switch' plugin

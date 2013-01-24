@@ -78,15 +78,19 @@ From your homedirectory (on Linux/Mac OSX):
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
 * `cd .vim; make install`
-* create ~/.local.vim if you want to have some
-  local/personal settings you don't want to commit into the repo
 
-> IMPORTANT: **always** add a `colorscheme` to your `~/.local-after.vim` file,
-> even if you use the defaults scheme add `colorscheme default`. Othewise you
-> will get a highlighting error `"E411: highlight group not found: Normal"`
-> during vim startup.
 
-Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
+  > Note: if you already have `~/.vim` `~/.vimrc` REMOVE THEM (you might want to backup them first :)
+
+* create `~/.vimrc.before` or `~/.vimrc.after` if you want to have some
+  local/personal settings you don't want to commit into the repo. see "[Local Configuration](#local)"
+
+
+  > IMPORTANT: **always** add a `colorscheme` to your `~/.vimrc.after` file.
+  > Even if you use the defaults scheme add `colorscheme default`. Othewise you
+  > will get a highlighting error `"E411: highlight group not found: Normal"`
+  > during vim startup.
+
 
 > IMPORTANT: [powerline](#powerline) requires some extra glyphs to work properly.
 > Check the official documentation on
@@ -152,6 +156,8 @@ They are loaded in the following order:
   customization options.
 
 * `.gvimrc.after` _[when GUI running]_
+
+[top](#top)
 
 <a name=backups>
 #### Backups
