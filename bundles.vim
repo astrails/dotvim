@@ -20,7 +20,7 @@ Bundle 'tsaleh/vim-align'
 Bundle 'mileszs/ack.vim'
 Bundle 'austintaylor/vim-indentobject'
 Bundle 'greplace.vim'
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Bundle 'astrails/vim-powerline'
 Bundle 'sjl/threesome.vim'
 Bundle 'Indent-Guides'
 Bundle 'tpope/vim-endwise'

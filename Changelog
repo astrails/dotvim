@@ -1,3 +1,7 @@
+* 2012-01-24 (II)
+  - resurrect old vim-powerline project. The new one has installation issues
+    on OSX
+
 * 2012-01-24
   - .vimrc.before and .vimrc.after support
   - removed .vim_local and .local.vim support

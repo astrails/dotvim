@@ -44,7 +44,7 @@ announcements of new versions, tips, etc.
   * [ack.vim](#ack.vim)
   * [vim-indentobject](#vim-indentobject)
   * [greplace.vim](#greplace.vim)
-  * [powerline](#powerline)
+  * [vim-powerline](#powerline)
   * [threesome.vim](#threesome.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
@@ -92,7 +92,7 @@ From your homedirectory (on Linux/Mac OSX):
   > during vim startup.
 
 
-> IMPORTANT: [powerline](#powerline) requires some extra glyphs to work properly.
+> IMPORTANT: [vim-powerline](#powerline) requires some extra glyphs to work properly.
 > Check the official documentation on
 > [font installation](http://lokaltog.github.com/powerline/overview.html#font-installation)
 > and follow the instructions. If you do not, then strange symbols will be
@@ -395,9 +395,22 @@ execute it with `@a`.
     * `:Greplace` - Incorporate the modifications from the replace buffer into
       the corresponding files.
 
-*   <a name=powerline>[powerline](https://github.com/Lokaltog/powerline) ([top](#top))
+*   <a name=powerline>[vim-powerline](https://github.com/astrails/vim-powerline) ([top](#top))
 
     Add a nice status line to Vim
+
+    > Note: the old
+    > [Lokaltog/vim-powerline](https://github.com/Lokaltog/vim-powerline)
+    > project is now deprecated in favor of
+    > [Lokaltog/powerline](https://github.com/Lokaltog/vim-powerline) which is
+    > python based and is supposed to be better.
+    >
+    > Unfortunately I coudn't get it to work on my OSX machine. Even more
+    > unfortunately the old project has changed default branch to `new-plugin`
+    > which is empty except for the README file announcing the new project
+    > location. This makes it impossible to use with vundle. The solution for
+    > now is that I forked the original plugin project and make it available
+    > under `astrails` account in a form suitable for vundle.
 
 *   <a name=threesome.vim>[threesome.vim](https://github.com/sjl/threesome.vim) ([top](#top))
 
