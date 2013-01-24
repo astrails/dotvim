@@ -1,3 +1,8 @@
+* 2012-01-24
+  - .vimrc.before and .vimrc.after support
+  - removed .vim_local and .local.vim support
+	- reprecated .local-before and .local-after
+
 * 2012-12-25
   - 'switch' plugin
 

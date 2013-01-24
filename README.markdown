@@ -121,32 +121,31 @@ Check out the 'plugins.vim' and 'after/plugin/bindings.vim' files for more...
 
 For easy upgrades its preferable not to change the dotvim configuration files.
 Instead you can add your own local configuration into one of the local override
-files. There are several override files supported by dotvim:
+files. There are several override files supported by dotvim.
 
-Files loaded **before** the plugins:
+They are loaded in the following order:
 
-* `~/.vim_local` - deprecated
-* `~/.vim-before.vim`
+* base dotvim configuration (global, plugin configurations, bindings, macros)
+* `~/.local-before.vim` _[deprecated]_
+* `~/.vimrc.before`
+
+  Loaded **before** the plugins
 
   This is where you should pre-set various plugin flags, enable/disable options
-  etc. This is for things you would normally put into yoru vimrc file.
+  etc. This is for things you would normally put into your vimrc file.
 
-Files loaded **after** the plugins:
+* `~/.gvimrc.before` _[when GUI running]_
+* vim plugins
+* dotvim bindings and overrides (loaded from `~/.vim/after.vim`)
+* `.local-after.vim` _[deprecated]_
+* `.vimrc.after`
 
-* `~/.local.vim` - deprecated
-* `~/.local-after.vim`
+  Loaded **after** the plugins
 
   This is where you can override settings set by plugins that have no
-  customization options etc.
+  customization options.
 
-Configuration files are loaded in the following order:
-
-* dotvim configuration
-* .local-before.vim
-* plugins
-* dotvim bindings and overrides
-* .local.vim
-* .local-after.vim
+* `.gvimrc.after` _[when GUI running]_
 
 <a name=backups>
 #### Backups
