@@ -30,6 +30,7 @@ announcements of new versions, tips, etc.
 * [Macros](#macros)
 * [Interesting Plugins](#interesting)
   * [nerdtree](#nerdtree)
+  * [NERDTreeTabs](#nerdtreetabs)
   * [nerdcommenter](#nerdcommenter)
   * [Command-T](#Command-T)
   * [CtrlP](#CtrlP)
@@ -219,8 +220,15 @@ execute it with `@a`.
 
     hax0r vim script to give you a tree explorer
 
-    * `Ctrl-P` - open directory browser
+    * `Ctrl-P` - open directory browser (**Note:** this is now handled by
+      [NERDTreeTabs](#nerdtreetabs) (see below))
     * `,p` - to find and highlight the currently open file in the tree
+
+*   <a name=nerdtreetabs>[NERDTreeTabs](https://github.com/jistr/vim-nerdtree-tabs) ([top](#top))
+
+    NERDTree and tabs together in Vim, painlessly
+
+    * `Ctrl-P` - open directory browser
 
 *   <a name=nerdcommenter>[nerdcommenter](http://github.com/scrooloose/nerdcommenter) ([top](#top))
 

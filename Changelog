@@ -1,3 +1,6 @@
+* 2013-03-21
+  - NERDTreeTabs plugin
+
 * 2012-01-24 (II)
   - resurrect old vim-powerline project. The new one has installation issues
     on OSX

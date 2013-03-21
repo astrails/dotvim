@@ -15,7 +15,7 @@ let g:delimitMate_expand_cr = 1
 
 " nerdtree
 " Ctrl-P to Display the file browser tree
-nmap <C-P> :NERDTreeToggle<CR>
+nmap <C-P> :NERDTreeTabsToggle<CR>
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
 
