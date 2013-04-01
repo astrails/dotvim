@@ -60,6 +60,7 @@ Bundle 'vim-scripts/jade.vim'
 Bundle 'wavded/vim-stylus'
 Bundle 'VimClojure'
 Bundle 'slim-template/vim-slim'
+Bundle 'elixir-lang/vim-elixir'
 
 " Support and minor
 Bundle 'kana/vim-textobj-user'
