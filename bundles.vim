@@ -32,6 +32,7 @@ Bundle 'utl.vim'
 Bundle 'hsitz/VimOrganizer'
 Bundle 'sjl/gundo.vim'
 Bundle 'AndrewRadev/switch.vim'
+Bundle 'airblade/vim-gitgutter'
 
 " Ruby/Rails
 Bundle 'tpope/vim-rails'

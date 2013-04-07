@@ -50,6 +50,7 @@ announcements of new versions, tips, etc.
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
   * [Gundo](#gundo)
+  * [vim-gitgutter](#gitgutter)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -474,6 +475,18 @@ execute it with `@a`.
     * `,u` - toggle undo window
     * `:h gundo.txt` - more help
 
+
+*   <a name=gitgutter>[Vim Git Gutter](https://github.com/airblade/vim-gitgutter) ([top](#top))
+    A Vim plugin which shows a git diff in the 'gutter' (sign column).
+    It shows whether each line has been added, modified, and where lines have been removed.
+
+    ![screenshot](https://raw.github.com/airblade/vim-gitgutter/master/screenshot.png)
+
+    In the screenshot above you can see:
+
+    * Line 15 has been modified.
+    * Lines 21-24 are new.
+    * A line or lines were removed between lines 25 and 26.
 
 *   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
 
