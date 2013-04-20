@@ -40,6 +40,7 @@ Bundle 'tpope/vim-rake'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'apidock.vim'
+Bundle 'josemarluedke/vim-rspec'
 
 " color themes
 Bundle 'altercation/vim-colors-solarized'
