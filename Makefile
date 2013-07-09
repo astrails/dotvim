@@ -6,9 +6,11 @@ update: install-vundle bundles compile-command-t
 
 upgrade: upgrade-bundles compile-command-t
 
-install: cleanup update
+install: delete update
 
-cleanup:
+delete:
+	@echo going to remove the bundle directory. press ENTER to continue.
+	@read
 	rm -rf bundle
 
 install-vundle:
