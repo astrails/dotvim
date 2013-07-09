@@ -388,7 +388,7 @@ execute it with `@a`.
     Usage is similar to textobj-rubyblock, just with `i` instead of `r`
 
     * `vai` / `vii` - select indent block including / excluding the outer lines
-    * ...
+    * `yai` / `yii` - yank ...
 
 *   <a name=greplace.vim>[greplace.vim](http://github.com/vim-scripts/greplace.vim) ([top](#top))
 
@@ -713,6 +713,15 @@ used intependently.
     Smart Space key for Vim
 
     press SPACE to repeat last motion command
+
+ *  [vim-gist](http://github.com/mattn/gist-vim)
+
+    create gists on github
+
+    - `:Gist` - gist the buffer
+    - `:'<,'>Gist` - gist selection
+    - `:Gist -p` - private gist
+    - :h Gist.vim
 
 
 [top](#top)
