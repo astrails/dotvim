@@ -73,6 +73,8 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'ecomba/vim-ruby-refactoring'
 " apidock.com docs integration
 Bundle 'apidock.vim'
+" toggle ruby blocks style
+Bundle 'vim-scripts/blockle.vim'
 
 " color themes
 Bundle 'altercation/vim-colors-solarized'

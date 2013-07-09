@@ -1,6 +1,7 @@
 * 2013-07-09
   - prompt before deleting bundles directory
   - annotate bundles.vim
+  - blockle.vim plugin
   - README updates
 
 * 2013-04-01

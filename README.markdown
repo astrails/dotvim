@@ -56,6 +56,7 @@ announcements of new versions, tips, etc.
   * [vim-rake](#vim-rake)
   * [vim-textobj-rubyblock](#vim-textobj-rubyblock)
   * [vim-ruby-refactoring](#vim-ruby-refactoring)
+  * [blockle.vim](#blockle)
   * [apidock.vim](#apidock.vim)
 * [Org mode and support plugins](#orgmode)
   * [calendar](#calendar)
@@ -546,6 +547,15 @@ execute it with `@a`.
     * `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)
     * `,rem`  :RExtractMethod          - Extract Method (visual selection)
 
+*   <a name=blockle)>[blockle.vim](https://github.com/vim-scripts/blockle.vim) ([top](#top))
+
+    Toggle ruby blocks style, e.g `{}` to `do .. end`
+
+    * `,B` - toggle block style
+
+    > NOTE: thre is an unfortunate interaction with delimitMate, the opening
+    > brase gets completed. i.e. you get `{} ... }`
+
 *   <a name=apidock.vim>[apidock.vim](https://github.com/alexandrov/apidock.vim) ([top](#top))
 
     Vim plugin that searches http://apidock.com Ruby, Rails, and RSpec docs from within Vim.
@@ -553,7 +563,6 @@ execute it with `@a`.
     * `RR` - Search the Rails docs for the word under the cursor.
     * `RB` - Search the Ruby docs for the word under the cursor.
     * `RS` - Search the RSpec docs for the word under the cursor.
-
 
 [top](#top)
 
