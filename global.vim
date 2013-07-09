@@ -14,6 +14,7 @@ if has('multi_byte')
   scriptencoding utf-8
   set encoding=utf-8
 end
+
 " presentation settings
 set number              " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers

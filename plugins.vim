@@ -10,8 +10,8 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
 
 " delimitMate
-let g:delimitMate_expand_space = 1
-let g:delimitMate_expand_cr = 1
+let g:delimitMate_expand_space = 1 " Turns on/off the expansion of <Space>
+let g:delimitMate_expand_cr = 1    " Turns on/off the expansion of <CR>
 
 " nerdtree
 " Ctrl-P to Display the file browser tree
