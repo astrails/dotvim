@@ -29,9 +29,6 @@ nmap <leader>d :diffupdate<CR>
 nmap <leader>dp :diffput<CR>
 nmap <leader>dg :diffget<CR>
 
-"set completeopt=menuone,preview,longest
-set completeopt=menuone,preview
-
 " driving me insane this thing
 command Q q
 command Qa qa
