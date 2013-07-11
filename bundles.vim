@@ -41,7 +41,7 @@ NeoBundle 'austintaylor/vim-indentobject'
 " global search & replace
 NeoBundle 'greplace.vim'
 " better looking statusline
-NeoBundle 'astrails/vim-powerline'
+NeoBundle 'bling/vim-airline'
 " plugin for resolving three-way merge conflicts
 NeoBundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels

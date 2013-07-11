@@ -1,5 +1,6 @@
 * experimental
   - upgrade to NeoBundle. IMPORTANT: See readme for upgrade instructions
+  - vim-airline. Replacement for vim-powerline
 
 * 2014-02-05
   - golang syntax support (thanks @torkale)
