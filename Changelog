@@ -3,6 +3,7 @@
   - faster Esc into normal mode (ttimeoutlen=50)
   - syntastic fixes (no re-check on exit, fancy marks)
   - vim-dispatch (async external commands with output in vim)
+  - unite.vim (generic user-interface plugin)
 
 * 2013-07-09
   - prompt before deleting bundles directory

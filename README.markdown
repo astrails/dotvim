@@ -51,6 +51,7 @@ announcements of new versions, tips, etc.
   * [delimitMate](#delimitMate)
   * [Gundo](#gundo)
   * [vim-dispatch](#vim-dispatch)
+  * [unite.vim](#unite.vim)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -485,6 +486,21 @@ execute it with `@a`.
 
     try `:Dispatch` from inside a Rails rspec file. `:h dispatch` for more
     info.
+
+*   <a name=unite.vim>[unite.vim][unite] ([top](#top))
+
+    Search and display information from arbitrary sources like files, buffers,
+    recently used files or registers.
+
+    This plugins is to powerful to present here, read the [documentation][unite].
+
+    Just to give you the taste of it, try:
+
+    `:Unite -no-start-insert -auto-preview colorscheme`
+
+    Then try to navigate up and down and see what happens ;)
+
+[unite]: https://github.com/Shougo/unite.vim
 
 *   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
 

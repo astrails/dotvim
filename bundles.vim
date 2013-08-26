@@ -118,3 +118,8 @@ Bundle 'mattn/webapi-vim'
 "Bundle 'ShowMarks'
 "Bundle 'tpope/vim-unimpaired'
 "Bundle 'reinh/vim-makegreen'
+
+Bundle 'Shougo/vimproc'
+Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/unite-outline'
+Bundle 'ujihisa/unite-colorscheme'
