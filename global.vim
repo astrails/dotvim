@@ -55,6 +55,8 @@ set ts=4                " number of spaces in a tab
 set sw=4                " number of spaces for indent
 set et                  " expand tabs into spaces
 
+set ttimeoutlen=50      " fast Esc to normal mode
+
 " mouse settings
 if has("mouse")
   set mouse=a
