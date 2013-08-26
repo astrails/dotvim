@@ -786,6 +786,18 @@ To use this feature: just include the file from your ~/.local.vim:
 
 [top](#top)
 
+<a name=writer>
+#### writer.vim
+
+My attempt to make vim look like iWriter ;)
+You can read about the details on [our blog][blog_writer].
+
+In short, just do `:so ~/.vim/writer.vim` when you are going to do some plain
+text writing.
+
+[blog_writer]: http://astrails.com/blog/2013/8/12/writing-markdown-with-style-in-vim
+
+[top](#top)
 
 #### Copyright
 
