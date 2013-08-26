@@ -1,6 +1,7 @@
 * 2013-08-27
   - writer.vim
   - faster Esc into normal mode (ttimeoutlen=50)
+  - syntastic fixes (no re-check on exit, fancy marks)
 
 * 2013-07-09
   - prompt before deleting bundles directory
