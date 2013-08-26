@@ -50,6 +50,7 @@ announcements of new versions, tips, etc.
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
   * [Gundo](#gundo)
+  * [vim-dispatch](#vim-dispatch)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -475,6 +476,15 @@ execute it with `@a`.
     * `,u` - toggle undo window
     * `:h gundo.txt` - more help
 
+*   <a name=vim-dispatch>[vim-dispatch](https://github.com/tpope/vim-dispatch) ([top](#top))
+
+    Asynchronous build and test dispatcher from Tpope.
+
+    This plugin allows to run sync/async builds and other shell commands in
+    background, with progress support.
+
+    try `:Dispatch` from inside a Rails rspec file. `:h dispatch` for more
+    info.
 
 *   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
 

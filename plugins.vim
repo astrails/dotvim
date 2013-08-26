@@ -145,3 +145,6 @@ autocmd FileType haml let b:switch_definitions =
       \ ]
 
 let g:blockle_mapping = '<Leader>B'
+
+" vim-dispatch
+autocmd FileType ruby let b:dispatch = 'rspec %'

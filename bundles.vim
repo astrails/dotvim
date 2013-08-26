@@ -58,6 +58,8 @@ Bundle 'hsitz/VimOrganizer'
 Bundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
 Bundle 'AndrewRadev/switch.vim'
+" async external commands with output in vim
+Bundle 'tpope/vim-dispatch'
 
 " Ruby/Rails
 
