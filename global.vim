@@ -75,7 +75,7 @@ let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 
 " directory settings
-silent !mkdir -vp ~/.backup/undo/ > /dev/null 2>&1
+call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
 set backupdir=~/.backup,.       " list of directories for the backup file
 set directory=~/.backup,~/tmp,. " list of directory names for the swap file
 set nobackup            " do not write backup files
