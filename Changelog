@@ -1,5 +1,6 @@
 * 2013-08-28
   - fix startup echo messages redirect
+  - prevent multiple after.vim loads
 
 * 2013-08-27
   - writer.vim
