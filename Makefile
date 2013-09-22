@@ -10,7 +10,7 @@ install: delete update
 
 delete:
 	@echo going to remove the bundle directory. press ENTER to continue.
-	@read
+	@read something
 	rm -rf bundle
 
 install-vundle:
