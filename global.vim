@@ -79,6 +79,7 @@ call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')
 set backupdir=~/.backup,.       " list of directories for the backup file
 set directory=~/.backup,~/tmp,. " list of directory names for the swap file
 set nobackup            " do not write backup files
+set backupskip+=~/tmp/*,/private/tmp/* " skip backups on OSX temp dir, for crontab -e to properly work
 set noswapfile          " do not write .swp files
 set undofile
 set undodir=~/.backup/undo/,~/tmp,.

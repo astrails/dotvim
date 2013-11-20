@@ -2,6 +2,8 @@
   - golang syntax support (thanks @torkale)
   - josemarluedke/vim-rspec - lightweight Rspec runner for Vim
   - girblade/vim-gitgutter - it diff in the gutter (sign column) and stages/reverts hunks
+  - backupskip for /private/tmp and ~/tmp.
+    skip backups on OSX temp dir, for crontab -e to properly work
 
 * 2013-08-28
   - fix startup echo messages redirect
