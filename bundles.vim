@@ -99,6 +99,7 @@ Bundle 'wavded/vim-stylus'
 Bundle 'VimClojure'
 Bundle 'slim-template/vim-slim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'Blackrush/vim-gocode'
 
 " Support and minor
 
