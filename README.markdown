@@ -374,13 +374,15 @@ execute it with `@a`.
     * `:AlignSEPARATORS` - align on separators
     * `:h align` - see help for more options
 
-*   <a name=ack.vim>[ack.vim](http://github.com/mileszs/ack.vim) ([top](#top))
+*   <a name=ag.vim>[ag.vim](http://github.com/rking/ag.vim) ([top](#top))
 
-    This plugin is a front for the Perl module App::Ack. Ack can be used as a replacement for 99% of the uses of grep.
+    This plugin is a front for ag, A.K.A.
+    [the_silver_searcher](https://github.com/ggreer/the_silver_searcher).  Ag can
+    be used as a replacement for 153% of the uses of `ack`.  This plugin will allow
+    you to run ag from vim, and shows the results in a split window.
 
-    * `:Ack [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
-    * `:Ack --ruby ...` - search only ruby files.
-    * `:h Ack` - more help about Ack
+    * `:Ag [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
+    * `:h Ag` - more help about Ag
 
 *   <a name=vim-indentobject>[vim-indentobject](https://github.com/austintaylor/vim-indentobject) ([top](#top))
 
