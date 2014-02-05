@@ -15,7 +15,7 @@ Bundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 Bundle 'kien/ctrlp.vim'
 " popup completion menu
-Bundle 'AutoComplPop'
+Bundle  'Valloric/YouCompleteMe'
 " tags list navigation
 Bundle 'taglist.vim'
 " yank history
