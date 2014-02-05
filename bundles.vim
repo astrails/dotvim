@@ -30,8 +30,8 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 " vertical alignment tool
 Bundle 'tsaleh/vim-align'
-" 'ack' searching integration
-Bundle 'mileszs/ack.vim'
+" 'ag' searching integration
+Bundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
 Bundle 'austintaylor/vim-indentobject'
 " global search & replace
