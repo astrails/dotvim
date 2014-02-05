@@ -7,8 +7,11 @@ All the right plugins are in. Nerdtree, CtrlP, you name it.
 The focus is on supporting Rails, but there is a lot of generic stuff too, so
 it will surely serve you well with any language of your choice.
 
-The config is using [Vundle](http://github.com/gmarik/vundle) for easy
-upgrading.
+The config is using [NeoBundle](https://github.com/Shougo/neobundle.vim) for easy
+upgrading. The list of installed bundles is in the `bundles.vim`
+
+> IMPORTANT: See [upgrade](#upgrade_neobundle) if you have an older Vundle
+> based install.
 
 *Some* help tips are provided for *some* of the plugins. please check out the
 plugin's docs for more info.
@@ -23,6 +26,7 @@ announcements of new versions, tips, etc.
 #### Contents
 
 * [Installation](#installation)
+* [Neobundle upgrade](#upgrade_neobundle)
 * [General Configuration](#general)
 * [Local configuration](#local)
 * [Backups](#backups)
@@ -102,6 +106,23 @@ From your homedirectory (on Linux/Mac OSX):
 > [font installation](http://lokaltog.github.com/powerline/overview.html#font-installation)
 > and follow the instructions. If you do not, then strange symbols will be
 > displayed instead. While this is not critical, it remains pretty annoying.
+
+[top](#top)
+
+<a name=upgrade_neobundle>
+#### Neobundle Upgrade
+
+Dotvim was updated to use Neobundle instead of Vundle. NeoBundle is mostly
+similar but supports more ways to install bundles, better install, locked
+revisions and more.
+
+To upgrade from an older Vundle based setup simply pull the latest version and
+run `make`.
+
+> Note: if you modified your `bundles.vim` you will need to replace all
+> instances of `Bundle` with `NeoBundle` in it. Until you do your vim might
+> print error messages during startup. ignore them and fix the `bundles.vim`,
+> then run `make`.
 
 [top](#top)
 

@@ -1,3 +1,6 @@
+* experimental
+  - upgrade to NeoBundle. IMPORTANT: See readme for upgrade instructions
+
 * 2014-02-05
   - golang syntax support (thanks @torkale)
   - josemarluedke/vim-rspec - lightweight Rspec runner for Vim (@torkale)

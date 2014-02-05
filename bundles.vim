@@ -1,130 +1,137 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 " plugin management
-Bundle 'gmarik/vundle'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " file tree
-Bundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
-Bundle 'jistr/vim-nerdtree-tabs'
+NeoBundle 'jistr/vim-nerdtree-tabs'
 " commenting
-Bundle 'scrooloose/nerdcommenter'
+NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
-Bundle 'kien/ctrlp.vim'
+NeoBundle 'kien/ctrlp.vim'
 " popup completion menu
-Bundle 'AutoComplPop'
+NeoBundle 'AutoComplPop'
 " tags list navigation
-Bundle 'taglist.vim'
+NeoBundle 'taglist.vim'
 " yank history
-Bundle 'YankRing.vim'
+NeoBundle 'YankRing.vim'
 " git integration
-Bundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 " syntax checking on save
-Bundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 " TextMate-style snippets
-Bundle 'msanders/snipmate.vim'
+NeoBundle 'msanders/snipmate.vim'
 " manipulation of surraunding parens, quotes, etc.
-Bundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-surround'
 " vertical alignment tool
-Bundle 'tsaleh/vim-align'
+NeoBundle 'tsaleh/vim-align'
 " 'ag' searching integration
-Bundle 'rking/ag.vim'
+NeoBundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
-Bundle 'austintaylor/vim-indentobject'
+NeoBundle 'austintaylor/vim-indentobject'
 " global search & replace
-Bundle 'greplace.vim'
+NeoBundle 'greplace.vim'
 " better looking statusline
-Bundle 'astrails/vim-powerline'
+NeoBundle 'astrails/vim-powerline'
 " plugin for resolving three-way merge conflicts
-Bundle 'sjl/splice.vim'
+NeoBundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
-Bundle 'Indent-Guides'
+NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
-Bundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
-Bundle 'Raimondi/delimitMate'
+NeoBundle 'Raimondi/delimitMate'
 " calendar, duh!
-Bundle 'calendar.vim--Matsumoto'
+NeoBundle 'calendar.vim--Matsumoto'
 " A Narrow Region Plugin (similar to Emacs)
-Bundle 'chrisbra/NrrwRgn'
+NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
-Bundle 'utl.vim'
+NeoBundle 'utl.vim'
 " A clone of Emacs' Org-mode for Vim
-Bundle 'hsitz/VimOrganizer'
+NeoBundle 'hsitz/VimOrganizer'
 " visual undo tree
-Bundle 'sjl/gundo.vim'
+NeoBundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
-Bundle 'AndrewRadev/switch.vim'
+NeoBundle 'AndrewRadev/switch.vim'
 " async external commands with output in vim
-Bundle 'tpope/vim-dispatch'
+NeoBundle 'tpope/vim-dispatch'
 " git diff in the gutter (sign column) and stages/reverts hunks
-Bundle 'airblade/vim-gitgutter'
+NeoBundle 'airblade/vim-gitgutter'
 
 " Ruby/Rails
 
 " rails support
-Bundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-rails'
 " bundler integration (e.g. :Bopen)
-Bundle 'tpope/vim-bundler'
+NeoBundle 'tpope/vim-bundler'
 " rake integration
-Bundle 'tpope/vim-rake'
+NeoBundle 'tpope/vim-rake'
 " A custom text object for selecting ruby blocks (ar/ir)
-Bundle 'nelstrom/vim-textobj-rubyblock'
+NeoBundle 'nelstrom/vim-textobj-rubyblock'
 " ruby refactoring
-Bundle 'ecomba/vim-ruby-refactoring'
+NeoBundle 'ecomba/vim-ruby-refactoring'
 " apidock.com docs integration
-Bundle 'apidock.vim'
+NeoBundle 'apidock.vim'
 " toggle ruby blocks style
-Bundle 'vim-scripts/blockle.vim'
+NeoBundle 'vim-scripts/blockle.vim'
 " lightweight Rspec runner for Vim
-Bundle 'josemarluedke/vim-rspec'
+NeoBundle 'josemarluedke/vim-rspec'
 
 " color themes
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tpope/vim-vividchalk'
+NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tsaleh/vim-tmux'
-Bundle 'Puppet-Syntax-Highlighting'
-Bundle 'JSON.vim'
-Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-markdown'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'vitaly/vim-syntastic-coffee'
-Bundle 'vim-scripts/jade.vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'VimClojure'
-Bundle 'slim-template/vim-slim'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tsaleh/vim-tmux'
+NeoBundle 'Puppet-Syntax-Highlighting'
+NeoBundle 'JSON.vim'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'vitaly/vim-syntastic-coffee'
+NeoBundle 'vim-scripts/jade.vim'
+NeoBundle 'wavded/vim-stylus'
+NeoBundle 'VimClojure'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'elixir-lang/vim-elixir'
+NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 " Support and minor
 
 " Support for user-defined text objects
-Bundle 'kana/vim-textobj-user'
+NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
-Bundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
-Bundle 'vitaly/vim-gitignore'
+NeoBundle 'vitaly/vim-gitignore'
 " repeat motion with <Space>
-Bundle 'scrooloose/vim-space'
+NeoBundle 'scrooloose/vim-space'
 " Github's gist support
-Bundle 'mattn/gist-vim'
+NeoBundle 'mattn/gist-vim'
 " web APIs support
-Bundle 'mattn/webapi-vim'
+NeoBundle 'mattn/webapi-vim'
 
-"Bundle 'ShowMarks'
-"Bundle 'tpope/vim-unimpaired'
-"Bundle 'reinh/vim-makegreen'
+"NeoBundle 'ShowMarks'
+"NeoBundle 'tpope/vim-unimpaired'
+"NeoBundle 'reinh/vim-makegreen'
 
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/unite-outline'
-Bundle 'ujihisa/unite-colorscheme'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/unite-outline'
+NeoBundle 'ujihisa/unite-colorscheme'
+
+filetype plugin indent on
+
