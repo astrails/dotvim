@@ -385,6 +385,11 @@ execute it with `@a`.
     * `:Ag [options] {pattern} [{directory}]` - grep for the pattern in side directory and open result in a QuickFix window
     * `:h Ag` - more help about Ag
 
+    Installation:
+
+    * on OSX: `brew install the_silver_searcher` or `port install the_silver_searcher`
+    * on Ubuntu: `apt-get install silversearcher-ag`
+
 *   <a name=vim-indentobject>[vim-indentobject](https://github.com/austintaylor/vim-indentobject) ([top](#top))
 
     A text object for manipulating blocks based on their indentation

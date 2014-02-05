@@ -1,12 +1,13 @@
 * 2014-02-05
   - golang syntax support (thanks @torkale)
-  - josemarluedke/vim-rspec - lightweight Rspec runner for Vim
-  - girblade/vim-gitgutter - it diff in the gutter (sign column) and stages/reverts hunks
+  - josemarluedke/vim-rspec - lightweight Rspec runner for Vim (@torkale)
+  - girblade/vim-gitgutter - it diff in the gutter (sign column) and stages/reverts hunks (@torkale)
   - backupskip for /private/tmp and ~/tmp.
     skip backups on OSX temp dir, for crontab -e to properly work
   - replaced threesome by splice. splice is a newer version of threesome by
     the same author.
   - Dockerfile syntax support
+  - replace ack by ag - faster better ack (@torkale)
 
 * 2013-08-28
   - fix startup echo messages redirect
