@@ -1,3 +1,6 @@
+* 2014-02-05
+  - golang syntax support (thanks @torkale)
+
 * 2013-08-28
   - fix startup echo messages redirect
   - prevent multiple after.vim loads

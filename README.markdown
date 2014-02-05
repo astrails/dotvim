@@ -730,6 +730,10 @@ used intependently.
 
     TBD
 
+*   [vim-gocode](https://github.com/Blackrush/vim-gocode)
+
+    Golang syntax support
+
 [top](#top)
 
 <a name=minor>
