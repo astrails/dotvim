@@ -1,5 +1,6 @@
 * 2014-02-05
   - golang syntax support (thanks @torkale)
+  - josemarluedke/vim-rspec - lightweight Rspec runner for Vim
 
 * 2013-08-28
   - fix startup echo messages redirect

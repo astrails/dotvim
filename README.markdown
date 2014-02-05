@@ -590,6 +590,20 @@ execute it with `@a`.
     * `RB` - Search the Ruby docs for the word under the cursor.
     * `RS` - Search the RSpec docs for the word under the cursor.
 
+*   <a name=vim-rspec>[vim-rspec](https://github.com/josemarluedke/vim-rspec) ([top](#top))
+
+    Lightweight Rspec runner for Vim.
+
+    Commands are self explanatory:
+
+    * `:call RunCurrentSpecFile()`
+    * `:call RunNearestSpec()`
+    * `:call RunLastSpec()`
+
+    Bindings:
+
+    * `,r` - `RunNearestSpec`
+
 [top](#top)
 
 <a name=orgmode>

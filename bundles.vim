@@ -77,6 +77,8 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'apidock.vim'
 " toggle ruby blocks style
 Bundle 'vim-scripts/blockle.vim'
+" lightweight Rspec runner for Vim
+Bundle 'josemarluedke/vim-rspec'
 
 " color themes
 Bundle 'altercation/vim-colors-solarized'
