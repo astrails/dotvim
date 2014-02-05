@@ -103,11 +103,16 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vitaly/vim-syntastic-coffee'
 NeoBundle 'vim-scripts/jade.vim'
 NeoBundle 'wavded/vim-stylus'
-NeoBundle 'VimClojure'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
+
+" clojure
+"NeoBundle 'VimClojure'
+NeoBundle 'guns/vim-clojure-static'
+NeoBundle 'tpope/vim-fireplace'
+NeoBundle 'kien/rainbow_parentheses.vim'
 
 " Support and minor
 

@@ -1,6 +1,7 @@
 * experimental
   - upgrade to NeoBundle. IMPORTANT: See readme for upgrade instructions
   - vim-airline. Replacement for vim-powerline
+  - upgraded clojure support. TODO: update readme and specify reason
 
 * 2014-02-05
   - golang syntax support (thanks @torkale)
