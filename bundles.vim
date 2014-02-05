@@ -60,6 +60,8 @@ Bundle 'sjl/gundo.vim'
 Bundle 'AndrewRadev/switch.vim'
 " async external commands with output in vim
 Bundle 'tpope/vim-dispatch'
+" git diff in the gutter (sign column) and stages/reverts hunks
+Bundle 'airblade/vim-gitgutter'
 
 " Ruby/Rails
 
