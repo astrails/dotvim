@@ -783,6 +783,10 @@ used intependently.
 
     Golang syntax support
 
+*   [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
+
+    Syntax for [Docker](http://www.docker.io) build files.
+
 [top](#top)
 
 <a name=minor>

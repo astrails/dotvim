@@ -88,7 +88,6 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
-
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tsaleh/vim-tmux'
 Bundle 'Puppet-Syntax-Highlighting'
@@ -104,6 +103,7 @@ Bundle 'VimClojure'
 Bundle 'slim-template/vim-slim'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'Blackrush/vim-gocode'
+Bundle 'ekalinin/Dockerfile.vim'
 
 " Support and minor
 

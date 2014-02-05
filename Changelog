@@ -6,6 +6,7 @@
     skip backups on OSX temp dir, for crontab -e to properly work
   - replaced threesome by splice. splice is a newer version of threesome by
     the same author.
+  - Dockerfile syntax support
 
 * 2013-08-28
   - fix startup echo messages redirect
