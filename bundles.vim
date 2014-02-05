@@ -39,7 +39,7 @@ Bundle 'greplace.vim'
 " better looking statusline
 Bundle 'astrails/vim-powerline'
 " plugin for resolving three-way merge conflicts
-Bundle 'sjl/threesome.vim'
+Bundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
 Bundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.

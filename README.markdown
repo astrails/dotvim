@@ -46,7 +46,7 @@ announcements of new versions, tips, etc.
   * [vim-indentobject](#vim-indentobject)
   * [greplace.vim](#greplace.vim)
   * [vim-powerline](#powerline)
-  * [threesome.vim](#threesome.vim)
+  * [splice.vim](#splice.vim)
   * [vim-endwise](#vim-endwise)
   * [delimitMate](#delimitMate)
   * [Gundo](#gundo)
@@ -424,42 +424,43 @@ execute it with `@a`.
     > now is that I forked the original plugin project and make it available
     > under `astrails` account in a form suitable for vundle.
 
-*   <a name=threesome.vim>[threesome.vim](https://github.com/sjl/threesome.vim) ([top](#top))
+*   <a name=splice.vim>[splice.vim](https://github.com/sjl/splice.vim) ([top](#top))
 
     A plugin for resolving conflicts during three-way merges.
 
     Add the following lines to ~/.gitconfig to use
 
     [merge]
-    tool = threesome
+    tool = splice
 
-    [mergetool "threesome"]
-    cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+    [mergetool "splice"]
+    cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'SpliceInit'"
     trustExitCode = true
 
     Bindings:
 
-    * `\g` - switch to grid view
-    * `\l` - switch to loupe view
-    * `\c` - switch to compare view
-    * `\p` - switch to path view
+    * `-g` - switch to grid view
+    * `-l` - switch to loupe view
+    * `-c` - switch to compare view
+    * `-p` - switch to path view
 
-    * `\o` - select the original file
-    * `\1` - select file one
-    * `\2` - select file two
-    * `\r` - select the results file
+    * `-o` - select the original file
+    * `-1` - select file one
+    * `-2` - select file two
+    * `-r` - select the results file
 
-    * `\n` - next unresolved conflict
-    * `\N` - prev unresolved conflict
+    * `-n` - next unresolved conflict
+    * `-N` - prev unresolved conflict
 
-    * `\<space>` - cycle layout
-    * `\s` - toggle scrolllocking
-    * `\d` - cycle diff combinations
-    * `\D` - turn off all diffs
+    * `-<space>` - cycle layout
+    * `-s` - toggle scrolllocking
+    * `-d` - cycle diff combinations
+    * `-D` - turn off all diffs
 
-    * `\CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
+    * `-CC` - exits vim with error code (like :cquit). this will indicate to git that merge resolution failed
+    * `-q`  - exits vim with success; this will indicate to git that merge succeeded
 
-    * `:h threesome` - you should probably read it ;)
+    * `:h splice` - you should probably read it ;)
 
 *   <a name=vim-endwise>[vim-endwise](http://github.com/tpope/vim-endwise) ([top](#top))
 
