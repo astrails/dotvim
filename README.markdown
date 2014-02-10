@@ -809,6 +809,10 @@ used intependently.
 
     Syntax for [Docker](http://www.docker.io) build files.
 
+*   [vim-less](https://github.com/groenewege/vim-less)
+
+    Syntax for [LESS](http://lesscss.org/).
+
 [top](#top)
 
 <a name=minor>
