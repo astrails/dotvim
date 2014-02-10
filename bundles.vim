@@ -108,6 +108,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
+NeoBundle 'groenewege/vim-less'
 
 " Support and minor
 
