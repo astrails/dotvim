@@ -1,6 +1,7 @@
 * experimental
   - upgrade to NeoBundle. IMPORTANT: See readme for upgrade instructions
   - vim-airline. Replacement for vim-powerline. IMPORTANT: See readme for upgrade instructions. Also: https://github.com/bling/vim-airline
+  - disable gitgutter in writer.vim
 
 * 2014-02-05
   - golang syntax support (thanks @torkale)
