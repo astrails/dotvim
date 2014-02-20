@@ -139,5 +139,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
 
+" vim-autoformat uses js-beautify from https://github.com/einars/js-beautify
+" as a node module, run "npm -g install js-beautify"
+NeoBundle 'Chiel92/vim-autoformat'
 filetype plugin indent on
 
