@@ -122,7 +122,7 @@ NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
 NeoBundle 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
-NeoBundle 'vitaly/vim-gitignore'
+NeoBundle 'taasaa/vim-gitignore'
 " repeat motion with <Space>
 NeoBundle 'scrooloose/vim-space'
 " Github's gist support
