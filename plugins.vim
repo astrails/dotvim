@@ -119,22 +119,22 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
 
 " VimClojure
-let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#DynamicHighlighting = 1
+"let g:vimclojure#ParenRainbow = 1
+"let g:vimclojure#DynamicHighlighting = 1
 
 " Utl.vim
-if has("mac")
-  let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
-end
-nmap <leader>o :Utl
+"if has("mac")
+  "let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
+"end
+"nmap <leader>o :Utl
 
 " VimOrganizer
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
-au BufEnter *.org call org#SetOrgFileType()
+"au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
+"au BufEnter *.org call org#SetOrgFileType()
 
 " Gundo
-nmap <leader>u :GundoToggle<CR>
-let g:gundo_close_on_revert = 1
+"nmap <leader>u :GundoToggle<CR>
+"let g:gundo_close_on_revert = 1
 
 " Switch
 " making some of the switches defined for ruby work in HAML files
@@ -151,11 +151,11 @@ let g:blockle_mapping = '<Leader>B'
 " vim-dispatch
 autocmd FileType ruby let b:dispatch = 'rspec %'
 
-let g:unite_source_history_yank_enable = 1
-let g:unite_enable_start_insert = 1
-let g:unite_source_file_mru_long_limit = 100
-let g:unite_source_directory_mru_long_limit = 100
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"let g:unite_source_history_yank_enable = 1
+"let g:unite_enable_start_insert = 1
+"let g:unite_source_file_mru_long_limit = 100
+"let g:unite_source_directory_mru_long_limit = 100
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " vim-rspec
 map <Leader>r :call RunNearestSpec()<CR>
