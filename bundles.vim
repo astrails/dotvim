@@ -13,7 +13,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " file tree
 NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
-NeoBundle 'jistr/vim-nerdtree-tabs'
+"NeoBundle 'jistr/vim-nerdtree-tabs'
 " commenting
 NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
@@ -33,7 +33,7 @@ NeoBundle 'msanders/snipmate.vim'
 " manipulation of surraunding parens, quotes, etc.
 NeoBundle 'tpope/vim-surround'
 " vertical alignment tool
-NeoBundle 'tsaleh/vim-align'
+"NeoBundle 'tsaleh/vim-align'
 " 'ag' searching integration
 NeoBundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
@@ -43,7 +43,7 @@ NeoBundle 'greplace.vim'
 " better looking statusline
 NeoBundle 'bling/vim-airline'
 " plugin for resolving three-way merge conflicts
-NeoBundle 'sjl/splice.vim'
+"NeoBundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
 NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
@@ -51,21 +51,21 @@ NeoBundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
 NeoBundle 'Raimondi/delimitMate'
 " calendar, duh!
-NeoBundle 'calendar.vim--Matsumoto'
+"NeoBundle 'calendar.vim--Matsumoto'
 " A Narrow Region Plugin (similar to Emacs)
-NeoBundle 'chrisbra/NrrwRgn'
+"NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
-NeoBundle 'utl.vim'
+"NeoBundle 'utl.vim'
 " A clone of Emacs' Org-mode for Vim
-NeoBundle 'hsitz/VimOrganizer'
+"NeoBundle 'hsitz/VimOrganizer'
 " visual undo tree
-NeoBundle 'sjl/gundo.vim'
+"NeoBundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
 NeoBundle 'AndrewRadev/switch.vim'
 " async external commands with output in vim
-NeoBundle 'tpope/vim-dispatch'
+"NeoBundle 'tpope/vim-dispatch'
 " git diff in the gutter (sign column) and stages/reverts hunks
-NeoBundle 'airblade/vim-gitgutter'
+"NeoBundle 'airblade/vim-gitgutter'
 
 " Ruby/Rails
 
@@ -93,27 +93,27 @@ NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tsaleh/vim-tmux'
-NeoBundle 'Puppet-Syntax-Highlighting'
+"NeoBundle 'tsaleh/vim-tmux'
+"NeoBundle 'Puppet-Syntax-Highlighting'
 NeoBundle 'JSON.vim'
-NeoBundle 'tpope/vim-cucumber'
+"NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'vitaly/vim-syntastic-coffee'
-NeoBundle 'vim-scripts/jade.vim'
-NeoBundle 'wavded/vim-stylus'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'Blackrush/vim-gocode'
-NeoBundle 'ekalinin/Dockerfile.vim'
+"NeoBundle 'vim-scripts/jade.vim'
+"NeoBundle 'wavded/vim-stylus'
+"NeoBundle 'slim-template/vim-slim'
+"NeoBundle 'elixir-lang/vim-elixir'
+"NeoBundle 'Blackrush/vim-gocode'
+"NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 
 " clojure
 "NeoBundle 'VimClojure'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'kien/rainbow_parentheses.vim'
+"NeoBundle 'guns/vim-clojure-static'
+"NeoBundle 'tpope/vim-fireplace'
+"NeoBundle 'kien/rainbow_parentheses.vim'
 
 " Support and minor
 
@@ -122,22 +122,25 @@ NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
 NeoBundle 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
-NeoBundle 'vitaly/vim-gitignore'
+NeoBundle 'taasaa/vim-gitignore'
 " repeat motion with <Space>
 NeoBundle 'scrooloose/vim-space'
 " Github's gist support
-NeoBundle 'mattn/gist-vim'
+"NeoBundle 'mattn/gist-vim'
 " web APIs support
-NeoBundle 'mattn/webapi-vim'
+"NeoBundle 'mattn/webapi-vim'
 
 "NeoBundle 'ShowMarks'
 "NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'reinh/vim-makegreen'
 
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/unite-outline'
-NeoBundle 'ujihisa/unite-colorscheme'
+"NeoBundle 'Shougo/vimproc'
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'Shougo/unite-outline'
+"NeoBundle 'ujihisa/unite-colorscheme'
 
+" vim-autoformat uses js-beautify from https://github.com/einars/js-beautify
+" as a node module, run "npm -g install js-beautify"
+NeoBundle 'Chiel92/vim-autoformat'
 filetype plugin indent on
 
