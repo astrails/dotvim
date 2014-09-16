@@ -2,9 +2,9 @@
 # line variable
 RUBY ?= $(shell ./find-ruby.sh)
 
-default: install
+.PHONY: help delete
+default: help
 
-.PHONY: delete git-cleanup cleanup compile-command-t compile-vimproc compile install reinstall help
 delete:
 	@echo going to remove the bundle directory. press ENTER to continue.
 	@read something
@@ -30,8 +30,7 @@ ${NEOBUNDLE}:
 	@echo '**************************************************************************'
 	@echo
 
-git-cleanup:
-	ls bundle | while read b;do (cd bundle/$$b && git clean -f);done
+.PHONY: cleanup compile-command-t compile-vimproc compile
 
 cleanup:
 	vim -u bundles.vim +NeoBundleClean +NeoBundleCheck +NeoBundleDocs
@@ -44,11 +43,35 @@ compile-vimproc:
 
 compile: compile-command-t compile-vimproc
 
+.PHONY: install reinstall
+
 install: ${NEOBUNDLE} cleanup compile
 
 reinstall: delete install
 
+.PHONY: edit-bundles edit
+
+edit-bundles:
+	vim bundles.vim
+
+edit: edit-bundles install
+
+.PHONY: cleanup-bundles update-bundles update
+
+cleanup-bundles:
+	ls bundle | while read b;do (cd bundle/$$b && git clean -f);done
+
+update-bundles: ${NEOBUNDLE}
+	vim -u bundles.vim +NeoBundleUpdate
+
+update: cleanup-bundles update-bundles install
+
+.PHONY: help
+
 help:
-	@echo 'make help                         print this message'
-	@echo 'make install                     (default) make sure all bundles installed and compiled'
+	@echo COMMON:
+	@echo 'make help                        (default) print this message'
+	@echo 'make install                     make sure all bundles installed and compiled'
 	@echo 'make reinstall                   [DANGEROUS!] - remove bundles and reinstall'
+	@echo 'make edit                        edit bundles file and install/refresh bundles'
+	@echo 'make update                      update installed bundles'
