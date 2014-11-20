@@ -63,6 +63,8 @@ announcements of new versions, tips, etc.
   * [unite.vim](#unite.vim)
   * [vim-gitgutter](#gitgutter)
   * [vim-i18n](#i18n)
+  * [switch](#switch)
+  * [emmet-vim](#emmet)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -576,6 +578,10 @@ execute it with `@a`.
 
     it will switch `"foo"` to `'foo'` to `:foo`. or `{:foo => bar}` to `{foo: bar}`,
     etc. See `:h switch` for more.
+
+*   <a name=emmet>[Switch](https://github.com/mattn/emmet-vim) ([top](#top))
+
+    [emmet.io](http://emmet.io) like html/css workflow plugin.
 
 [top](#top)
 

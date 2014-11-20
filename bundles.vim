@@ -66,6 +66,8 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-dispatch'
 " git diff in the gutter (sign column) and stages/reverts hunks
 NeoBundle 'airblade/vim-gitgutter'
+" hi-speed html coding
+NeoBundle 'mattn/emmet-vim'
 
 " Ruby/Rails
 
