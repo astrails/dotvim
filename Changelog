@@ -6,6 +6,7 @@
   - upgraded clojure syntax support
   - vim plugin for emmet.io HTML/CSS workflow
   - improved CtrlP ignore list to skip image files
+  - editorconfig.org file support
 
 * 2014-11-25
   - fix a deprecation warning by the latest NeoBundle version.

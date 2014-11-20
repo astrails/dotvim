@@ -65,6 +65,7 @@ announcements of new versions, tips, etc.
   * [vim-i18n](#i18n)
   * [switch](#switch)
   * [emmet-vim](#emmet)
+  * [editorconfig](#editorconfig)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -582,6 +583,10 @@ execute it with `@a`.
 *   <a name=emmet>[Switch](https://github.com/mattn/emmet-vim) ([top](#top))
 
     [emmet.io](http://emmet.io) like html/css workflow plugin.
+
+*   <a name=editorconfig>[editorconfig-vim](https://github.com/editorconfig/editorconfig-vim) ([top](#top))
+
+    [.editorconfig](http://editorconfig.org) file support.
 
 [top](#top)
 

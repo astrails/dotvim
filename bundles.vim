@@ -68,6 +68,8 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'airblade/vim-gitgutter'
 " hi-speed html coding
 NeoBundle 'mattn/emmet-vim'
+" editorconfig.org support
+NeoBundle 'editorconfig/editorconfig-vim'
 
 " Ruby/Rails
 
