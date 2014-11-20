@@ -3,6 +3,7 @@
 * 2015-06-19
   - vim-i18n plugin for extracting i18n strings into .yml files
   - syntax support: mustashe-handlebars, literate coffeescript and React cjsx
+  - upgraded clojure syntax support
 
 * 2014-11-25
   - fix a deprecation warning by the latest NeoBundle version.

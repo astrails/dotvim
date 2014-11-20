@@ -829,6 +829,14 @@ used intependently.
     Syntax for [mustache](http://mustache.github.io) and
     [handlebars](http://handlebarsjs.com) templates.
 
+*   Clojure syntax support by the following plugins:
+
+    [vim-clojure-static](http://github.com/guns/vim-clojure-static)
+    [vim-fireplace](http://github.com/tpope/vim-fireplace)
+    [rainbow_parentheses](http://github.com/kien/rainbow_parentheses.vim)
+
+    rainbow_parentheses can be useful to other languages as well ;)
+
 [top](#top)
 
 <a name=minor>
