@@ -824,6 +824,11 @@ used intependently.
 
     Syntax for [LESS](http://lesscss.org/).
 
+*   [vim-mustache-handlebars](https://github.com/mustache/vim-mustache-handlebars)
+
+    Syntax for [mustache](http://mustache.github.io) and
+    [handlebars](http://handlebarsjs.com) templates.
+
 [top](#top)
 
 <a name=minor>

@@ -111,6 +111,9 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'mtscout6/vim-cjsx'
+NeoBundle 'mintplant/vim-literate-coffeescript'
 
 " Support and minor
 
