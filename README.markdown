@@ -10,8 +10,13 @@ it will surely serve you well with any language of your choice.
 The config is using [NeoBundle](https://github.com/Shougo/neobundle.vim) for easy
 upgrading. The list of installed bundles is in the `bundles.vim`
 
-> IMPORTANT: See [upgrade](#upgrade_neobundle) if you have an older Vundle
-> based install.
+> IMPORTANT:
+> - Vundle was replaced with
+>   [Neobundle](https://github.com/Shougo/neobundle.vim). See [Neobundle
+>   upgrade instructions](#upgrade_neobundle) if you have an older Vundle based
+>   install.
+> - vim-powerline was replaced with [vim-airline](#airline). Please see
+>   [installation instructions](#installation_note)
 
 *Some* help tips are provided for *some* of the plugins. please check out the
 plugin's docs for more info.
@@ -94,19 +99,18 @@ From your homedirectory (on Linux/Mac OSX):
 * create `~/.vimrc.before` or `~/.vimrc.after` if you want to have some
   local/personal settings you don't want to commit into the repo. see "[Local Configuration](#local)"
 
-
-  > IMPORTANT: **always** add a `colorscheme` to your `~/.vimrc.after` file.
-  > Even if you use the defaults scheme add `colorscheme default`. Othewise you
-  > will get a highlighting error `"E411: highlight group not found: Normal"`
-  > during vim startup.
-
-
-> IMPORTANT: [vim-airline](#airline) requires some extra glyphs to work properly.
-> Check the official documentation on
-> [font > installation](https://github.com/bling/vim-airline#integrating-with-powerline-fonts)
-> and follow the instructions. If you do not, then strange symbols will be
-> displayed instead (can be fixed by configuring it to use regular fonts. see
-> help)
+<a name=installation_note>
+> **IMPORTANT**
+> - **always** add a `colorscheme` to your `~/.vimrc.after` file.  Even if you
+>   use the defaults scheme add `colorscheme default`. Othewise you will get a
+>   highlighting error `"E411: highlight group not found: Normal"` during vim
+>   startup.
+> - [vim-airline](#airline) requires some extra glyphs to work properly.  Check
+>   the official documentation on [font >
+>   installation](https://github.com/bling/vim-airline#integrating-with-powerline-fonts)
+>   and follow the instructions. If you do not, then strange symbols will be
+>   displayed instead (can be fixed by configuring it to use regular fonts. see
+>   help)
 
 [top](#top)
 
