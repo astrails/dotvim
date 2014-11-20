@@ -85,6 +85,8 @@ NeoBundle 'apidock.vim'
 NeoBundle 'vim-scripts/blockle.vim'
 " lightweight Rspec runner for Vim
 NeoBundle 'josemarluedke/vim-rspec'
+" i18n extraction plugin
+NeoBundle 'stefanoverna/vim-i18n'
 
 " color themes
 NeoBundle 'altercation/vim-colors-solarized'

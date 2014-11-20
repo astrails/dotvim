@@ -62,6 +62,7 @@ announcements of new versions, tips, etc.
   * [vim-dispatch](#vim-dispatch)
   * [unite.vim](#unite.vim)
   * [vim-gitgutter](#gitgutter)
+  * [vim-i18n](#i18n)
 * [Ruby/Rails Support](#ruby)
   * [vim-rails](#vim-rails)
   * [vim-bundler](#vim-bundler)
@@ -562,6 +563,12 @@ execute it with `@a`.
     * `,hr` - revert hunk
 
     There are quite some customization options. see help.
+
+*   <a name=i18n>[vim-i18n](https://github.com/stefanoverna/vim-i18n) ([top](#top))
+
+    Extracts i18n strings from source files into .yml file.
+
+    * `,z` - extract selected string
 
 *   <a name=switch>[Switch](https://github.com/AndrewRadev/switch.vim) ([top](#top))
 
