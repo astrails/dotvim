@@ -126,13 +126,16 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 
 "NeoBundle 'ShowMarks'
-"NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'reinh/vim-makegreen'
 
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" tabular alt-v and then Tabularize/: to  use : as tab organizer
+NeoBundle 'godlygeek/tabular'
 
 call neobundle#end()
 
