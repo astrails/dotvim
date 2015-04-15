@@ -69,3 +69,34 @@ nnoremap <C-l> <C-w>l
 
 " fast expand current file's directory in command mode
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" vim reload
+nmap <silent> ,vr :so %<CR>
+
+" Type ,hl to toggle highlighting on/off, and show current value.
+noremap ,hl :set hlsearch! hlsearch?<CR>
+
+" ,hp = html preview
+map <silent> ,hp :!open -a Safari %<CR><CR>
+
+" create <%= foo %> erb tags using Ctrl-k in edit mode
+imap <silent> <C-K> <%=   %><Esc>3hi
+
+" create <%= foo %> erb tags using Ctrl-j in edit mode
+imap <silent> <C-J> <%  %><Esc>2hi
+
+" Make gf (go to file) create the file, if not existent
+nnoremap gf :e<cfile><CR>
+nnoremap <C-w>f :sp +e<cfile><CR>
+nnoremap <C-w>gf :tabe<cfile><CR>
+
+" ,q to toggle quickfix window (where you have stuff like Ag)
+" " ,oq to open it back up (rare)
+nmap <silent> ,qc :cclose<CR>
+nmap <silent> ,qo :copen<CR>
+
+"Go to last edit location with ,.
+nnoremap ,. '.'
+
+" gary bernhardt's hashrocket this is the dogs bollocks ;)
+imap <c-l> <space>=><space>
