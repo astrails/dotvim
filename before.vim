@@ -13,3 +13,6 @@ if has('gui_running')
     source ~/.gvimrc.before
   endif
 endif
+
+
+colorscheme solarized 
