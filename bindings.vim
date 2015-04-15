@@ -100,3 +100,11 @@ nnoremap ,. '.'
 
 " gary bernhardt's hashrocket this is the dogs bollocks ;)
 imap <c-l> <space>=><space>
+
+" ============================
+" " Tabularize - alignment
+" " ============================
+" " Hit Cmd-Shift-A then type a character you want to align by
+nmap <C-a> :Tabularize /
+vmap <C-a> :Tabularize /
+
