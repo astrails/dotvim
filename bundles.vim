@@ -92,6 +92,7 @@ NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
+NeoBundle 'heartsentwined/vim-ember-script'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tsaleh/vim-tmux'
 NeoBundle 'Puppet-Syntax-Highlighting'
