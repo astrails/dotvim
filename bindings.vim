@@ -4,6 +4,7 @@ map Q gq
 "make Y consistent with C and D
 nnoremap Y y$
 
+imap <C-c> <CR><Esc>O
 " toggle highlight trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 

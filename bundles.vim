@@ -9,8 +9,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " plugin management
 NeoBundleFetch 'Shougo/neobundle.vim'
-
+NeoBundle 'tpope/vim-projectionist'
+NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'einars/js-beautify'
+NeoBundle 'Raimondi/delimitMate'
 " file tree
+NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
 NeoBundle 'jistr/vim-nerdtree-tabs'
@@ -92,7 +96,6 @@ NeoBundle 'tpope/vim-vividchalk'
 NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
-NeoBundle 'heartsentwined/vim-ember-script'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tsaleh/vim-tmux'
 NeoBundle 'Puppet-Syntax-Highlighting'
@@ -111,8 +114,18 @@ NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 
-" Support and minor
+" Emberjs / Ember-cli / Ember-script / emblem
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'heartsentwined/vim-ember-script'
+NeoBundle 'https://github.com/JarrodCTaylor/vim-ember-cli-test-runner'
+NeoBundle 'heartsentwined/vim-emblem'
+NeoBundle 'camthompson/vim-ember'
+NeoBundle 'tpope/vim-projectionist'
+NeoBundle 'tpope/vim-surround'
 
+" Support and minor
+NeoBundle 'dsawardekar/portkey'
+NeoBundle 'elzr/vim-json'
 " Support for user-defined text objects
 NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
