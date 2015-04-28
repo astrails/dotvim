@@ -17,6 +17,7 @@ end
 
 " presentation settings
 set number              " precede each line with its line number
+set rnu!
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
 set nowrap              " Do not wrap words (view)
