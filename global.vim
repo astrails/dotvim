@@ -44,6 +44,7 @@ set history=1000
 set autoread            " automatically read file that has been changed on disk and doesn't have changes in vim
 set backspace=indent,eol,start
 set guioptions-=T       " disable toolbar"
+set guifont=monofur\for\Powerline\Plus\Nerd\File\Types
 set completeopt=menuone,preview
 let bash_is_sh=1        " syntax shell files as bash scripts
 set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for details
@@ -95,3 +96,4 @@ runtime macros/matchit.vim
 
 let mapleader = ","
 let maplocalleader = "\\"
+" NERDTress File highlighting

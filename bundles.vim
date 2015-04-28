@@ -11,6 +11,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'tpope/vim-projectionist'
 NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'einars/js-beautify'
 NeoBundle 'Raimondi/delimitMate'
 " file tree
@@ -22,6 +23,7 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ryanoasis/vim-webdevicons'
 " popup completion menu
 NeoBundle 'AutoComplPop'
 " tags list navigation
