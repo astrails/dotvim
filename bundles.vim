@@ -66,6 +66,8 @@ NeoBundle 'AndrewRadev/switch.vim'
 NeoBundle 'tpope/vim-dispatch'
 " git diff in the gutter (sign column) and stages/reverts hunks
 NeoBundle 'airblade/vim-gitgutter'
+" multiple cursors
+NeoBundle 'terryma/vim-multiple-cursors'
 
 " Ruby/Rails
 
@@ -129,7 +131,15 @@ NeoBundle 'mattn/webapi-vim'
 "NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'reinh/vim-makegreen'
 
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
