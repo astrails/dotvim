@@ -30,7 +30,7 @@ ${NEOBUNDLE}:
 	@echo '**************************************************************************'
 	@echo
 
-.PHONY: cleanup compile-command-t compile-vimproc compile
+.PHONY: cleanup compile-command-t compile
 
 cleanup:
 	vim -u bundles.vim +NeoBundleClean +NeoBundleCheck +NeoBundleDocs
@@ -38,10 +38,7 @@ cleanup:
 compile-command-t:
 	test ! -d bundle/Command-T || (cd bundle/Command-T/ruby/command-t/ && $(RUBY) extconf.rb && make)
 
-compile-vimproc:
-	test ! -d bundle/vimproc || make -C bundle/vimproc
-
-compile: compile-command-t compile-vimproc
+compile: compile-command-t
 
 .PHONY: install reinstall
 
