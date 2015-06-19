@@ -9,6 +9,7 @@
   - editorconfig.org file support
   - disabled chrisbra/NrrwRgn
   - rust language support
+  - string interpolation for easy surround (tyanks @erez-rabih)
 
 * 2014-11-25
   - fix a deprecation warning by the latest NeoBundle version.
