@@ -848,6 +848,11 @@ used intependently.
 
     rainbow_parentheses can be useful to other languages as well ;)
 
+*   [Rust](http://www.rust-lang.org) support.
+
+    using files from [rust repository](https://github.com/rust-lang/rust)
+
+
 [top](#top)
 
 <a name=minor>
