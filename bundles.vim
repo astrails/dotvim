@@ -53,7 +53,7 @@ NeoBundle 'Raimondi/delimitMate'
 " calendar, duh!
 NeoBundle 'calendar.vim--Matsumoto'
 " A Narrow Region Plugin (similar to Emacs)
-NeoBundle 'chrisbra/NrrwRgn'
+"NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
 NeoBundle 'utl.vim'
 " A clone of Emacs' Org-mode for Vim
