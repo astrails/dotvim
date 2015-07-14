@@ -79,8 +79,6 @@ NeoBundle 'tpope/vim-bundler'
 NeoBundle 'tpope/vim-rake'
 " A custom text object for selecting ruby blocks (ar/ir)
 NeoBundle 'nelstrom/vim-textobj-rubyblock'
-" ruby refactoring
-NeoBundle 'ecomba/vim-ruby-refactoring'
 " apidock.com docs integration
 NeoBundle 'apidock.vim'
 " toggle ruby blocks style
@@ -113,6 +111,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 
 " Support and minor
+NeoBundle 'ervandew/screen'
 
 " Support for user-defined text objects
 NeoBundle 'kana/vim-textobj-user'

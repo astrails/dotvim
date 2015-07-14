@@ -35,7 +35,6 @@ command Qa qa
 command QA qa
 command -nargs=* -complete=file W w <args>
 command -nargs=* -complete=file E e <args>
-
 " center display after searching
 nnoremap n   nzz
 nnoremap N   Nzz
