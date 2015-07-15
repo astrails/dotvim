@@ -36,6 +36,8 @@ NeoBundle 'tpope/vim-surround'
 NeoBundle 'tsaleh/vim-align'
 " 'ag' searching integration
 NeoBundle 'rking/ag.vim'
+" search in nerdtree selected directory
+NeoBundle 'taiansu/nerdtree-ag'
 " text object based on indent level (ai, ii)
 NeoBundle 'austintaylor/vim-indentobject'
 " global search & replace
