@@ -1,5 +1,9 @@
 * unreleased
 
+* 2015-07-21
+  - mintplant/vim-literate-coffeescript repo is gone. replaced with a cached
+  copy at vitaly/vim-literate-coffeescript
+
 * 2015-06-19
   - vim-i18n plugin for extracting i18n strings into .yml files
   - syntax support: mustashe-handlebars, literate coffeescript and React cjsx

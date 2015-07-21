@@ -116,7 +116,7 @@ NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'mtscout6/vim-cjsx'
-NeoBundle 'mintplant/vim-literate-coffeescript'
+NeoBundle 'vitaly/vim-literate-coffeescript'
 NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
 
 " clojure
