@@ -118,6 +118,8 @@ NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'mtscout6/vim-cjsx'
 NeoBundle 'vitaly/vim-literate-coffeescript'
 NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " clojure
 "NeoBundle 'VimClojure'
