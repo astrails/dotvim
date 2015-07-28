@@ -9,8 +9,13 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " plugin management
 NeoBundleFetch 'Shougo/neobundle.vim'
-
+NeoBundle 'tpope/vim-projectionist'
+NeoBundle 'maksimr/vim-jsbeautify'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'einars/js-beautify'
+NeoBundle 'Raimondi/delimitMate'
 " file tree
+NeoBundle 'Chiel92/vim-autoformat'
 NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
 NeoBundle 'jistr/vim-nerdtree-tabs'
@@ -18,6 +23,7 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'ryanoasis/vim-webdevicons'
 " popup completion menu
 NeoBundle 'AutoComplPop'
 " tags list navigation
@@ -125,8 +131,18 @@ NeoBundle 'guns/vim-clojure-static'
 NeoBundle 'tpope/vim-fireplace'
 NeoBundle 'kien/rainbow_parentheses.vim'
 
-" Support and minor
+" Emberjs / Ember-cli / Ember-script / emblem
+NeoBundle 'mustache/vim-mustache-handlebars'
+NeoBundle 'heartsentwined/vim-ember-script'
+NeoBundle 'https://github.com/JarrodCTaylor/vim-ember-cli-test-runner'
+NeoBundle 'heartsentwined/vim-emblem'
+NeoBundle 'camthompson/vim-ember'
+NeoBundle 'tpope/vim-projectionist'
+NeoBundle 'tpope/vim-surround'
 
+" Support and minor
+NeoBundle 'dsawardekar/portkey'
+NeoBundle 'elzr/vim-json'
 " Support for user-defined text objects
 NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
@@ -141,7 +157,7 @@ NeoBundle 'mattn/gist-vim'
 NeoBundle 'mattn/webapi-vim'
 
 "NeoBundle 'ShowMarks'
-"NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-unimpaired'
 "NeoBundle 'reinh/vim-makegreen'
 
 NeoBundle 'Shougo/vimproc.vim', {
@@ -156,6 +172,9 @@ NeoBundle 'Shougo/vimproc.vim', {
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" tabular alt-v and then Tabularize/: to  use : as tab organizer
+NeoBundle 'godlygeek/tabular'
 
 call neobundle#end()
 
