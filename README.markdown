@@ -92,7 +92,7 @@ announcements of new versions, tips, etc.
 
 From your homedirectory (on Linux/Mac OSX):
 
-* `git clone git://github.com/astrails/dotvim.git`
+* `git clone https://github.com/astrails/dotvim.git # or git@github.com:astrails/dotvim.git for ssh`
 * `ln -sfn dotvim .vim`
 * `ln -sfn dotvim/vimrc .vimrc`
 * `cd .vim; make install`
