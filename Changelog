@@ -1,5 +1,8 @@
 * unreleased
 
+* 2015-09-0
+  - jsx and javascript syntax highlighting
+
 * 2015-07-21
   - mintplant/vim-literate-coffeescript repo is gone. replaced with a cached
   copy at vitaly/vim-literate-coffeescript
