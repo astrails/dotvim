@@ -10,6 +10,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " plugin management
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'Lokaltog/vim-powerline'
 " file tree
 NeoBundle 'scrooloose/nerdtree'
 " file tree and tabs interaction
