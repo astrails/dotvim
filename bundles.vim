@@ -70,6 +70,8 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mattn/emmet-vim'
 " editorconfig.org support
 NeoBundle 'editorconfig/editorconfig-vim'
+" tmux + vim = love
+NeoBundle 'christoomey/vim-tmux-navigator'
 
 " Ruby/Rails
 

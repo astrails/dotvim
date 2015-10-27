@@ -164,3 +164,6 @@ map <Leader>r :call RunNearestSpec()<CR>
 let g:airline_powerline_fonts=1
 let g:airline_theme='light' " dark simple badwolf solarized solarized2
 set noshowmode
+
+" uncomment to define your own bindings for tmux-vim-navigator
+"let g:tmux_navigator_no_mappings = 1
