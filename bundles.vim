@@ -87,6 +87,9 @@ NeoBundle 'apidock.vim'
 NeoBundle 'vim-scripts/blockle.vim'
 " lightweight Rspec runner for Vim
 NeoBundle 'josemarluedke/vim-rspec'
+" RuboCop
+" NeoBundle 'ngmy/vim-rubocop'
+
 
 " color themes
 NeoBundle 'altercation/vim-colors-solarized'
@@ -108,7 +111,7 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'VimClojure'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'Blackrush/vim-gocode'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 
