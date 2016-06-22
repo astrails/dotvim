@@ -1,5 +1,9 @@
 ## Dotvim
 
+> NOTE: this project is no longer supported. The development moved to the
+> [Dotvim v2](https://github.com/vitaly/dotvim2). Beta testers and
+> contributions are welcome.
+
 ### An attempt at The Ultimate Vim Configuration™ ;)
 
 All the right plugins are in. Nerdtree, CtrlP, you name it.
